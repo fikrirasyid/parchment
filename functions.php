@@ -115,6 +115,20 @@ function manuscript_scripts() {
 add_action( 'wp_enqueue_scripts', 'manuscript_scripts' );
 
 /**
+ * Modifying excerpt suffix
+ */
+function manuscript_excerpt_more(){
+	global $post;
+
+	$more_url 		= esc_url( get_permalink( $post->ID ) );
+	$more_title 	= sprintf( __( 'Permanent link to %s', 'manuscript' ), $post->post_title );
+	$more_copy 		= __( 'Continue Reading', 'manuscript' );
+
+	return " &hellip; </p><p><a href='{$more_url}' title='{$more_title}' class='entry-read-more'>{$more_copy}</a>";
+}	
+add_filter( 'excerpt_more', 'manuscript_excerpt_more' );
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';

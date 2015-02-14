@@ -917,7 +917,8 @@ a:hover, a:active {
 }
 
 .hentry-day {
-  margin-bottom: 6em;
+  margin-top: 10em;
+  margin-bottom: 5em;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 14px;
@@ -941,6 +942,30 @@ a:hover, a:active {
 .entry-meta a {
   color: #6E6E6E;
   font-style: normal;
+}
+
+a.entry-read-more {
+  border: 1px solid #6E6E6E;
+  color: #6E6E6E;
+  font-family: "Montserrat", sans-serif;
+  padding: .9em 2em;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
+  font-size: 12.4px;
+  font-size: 0.775rem;
+  text-decoration: none;
+  margin-top: 1em;
+  display: inline-block;
+  line-height: 1;
+}
+a.entry-read-more:hover {
+  background: #6E6E6E;
+  color: #F5F5F5;
+}
+a.entry-read-more:active {
+  background: #1a1a1a;
 }
 
 .page-content,

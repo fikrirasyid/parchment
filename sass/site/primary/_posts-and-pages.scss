@@ -11,7 +11,8 @@
 }
 
 .hentry-day {
-	margin-bottom: 6em;
+	margin-top: 10em;
+	margin-bottom: 5em;
 	font-weight: 300;
 	text-transform: uppercase;
 	@include font-size( .875 );
@@ -32,6 +33,28 @@
 	a{
 		color: $color__text-main;
 		font-style: normal;
+	}
+}
+
+a.entry-read-more{
+	border: 1px solid $color__text-main;
+	color: $color__text-main;
+	font-family: $font__heading;
+	padding: .9em 2em;
+	@include border-radius( 2em );
+	@include font-size( .775 );
+	text-decoration: none;
+	margin-top: 1em;
+	display: inline-block;
+	line-height: 1;
+	
+	&:hover{
+		background: $color__text-main;
+		color: $color__background-body;
+	}
+
+	&:active{
+		background: $color__link;
 	}
 }
 
