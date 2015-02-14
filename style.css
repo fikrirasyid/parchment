@@ -1476,6 +1476,15 @@ a:hover, a:active {
   left: -25px;
 }
 
+.entry-featured-image {
+  display: block;
+  padding: 10px 10px 8px;
+  background: white;
+  line-height: .9;
+  margin: 20px -10px;
+  box-shadow: 0 2px 2px #c2c2c2;
+}
+
 .entry-title {
   font-size: 20.8px;
   font-size: 1.3rem;

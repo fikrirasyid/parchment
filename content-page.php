@@ -11,6 +11,15 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
+	<?php
+		// Append post thumbnail
+		if( has_post_thumbnail() ){
+			echo sprintf( '<a href="%s" class="entry-featured-image" title="%s">', get_permalink( get_the_ID() ), sprintf( __( 'Permanent link to %s', 'manuscript' ), get_the_title() ) ); 
+			the_post_thumbnail( 'large' );
+			echo '</a>';
+		}
+	?>	
+
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

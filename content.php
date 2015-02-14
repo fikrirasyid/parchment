@@ -8,6 +8,16 @@ get_template_part( 'content', 'hentry-separator' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+	<?php
+		// Append post thumbnail
+		if( has_post_thumbnail() ){
+			echo sprintf( '<a href="%s" class="entry-featured-image" title="%s">', get_permalink( get_the_ID() ), sprintf( __( 'Permanent link to %s', 'manuscript' ), get_the_title() ) ); 
+			the_post_thumbnail( 'large' );
+			echo '</a>';
+		}
+	?>
+
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
