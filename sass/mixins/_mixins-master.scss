@@ -36,6 +36,29 @@
 	box-sizing: $box-model;
 }
 
+// Button inverse
+@mixin button-ghost(){
+	border: 1px solid $color__text-main;
+	color: $color__text-main;
+	font-family: $font__heading;
+	padding: .9em 2em;
+	@include border-radius( 2em );
+	@include font-size( .775 );
+	text-decoration: none;
+	margin-top: 1em;
+	display: inline-block;
+	line-height: 1;
+	
+	&:hover{
+		background: $color__text-main;
+		color: $color__background-body;
+	}
+
+	&:active{
+		background: $color__link;
+	}	
+}
+
 // Layout wrapping
 @mixin wrap( $width ){
 	display: block;

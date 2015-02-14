@@ -1,3 +1,7 @@
+#comments{
+	margin-top: 5em;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
@@ -35,6 +39,45 @@
 }
 
 .comment-list{
+	margin-left: 0;
+	padding-left: 0;
+
+	li.comment{
+		list-style: none;
+		margin-bottom: 4em;
+	}
+
+	.children{
+		margin-top: 4em;
+		padding-left: 0;
+		margin-left: 85px;
+	}
+
+	.says{
+		font-style: italic;
+	}
+
+	.comment-metadata{
+		@include font-size( .815 );
+
+		a{
+			text-decoration: none;
+			color: $color__text-main;
+		}
+	}
+
+	.comment-body{
+		padding-left: 85px;
+		position: relative;
+
+		.avatar{
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include border-radius( 50% );
+		}
+	}
+
 	#respond{
 		padding: 1.5em 0;
 
@@ -50,4 +93,9 @@
 			margin-bottom: 0;
 		}
 	}
+}
+
+a.comment-reply-link{
+	@include button-ghost;
+	padding: .7em 2em;
 }
