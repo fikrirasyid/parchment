@@ -18,6 +18,16 @@
 	@include font-size( .875 );
 	color: $color__text-main;
 	font-family: $font__heading;
+	position: relative;
+
+	&:before{
+		font-family: 'genericons';
+		content: '\f303';
+		font-size: 16px;
+		position: absolute;
+		top: -2px;
+		left: -25px;
+	}
 }
 
 .entry-title{
