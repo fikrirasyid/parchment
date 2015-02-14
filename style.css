@@ -1525,11 +1525,15 @@ a:hover, a:active {
 
 .entry-featured-image {
   display: block;
-  padding: 10px 10px 8px;
+  padding: 10px 10px 9px;
   background: white;
   line-height: .9;
   margin: 20px -10px;
   box-shadow: 0 2px 2px #c2c2c2;
+}
+.entry-featured-image img {
+  display: block;
+  margin: 0 auto;
 }
 
 .entry-title {
