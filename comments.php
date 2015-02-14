@@ -64,6 +64,23 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'manuscript' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php 
+		// Get stored variables
+		$commenter 	= wp_get_current_commenter();
+		$req      	= get_option( 'require_name_email' );
+		$aria_req = ( $req ? " aria-required='true'" : '' );
+
+		comment_form( array(
+			'title_reply'			=> __( 'Share Your Thought', 'manuscript' ),
+			'comment_notes_before'	=> false,
+			'comment_notes_after' 	=> false,
+			'comment_field'        	=> '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-describedby="form-allowed-tags" aria-required="true" placeholder="'. __( 'Type your comment', 'manuscript' ) .'"></textarea></p>',
+			'fields'				=> array(
+				'author' => '<p class="comment-form-author"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' placeholder="'. __( "Your Name", "manuscript" ) .'" /></p>',
+				'email'  => '<p class="comment-form-email"><input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . ' placeholder="'. __( "Your Email", "manuscript" ) .'" /></p>',
+				'url'    => '<p class="comment-form-url"><label for="url"><input id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" placeholder="'. __( "Your URL", "manuscript" ) .'" /></p>',				
+			)	
+		) ); 
+	?>
 
 </div><!-- #comments -->

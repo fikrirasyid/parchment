@@ -4,3 +4,50 @@
 .bypostauthor {
 	display: block;
 }
+
+#respond{
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url{
+		display: inline-block;
+		width: 195px;
+		margin-top: 0;
+		margin-left: 14px;
+		margin-bottom: 2px;
+
+		input{
+			width: 100%;
+		}
+	}
+
+	.comment-form-author{
+		margin-left: 0;
+	}
+
+	.comment-form-comment{
+		margin-bottom: 20px;
+	}
+}
+
+#comment{
+	display: block;
+	width: 100%;
+}
+
+.comment-list{
+	#respond{
+		padding: 1.5em 0;
+
+		.comment-form-author,
+		.comment-form-email,
+		.comment-form-url{
+			width: 100%;
+			margin-left: 0;
+			margin-bottom: 14px;
+		}		
+
+		.comment-form-url{
+			margin-bottom: 0;
+		}
+	}
+}
