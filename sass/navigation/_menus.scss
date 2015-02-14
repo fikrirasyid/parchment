@@ -91,6 +91,14 @@
 
 	a{
 		position: relative;
+
+		&:hover{
+			opacity: .6;
+		}
+
+		&:active{
+			opacity: .8;
+		}
 	}
 
 	& .nav-previous {

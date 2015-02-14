@@ -1310,6 +1310,16 @@ a:hover, a:active {
 .post-navigation a {
   position: relative;
 }
+.comment-navigation a:hover,
+.posts-navigation a:hover,
+.post-navigation a:hover {
+  opacity: .6;
+}
+.comment-navigation a:active,
+.posts-navigation a:active,
+.post-navigation a:active {
+  opacity: .8;
+}
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
