@@ -530,6 +530,29 @@ html {
 body {
   background: #F5F5F5;
   /* Fallback for when there is no custom background color defined. */
+  position: relative;
+}
+body:after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 150px;
+  background: -moz-linear-gradient(top, transparent 0%, #F5F5F5 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(100%, #F5F5F5));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, transparent 0%, #F5F5F5 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, transparent 0%, #F5F5F5 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, transparent 0%, #F5F5F5 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, transparent 0%, #F5F5F5 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+  /* IE6-9 */
 }
 
 blockquote, q {
