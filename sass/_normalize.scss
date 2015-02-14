@@ -1,7 +1,7 @@
 html {
-	font-family: sans-serif;
+	font-family: $font__main;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
+	-ms-text-size-adjust:     100%;	
 }
 
 body {
@@ -102,7 +102,7 @@ svg:not(:root) {
 }
 
 figure {
-	margin: 1em 40px;
+	margin: 0;
 }
 
 hr {

@@ -6,6 +6,7 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
 $color__text-input: #666;
+$color__text-heading: darken( $color__text-input, 11% );
 $color__text-input-focus: #111;
 $color__text-main: #6E6E6E;
 $color__link: darken( $color__text-main, 33% ); // #1E1E1E

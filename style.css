@@ -45,7 +45,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 1.0 Normalize
 --------------------------------------------------------------*/
 html {
-  font-family: sans-serif;
+  font-family: "Vollkorn", "Georgia", serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -148,7 +148,7 @@ svg:not(:root) {
 }
 
 figure {
-  margin: 1em 40px;
+  margin: 0;
 }
 
 hr {
@@ -269,7 +269,7 @@ input,
 select,
 textarea {
   color: #6E6E6E;
-  font-family: sans-serif;
+  font-family: "Vollkorn", "Georgia", serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -277,54 +277,240 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  color: #1a1a1a;
 }
 
-p {
-  margin-bottom: 1.5em;
+.comment-body,
+.entry-content {
+  line-height: 1.7;
 }
-
-dfn, cite, em, i {
+.comment-body h1,
+.entry-content h1 {
+  font-size: 38.4px;
+  font-size: 2.4rem;
+  color: #4a4a4a;
+  line-height: 1.2;
+  margin-top: 2em;
+  margin-bottom: .5em;
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+.comment-body h2,
+.entry-content h2 {
+  font-size: 30.4px;
+  font-size: 1.9rem;
+  color: #4a4a4a;
+  line-height: 1.3;
+  margin-top: 2em;
+  margin-bottom: .5em;
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.comment-body h3,
+.entry-content h3 {
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  color: #4a4a4a;
+  line-height: 1.3;
+  margin-top: 2em;
+  margin-bottom: .5em;
+  font-style: italic;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.comment-body h4,
+.entry-content h4 {
+  font-weight: 300;
+  color: #4a4a4a;
+  line-height: 1.4;
+  margin-top: .4em;
+  margin-bottom: .5em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.comment-body p,
+.entry-content p {
+  margin-top: .2em;
+  margin-bottom: 1em;
+}
+.comment-body a,
+.entry-content a {
+  text-decoration: underline;
+}
+.comment-body b, .comment-body strong,
+.entry-content b,
+.entry-content strong {
+  font-weight: 700;
+  color: #4a4a4a;
+}
+.comment-body dfn, .comment-body cite, .comment-body em, .comment-body i,
+.entry-content dfn,
+.entry-content cite,
+.entry-content em,
+.entry-content i {
   font-style: italic;
 }
-
-blockquote {
-  margin: 0 1.5em;
+.comment-body blockquote,
+.entry-content blockquote {
+  margin: 1.5em 0;
+  padding: .7em 1.2em;
+  font-weight: 300;
+  color: #aeaeae;
+  line-height: 1.6;
+  border-left: 2px solid #c2c2c2;
+  font-size: 16px;
+  font-size: 1rem;
 }
-
-address {
-  margin: 0 0 1.5em;
+.comment-body blockquote p:first-child,
+.entry-content blockquote p:first-child {
+  margin-top: 0;
 }
-
-pre {
+.comment-body blockquote p:last-child,
+.entry-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+.comment-body address,
+.entry-content address {
+  margin: 0 0 1em;
+  font-style: italic;
+  line-height: 1.4;
+  color: #4a4a4a;
+}
+.comment-body pre,
+.entry-content pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
   padding: 1.6em;
 }
-
-code, kbd, tt, var {
+.comment-body code, .comment-body kbd, .comment-body tt, .comment-body var,
+.entry-content code,
+.entry-content kbd,
+.entry-content tt,
+.entry-content var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  color: #4a4a4a;
 }
-
-abbr, acronym {
-  border-bottom: 1px dotted #666;
+.comment-body code,
+.entry-content code {
+  background: #FAFAFA;
+  padding: 0 3px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.comment-body pre code,
+.entry-content pre code {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.comment-body abbr, .comment-body acronym,
+.entry-content abbr,
+.entry-content acronym {
+  border-bottom: 1px dotted #FAFAFA;
   cursor: help;
 }
-
-mark, ins {
+.comment-body mark, .comment-body ins,
+.entry-content mark,
+.entry-content ins {
   background: #fff9c0;
   text-decoration: none;
 }
-
-big {
+.comment-body sup,
+.comment-body sub,
+.entry-content sup,
+.entry-content sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.comment-body sup,
+.entry-content sup {
+  bottom: 1ex;
+}
+.comment-body sub,
+.entry-content sub {
+  top: .5ex;
+}
+.comment-body small,
+.entry-content small {
+  font-size: 75%;
+}
+.comment-body big,
+.entry-content big {
   font-size: 125%;
+}
+.comment-body ul, .comment-body ol,
+.entry-content ul,
+.entry-content ol {
+  margin-left: 0;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.comment-body ul ul, .comment-body ul ol, .comment-body ol ul, .comment-body ol ol,
+.entry-content ul ul,
+.entry-content ul ol,
+.entry-content ol ul,
+.entry-content ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.comment-body ul > li,
+.entry-content ul > li {
+  list-style: disc;
+}
+.comment-body ol > li,
+.entry-content ol > li {
+  list-style: decimal;
+}
+.comment-body table,
+.entry-content table {
+  border-top: 1px solid #d4d4d4;
+  margin: 2em 0;
+}
+.comment-body table thead td,
+.entry-content table thead td {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  background: white;
+}
+.comment-body table tr td, .comment-body table th td,
+.entry-content table tr td,
+.entry-content table th td {
+  border-bottom: 1px solid #d4d4d4;
+  padding: .7em .7em .65em;
+  font-size: .9em;
+  line-height: 1.4;
+}
+.comment-body .post-password-form,
+.entry-content .post-password-form {
+  margin-top: 1em;
+}
+.comment-body .post-password-form label,
+.entry-content .post-password-form label {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.comment-body .post-password-form input[type="password"],
+.entry-content .post-password-form input[type="password"] {
+  margin-bottom: 1em;
+  margin-right: 1em;
+  display: block;
+  width: 80%;
 }
 
 /*--------------------------------------------------------------
@@ -405,34 +591,33 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
+  border: none;
+  background: #1a1a1a;
+  color: white;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-size: 0.75rem;
-  line-height: 1;
-  padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  padding: .75em 3.5em;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
 }
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+  background: #333333;
 }
-button:active, button:focus,
-input[type="button"]:active,
+button:focus, button:active,
 input[type="button"]:focus,
-input[type="reset"]:active,
+input[type="button"]:active,
 input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-  border-color: #aaa #bbb #bbb;
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+input[type="reset"]:active,
+input[type="submit"]:focus,
+input[type="submit"]:active {
+  outline: none;
+  background: black;
 }
 
 input[type="text"],
@@ -475,6 +660,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
   color: #1a1a1a;
+  text-decoration: none;
 }
 a:focus {
   outline: thin dotted;
@@ -662,24 +848,76 @@ a:hover, a:active {
 10.0 Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+10.0 Header
+--------------------------------------------------------------*/
+#masthead {
+  display: block;
+  width: 620px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 140px 0;
+}
+
+.site-title {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 28.8px;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.site-description {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+#primary {
+  display: block;
+  width: 620px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .sticky {
   display: block;
 }
 
 .hentry {
-  margin: 0 0 1.5em;
+  margin-bottom: 6em;
 }
 
-.byline,
-.updated:not(.published) {
-  display: none;
+.hentry-day {
+  margin-bottom: 6em;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #6E6E6E;
+  font-family: "Montserrat", sans-serif;
 }
 
-.single .byline,
-.group-blog .byline {
-  display: inline;
+.entry-title {
+  font-size: 20.8px;
+  font-size: 1.3rem;
+  margin-bottom: .25em;
+}
+
+.entry-meta {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #6E6E6E;
+  font-style: italic;
+}
+.entry-meta a {
+  color: #6E6E6E;
+  font-style: normal;
 }
 
 .page-content,
@@ -764,13 +1002,25 @@ object {
 
 .wp-caption-text {
   text-align: center;
+  font-size: 12.8px;
+  font-size: 0.8rem;
+  padding: .4em;
+  line-height: 1.3;
+  color: #a1a1a1;
 }
 
 /*--------------------------------------------------------------
 12.2 Galleries
 --------------------------------------------------------------*/
 .gallery {
-  margin-bottom: 1.5em;
+  margin: 2em 0;
+}
+.gallery .gallery-icon > a {
+  display: block;
+  line-height: .8;
+}
+.gallery figure {
+  margin: 0;
 }
 
 .gallery-item {
@@ -806,4 +1056,39 @@ object {
 
 .gallery-caption {
   display: block;
+}
+
+/*--------------------------------------------------------------
+13.0 Plugins
+--------------------------------------------------------------*/
+.entry-content hr.footnotes {
+  display: none;
+}
+.entry-content ol.footnotes {
+  font-size: 13.6px;
+  font-size: 0.85rem;
+  opacity: .7;
+  position: relative;
+  margin-top: 3em;
+  padding-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 0;
+}
+.entry-content ol.footnotes:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 65%;
+  height: 1px;
+  background: gainsboro;
+}
+.entry-content ol.footnotes li {
+  margin-bottom: .3em;
+}
+.entry-content ol.footnotes li p {
+  margin: 0 0 1em;
+}
+.entry-content ol.footnotes li p:last-child {
+  margin-bottom: 0;
 }

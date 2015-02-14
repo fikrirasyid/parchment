@@ -2,6 +2,9 @@
 /**
  * @package Manuscript
  */
+
+// hentry separator
+get_template_part( 'content', 'hentry-separator' ); 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -31,8 +34,4 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php manuscript_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

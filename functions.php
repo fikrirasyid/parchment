@@ -100,6 +100,8 @@ add_action( 'widgets_init', 'manuscript_widgets_init' );
  * Enqueue scripts and styles.
  */
 function manuscript_scripts() {
+    wp_enqueue_style( 'manuscript-google-fonts', '//fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700|Montserrat:400,700' );
+
 	wp_enqueue_style( 'manuscript-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'manuscript-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );

@@ -1,0 +1,19 @@
+#masthead{
+	@include wrap( 620px );
+	padding: 140px 0;
+}
+
+.site-title{
+	text-transform: uppercase;
+	font-family: $font__heading;
+	font-weight: 700;
+	@include font-size( 1.8 );
+	margin: 0;
+}
+
+.site-description{
+	margin: 0;
+	color: $color__link;
+	@include font-size( 1 );
+	font-weight: 400;
+}

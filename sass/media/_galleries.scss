@@ -1,5 +1,14 @@
 .gallery {
-	margin-bottom: 1.5em;
+	margin: 2em 0;
+
+	.gallery-icon > a{
+		display: block;
+		line-height: .8;
+	}
+
+	figure{
+		margin: 0;
+	}
 }
 
 .gallery-item {
