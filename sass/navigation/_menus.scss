@@ -80,20 +80,57 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
+	font-family: $font__heading;
+	text-transform: uppercase;
+	@include font-size( .9 );
 
 	.site-main & {
 		margin: 0 0 1.5em;
 		overflow: hidden;
 	}
 
+	a{
+		position: relative;
+	}
+
 	& .nav-previous {
 		float: left;
 		width: 50%;
+
+		a{
+			padding-left: 30px;
+
+			&:before{
+				font-size: 32px;
+				font-family: 'genericons';
+				content: '\f430';
+				position: absolute;
+				top: -14px;
+				left: -5px;
+			}
+		}
 	}
 
 	& .nav-next {
 		float: right;
 		text-align: right;
 		width: 50%;
+
+		a{
+			padding-right: 30px;
+
+			&:after{
+				font-size: 32px;
+				font-family: 'genericons';
+				content: '\f429';
+				position: absolute;
+				top: -16px;
+				right: -5px;
+			}
+		}
 	}
+}
+
+.posts-navigation{
+	padding-bottom: 200px;
 }

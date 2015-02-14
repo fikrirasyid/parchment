@@ -1291,11 +1291,24 @@ a:hover, a:active {
     display: none;
   }
 }
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+}
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
+}
+.comment-navigation a,
+.posts-navigation a,
+.post-navigation a {
+  position: relative;
 }
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
@@ -1303,12 +1316,46 @@ a:hover, a:active {
   float: left;
   width: 50%;
 }
+.comment-navigation .nav-previous a,
+.posts-navigation .nav-previous a,
+.post-navigation .nav-previous a {
+  padding-left: 30px;
+}
+.comment-navigation .nav-previous a:before,
+.posts-navigation .nav-previous a:before,
+.post-navigation .nav-previous a:before {
+  font-size: 32px;
+  font-family: 'genericons';
+  content: '\f430';
+  position: absolute;
+  top: -14px;
+  left: -5px;
+}
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
   float: right;
   text-align: right;
   width: 50%;
+}
+.comment-navigation .nav-next a,
+.posts-navigation .nav-next a,
+.post-navigation .nav-next a {
+  padding-right: 30px;
+}
+.comment-navigation .nav-next a:after,
+.posts-navigation .nav-next a:after,
+.post-navigation .nav-next a:after {
+  font-size: 32px;
+  font-family: 'genericons';
+  content: '\f429';
+  position: absolute;
+  top: -16px;
+  right: -5px;
+}
+
+.posts-navigation {
+  padding-bottom: 200px;
 }
 
 /*--------------------------------------------------------------
@@ -1535,6 +1582,10 @@ a.entry-read-more:active {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+#secondary {
+  display: none;
 }
 
 /*--------------------------------------------------------------
