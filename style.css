@@ -1961,6 +1961,29 @@ a.entry-read-more:active {
   display: block;
   margin-bottom: 3em;
 }
+.entry-footer .post-edit-link {
+  border: 1px solid #6E6E6E;
+  color: #6E6E6E;
+  font-family: "Montserrat", sans-serif;
+  padding: .9em 2em;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
+  font-size: 12.4px;
+  font-size: 0.775rem;
+  text-decoration: none;
+  margin-top: 1em;
+  display: inline-block;
+  line-height: 1;
+}
+.entry-footer .post-edit-link:hover {
+  background: #6E6E6E;
+  color: #F5F5F5;
+}
+.entry-footer .post-edit-link:active {
+  background: #1a1a1a;
+}
 
 .cat-links,
 .tags-links {

@@ -146,6 +146,10 @@ a.entry-read-more{
 		display: block;
 		margin-bottom: 3em;
 	}
+
+	.post-edit-link{
+		@include button-ghost;
+	}
 }
 
 .cat-links,
