@@ -1641,6 +1641,7 @@ a.entry-read-more:active {
 --------------------------------------------------------------*/
 #comments {
   margin-top: 5em;
+  margin-bottom: 5em;
 }
 
 .comment-content a {
@@ -1757,6 +1758,7 @@ a.comment-reply-link:active {
 10.4 Footer
 --------------------------------------------------------------*/
 #colophon {
+  margin-top: 2em;
   text-align: center;
   font-size: 14px;
   font-size: 0.875rem;
