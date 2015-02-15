@@ -1590,6 +1590,48 @@ a.entry-read-more:active {
   margin: 0 0 1.5em;
 }
 
+.entry-footer {
+  display: block;
+  margin-top: 4em;
+  position: relative;
+}
+
+.cat-links,
+.tags-links {
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+.cat-links .label,
+.tags-links .label {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 110px;
+  position: relative;
+}
+.cat-links .label:before,
+.tags-links .label:before {
+  font-family: 'genericons';
+  font-size: 16px;
+  position: absolute;
+  top: -1px;
+  left: -23px;
+}
+.cat-links a,
+.tags-links a {
+  text-decoration: underline;
+}
+
+.cat-links .label:before {
+  content: '\f301';
+}
+
+.tags-links .label:before {
+  content: '\f302';
+}
+
 #secondary {
   display: none;
 }

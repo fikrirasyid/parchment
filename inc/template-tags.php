@@ -90,13 +90,13 @@ function manuscript_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'manuscript' ) );
 		if ( $categories_list && manuscript_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'manuscript' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . __( '<span class="label">Posted in</span> %1$s', 'manuscript' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'manuscript' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'manuscript' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( '<span class="label">Tagged</span> %1$s', 'manuscript' ) . '</span>', $tags_list );
 		}
 	}
 
