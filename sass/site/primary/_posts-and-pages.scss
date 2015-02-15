@@ -5,6 +5,7 @@
 .page-title{
 	margin-bottom: 0;
 	position: relative;
+	line-height: 1.2;
 	
 	&:before{
 		font-size: 32px;
@@ -49,6 +50,15 @@ body{
 	}
 }
 
+.rtl{
+	.page-title{
+		&:before{
+			left: auto;
+			right: -40px;
+		}
+	}
+}
+
 .taxonomy-description{
 	p{
 		margin-top:0;
@@ -80,6 +90,15 @@ body{
 		position: absolute;
 		top: -2px;
 		left: -25px;
+	}
+}
+
+.rtl{
+	.hentry-day{
+		&:before{
+			left: auto;
+			right: -25px;
+		}
 	}
 }
 
@@ -197,6 +216,18 @@ a.entry-read-more{
 	}
 }
 
+.rtl{
+	.cat-links,
+	.tags-links{
+		.label{
+			&:before{
+				left: auto;
+				right: -23px;
+			}
+		}
+	}
+}
+
 /**
 * Mobile adjustment
 */
@@ -234,5 +265,28 @@ a.entry-read-more{
 	.cat-links,
 	.tags-links{
 		margin-left: 22px;
+	}
+
+	body.rtl{
+		&.category,
+		&.tag,
+		&.date,
+		&.search{
+			.page-title{
+				margin-left: 0;
+				margin-right: 35px;
+			}
+		}
+
+		.hentry-day{
+			margin-left: 0;
+			margin-right: 22px;
+		}
+
+		.cat-links,
+		.tags-links{
+			margin-left: 0;
+			margin-right: 22px;
+		}
 	}
 }

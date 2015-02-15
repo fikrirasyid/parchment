@@ -235,3 +235,13 @@
 .entry-content{
 	@include copy;	
 }
+
+.rtl{
+	.comment-body,
+	.entry-content{
+		blockquote{
+			border-left: none;			
+			border-right: 2px solid darken( $color__background-body, 20% );			
+		}
+	}	
+}

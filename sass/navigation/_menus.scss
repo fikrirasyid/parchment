@@ -95,6 +95,7 @@
 
 	a{
 		position: relative;
+		display: block;
 		@include hover-ux();
 	}
 
@@ -130,6 +131,16 @@
 			}
 		}
 	}
+}
+
+.rtl{
+	.comment-navigation,
+	.posts-navigation,
+	.post-navigation{
+		.nav-previous{
+			text-align: left;
+		}
+	}	
 }
 
 /**

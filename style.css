@@ -1166,6 +1166,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 80%;
 }
 
+.rtl .comment-body blockquote,
+.rtl .entry-content blockquote {
+  border-left: none;
+  border-right: 2px solid #c2c2c2;
+}
+
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
@@ -1419,6 +1425,7 @@ a:hover, a:active {
 .posts-navigation a,
 .post-navigation a {
   position: relative;
+  display: block;
 }
 .comment-navigation a:hover,
 .posts-navigation a:hover,
@@ -1462,6 +1469,12 @@ a:hover, a:active {
   position: absolute;
   top: -16px;
   right: -45px;
+}
+
+.rtl .comment-navigation .nav-previous,
+.rtl .posts-navigation .nav-previous,
+.rtl .post-navigation .nav-previous {
+  text-align: left;
 }
 
 /**
@@ -1602,6 +1615,11 @@ a:hover, a:active {
   top: 47px;
 }
 
+.rtl #toggle-drawer {
+  left: auto;
+  right: 15px;
+}
+
 #drawer {
   position: relative;
   z-index: 60;
@@ -1663,6 +1681,7 @@ a:hover, a:active {
 .drawer-content .drawer-navigation ul {
   margin: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 .drawer-content .drawer-navigation li {
   list-style: none;
@@ -1693,6 +1712,27 @@ a:hover, a:active {
   border-bottom: 1px solid gainsboro;
 }
 
+.rtl .drawer-content .drawer-header {
+  padding-right: 54px;
+  padding-left: 15px;
+}
+.rtl .drawer-content .drawer-header .toggle-button {
+  left: auto;
+  right: 19px;
+}
+.rtl .drawer-content .drawer-navigation {
+  padding-right: 50px;
+  padding-left: 15px;
+}
+.rtl .drawer-content .drawer-navigation .children {
+  padding-left: 0;
+  padding-right: 15px;
+}
+.rtl .drawer-content .drawer-widgets .widget {
+  padding-right: 50px;
+  padding-left: 25px;
+}
+
 .drawer-overlay {
   content: '';
   position: fixed;
@@ -1710,6 +1750,7 @@ a:hover, a:active {
 .widget ul, .widget ol {
   margin: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 .widget ul li, .widget ol li {
   list-style: none;
@@ -1804,6 +1845,10 @@ body.admin-bar.scrolling .drawer-content {
     width: auto;
     right: 40px;
   }
+  body.admin-bar.rtl .drawer-content {
+    right: 0;
+    left: 40px;
+  }
 }
 @media screen and (max-width: 601px) {
   body.admin-bar #toggle-drawer {
@@ -1875,6 +1920,7 @@ body.admin-bar.scrolling .drawer-content {
 .page-title {
   margin-bottom: 0;
   position: relative;
+  line-height: 1.2;
 }
 .page-title:before {
   font-size: 32px;
@@ -1895,6 +1941,11 @@ body.date .page-title:before {
 }
 body.search .page-title:before {
   content: '\f400';
+}
+
+.rtl .page-title:before {
+  left: auto;
+  right: -40px;
 }
 
 .taxonomy-description p {
@@ -1927,6 +1978,11 @@ body.search .page-title:before {
   position: absolute;
   top: -2px;
   left: -25px;
+}
+
+.rtl .hentry-day:before {
+  left: auto;
+  right: -25px;
 }
 
 .entry-featured-image {
@@ -2088,6 +2144,12 @@ a.entry-read-more:active {
   content: '\f302';
 }
 
+.rtl .cat-links .label:before,
+.rtl .tags-links .label:before {
+  left: auto;
+  right: -23px;
+}
+
 /**
 * Mobile adjustment
 */
@@ -2121,6 +2183,20 @@ a.entry-read-more:active {
   .cat-links,
   .tags-links {
     margin-left: 22px;
+  }
+
+  body.rtl.category .page-title, body.rtl.tag .page-title, body.rtl.date .page-title, body.rtl.search .page-title {
+    margin-left: 0;
+    margin-right: 35px;
+  }
+  body.rtl .hentry-day {
+    margin-left: 0;
+    margin-right: 22px;
+  }
+  body.rtl .cat-links,
+  body.rtl .tags-links {
+    margin-left: 0;
+    margin-right: 22px;
   }
 }
 /*--------------------------------------------------------------
@@ -2223,6 +2299,7 @@ a.entry-read-more:active {
 .comment-list {
   margin-left: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 .comment-list li.comment {
   list-style: none;
@@ -2231,6 +2308,7 @@ a.entry-read-more:active {
 .comment-list .children {
   margin-top: 4em;
   padding-left: 0;
+  padding-right: 0;
   margin-left: 85px;
 }
 .comment-list .says {
@@ -2294,6 +2372,23 @@ a.comment-reply-link:hover {
 }
 a.comment-reply-link:active {
   background: #1a1a1a;
+}
+
+.rtl .comment-list .comment-body {
+  padding-left: 0;
+  padding-right: 85px;
+}
+.rtl .comment-list .comment-body .avatar {
+  left: auto;
+  right: 0;
+}
+.rtl .comment-list .children {
+  margin-left: 0;
+  margin-right: 85px;
+}
+.rtl #cancel-comment-reply-link {
+  right: auto;
+  left: 0;
 }
 
 /**
