@@ -177,13 +177,17 @@ a.entry-read-more{
 	display: block;
 	@include font-size( .875 );
 	margin-bottom: 10px;
+	position: relative;
+	padding-left: 110px;
 
 	.label{
 		font-family: $font__heading;
 		text-transform: uppercase;
 		display: inline-block;
 		width: 110px;
-		position: relative;
+		position: absolute;
+		top: 0;
+		left: 0;
 
 		&:before{
 			font-family: 'genericons';			
@@ -219,7 +223,13 @@ a.entry-read-more{
 .rtl{
 	.cat-links,
 	.tags-links{
+		padding-left: 0;
+		padding-right: 110px;
+		
 		.label{
+			left: auto;
+			right: 0;
+
 			&:before{
 				left: auto;
 				right: -23px;

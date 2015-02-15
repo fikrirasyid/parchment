@@ -2106,6 +2106,8 @@ a.entry-read-more:active {
   font-size: 14px;
   font-size: 0.875rem;
   margin-bottom: 10px;
+  position: relative;
+  padding-left: 110px;
 }
 .cat-links .label,
 .tags-links .label {
@@ -2113,7 +2115,9 @@ a.entry-read-more:active {
   text-transform: uppercase;
   display: inline-block;
   width: 110px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .cat-links .label:before,
 .tags-links .label:before {
@@ -2144,6 +2148,16 @@ a.entry-read-more:active {
   content: '\f302';
 }
 
+.rtl .cat-links,
+.rtl .tags-links {
+  padding-left: 0;
+  padding-right: 110px;
+}
+.rtl .cat-links .label,
+.rtl .tags-links .label {
+  left: auto;
+  right: 0;
+}
 .rtl .cat-links .label:before,
 .rtl .tags-links .label:before {
   left: auto;
