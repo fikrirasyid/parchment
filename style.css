@@ -1443,6 +1443,12 @@ a:hover, a:active {
   float: left;
   width: 50%;
 }
+.comment-navigation .nav-previous a,
+.posts-navigation .nav-previous a,
+.post-navigation .nav-previous a {
+  padding-right: 10px;
+  display: block;
+}
 .comment-navigation .nav-previous a:before,
 .posts-navigation .nav-previous a:before,
 .post-navigation .nav-previous a:before {
@@ -1459,6 +1465,12 @@ a:hover, a:active {
   float: right;
   text-align: right;
   width: 50%;
+}
+.comment-navigation .nav-next a,
+.posts-navigation .nav-next a,
+.post-navigation .nav-next a {
+  padding-left: 10px;
+  display: block;
 }
 .comment-navigation .nav-next a:after,
 .posts-navigation .nav-next a:after,
@@ -1493,18 +1505,6 @@ a:hover, a:active {
   .post-navigation .nav-next a:before,
   .post-navigation .nav-next a:after {
     display: none;
-  }
-  .comment-navigation .nav-previous a,
-  .posts-navigation .nav-previous a,
-  .post-navigation .nav-previous a {
-    padding-right: 10px;
-    display: block;
-  }
-  .comment-navigation .nav-next a,
-  .posts-navigation .nav-next a,
-  .post-navigation .nav-next a {
-    padding-left: 10px;
-    display: block;
   }
 }
 /*--------------------------------------------------------------

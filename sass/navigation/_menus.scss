@@ -104,6 +104,9 @@
 		width: 50%;
 
 		a{
+			padding-right: 10px;
+			display: block;
+
 			&:before{
 				font-size: 32px;
 				font-family: 'genericons';
@@ -121,6 +124,9 @@
 		width: 50%;
 
 		a{
+			padding-left: 10px;
+			display: block;
+
 			&:after{
 				font-size: 32px;
 				font-family: 'genericons';
@@ -157,20 +163,6 @@
 				&:after{
 					display: none;
 				}
-			}
-		}
-
-		.nav-previous{
-			a{
-				padding-right: 10px;
-				display: block;
-			}
-		}
-
-		.nav-next{
-			a{
-				padding-left: 10px;
-				display: block;
 			}
 		}
 	}
