@@ -1720,6 +1720,19 @@ a.comment-reply-link:active {
 }
 
 /*--------------------------------------------------------------
+10.4 Footer
+--------------------------------------------------------------*/
+#colophon {
+  text-align: center;
+  font-size: 14px;
+  font-size: 0.875rem;
+  padding-bottom: 10em;
+}
+#colophon a {
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
