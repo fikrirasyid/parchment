@@ -1568,6 +1568,10 @@ a:hover, a:active {
   display: none;
 }
 
+.admin-bar #toggle-drawer {
+  top: 47px;
+}
+
 #drawer {
   position: relative;
   z-index: 60;
@@ -1749,7 +1753,7 @@ a:hover, a:active {
 }
 
 body.admin-bar .drawer-content {
-  top: 46px;
+  top: 32px;
 }
 body.admin-bar.scrolling .drawer-content {
   top: 0;
