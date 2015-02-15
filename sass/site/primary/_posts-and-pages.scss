@@ -2,6 +2,59 @@
 	@include wrap( 620px );
 }
 
+.page-title{
+	margin-bottom: 0;
+	position: relative;
+	
+	&:before{
+		font-size: 32px;
+		font-family: 'genericons';	
+		position: absolute;
+		top: 0;
+		left: -40px;
+	}
+}
+
+body{
+	&.category{
+		.page-title{
+			&:before{
+				content: '\f301';
+			}
+		}
+	}
+
+	&.tag{
+		.page-title{
+			&:before{
+				content: '\f302';
+			}
+		}
+	}
+
+	&.date{
+		.page-title{
+			&:before{
+				content: '\f303';
+			}
+		}
+	}
+
+	&.search{
+		.page-title{
+			&:before{
+				content: '\f400';
+			}
+		}
+	}
+}
+
+.taxonomy-description{
+	p{
+		margin-top:0;
+	}
+}
+
 .sticky {
 	display: block;
 }
