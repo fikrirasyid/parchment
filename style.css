@@ -1804,6 +1804,17 @@ body.admin-bar.scrolling .drawer-content {
   font-weight: 400;
 }
 
+/**
+* Mobile adjustment
+*/
+@media screen and (max-width: 640px) {
+  #masthead {
+    display: block;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
@@ -2029,6 +2040,26 @@ a.entry-read-more:active {
   content: '\f302';
 }
 
+/**
+* Mobile adjustment
+*/
+@media screen and (max-width: 640px) {
+  #primary {
+    display: block;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .entry-featured-image {
+    display: block;
+    padding: 0;
+    background: white;
+    line-height: .9;
+    margin: 20px 0%;
+    box-shadow: 0 2px 2px #c2c2c2;
+  }
+}
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/

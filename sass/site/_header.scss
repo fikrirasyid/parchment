@@ -21,3 +21,12 @@
 	@include font-size( 1 );
 	font-weight: 400;
 }
+
+/**
+* Mobile adjustment
+*/
+@media screen and ( max-width: 640px ){
+	#masthead{
+		@include wrap( 90% );
+	}
+}
