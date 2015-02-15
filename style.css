@@ -1484,6 +1484,12 @@ a:hover, a:active {
   font-size: 1.8rem;
   margin: 0;
 }
+.site-title a:hover {
+  opacity: .6;
+}
+.site-title a:active {
+  opacity: .8;
+}
 
 .site-description {
   margin: 0;
@@ -1566,6 +1572,12 @@ a:hover, a:active {
 .entry-meta a {
   color: #6E6E6E;
   font-style: normal;
+}
+.entry-meta a:hover {
+  opacity: .6;
+}
+.entry-meta a:active {
+  opacity: .8;
 }
 
 a.entry-read-more {

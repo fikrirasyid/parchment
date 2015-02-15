@@ -9,6 +9,10 @@
 	font-weight: 700;
 	@include font-size( 1.8 );
 	margin: 0;
+
+	a{
+		@include hover-ux();
+	}
 }
 
 .site-description{

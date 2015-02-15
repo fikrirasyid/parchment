@@ -62,6 +62,7 @@
 	a{
 		color: $color__text-main;
 		font-style: normal;
+		@include hover-ux();
 	}
 }
 
