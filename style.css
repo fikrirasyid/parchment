@@ -1547,19 +1547,222 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 9.0 Widgets
 --------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */
+/**
+* Drawer
+*/
+#toggle-drawer {
+  font-size: 16px;
+  padding: 10px 20px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  color: #6E6E6E;
 }
-.widget select {
-  max-width: 100%;
+#toggle-drawer:hover {
+  opacity: .6;
+}
+#toggle-drawer:active {
+  opacity: .8;
+}
+#toggle-drawer .label {
+  display: none;
 }
 
-/* Search widget. */
+#drawer {
+  position: relative;
+  z-index: 60;
+  display: none;
+}
+
+.drawer-content {
+  position: fixed;
+  top: 0;
+  right: 40px;
+  bottom: 0;
+  left: -100%;
+  background: white;
+  box-shadow: 1px 0 10px gainsboro;
+  z-index: 70;
+  overflow-y: auto;
+  right: auto;
+  width: 320px;
+}
+.drawer-content .drawer-header {
+  padding: 21px 15px 21px 54px;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  color: #1a1a1a;
+  border-bottom: 1px solid gainsboro;
+  position: relative;
+  font-weight: 300;
+}
+.drawer-content .drawer-header .site-name {
+  line-height: 1;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.drawer-content .drawer-header .toggle-button {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+  font-size: 16px;
+  margin-top: -8px;
+}
+.drawer-content .drawer-header .toggle-button:hover {
+  opacity: .6;
+}
+.drawer-content .drawer-header .toggle-button:active {
+  opacity: .8;
+}
+.drawer-content .drawer-header .toggle-button .label {
+  display: none;
+}
+.drawer-content .drawer-navigation {
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 15px 15px 15px 50px;
+  border-bottom: 1px solid gainsboro;
+  line-height: 1.8;
+}
+.drawer-content .drawer-navigation ul {
+  margin: 0;
+  padding-left: 0;
+}
+.drawer-content .drawer-navigation li {
+  list-style: none;
+  padding: 2px 0;
+}
+.drawer-content .drawer-navigation li.page_item_has_children {
+  padding-bottom: 0;
+}
+.drawer-content .drawer-navigation .children {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin-left: 15px;
+  padding-top: 2px;
+  line-height: 2;
+}
+.drawer-content .drawer-navigation .children li {
+  list-style: disc;
+}
+.drawer-content .drawer-navigation a:hover {
+  opacity: .6;
+}
+.drawer-content .drawer-navigation a:active {
+  opacity: .8;
+}
+.drawer-content .drawer-widgets .widget {
+  padding: 15px 25px 15px 50px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.drawer-overlay {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #F5F5F5;
+  opacity: .9;
+}
+
+.widget {
+  line-height: 1.2;
+}
+.widget ul, .widget ol {
+  margin: 0;
+  padding-left: 0;
+}
+.widget ul li, .widget ol li {
+  list-style: none;
+  padding: 5px 0;
+}
+.widget .widgettitle,
+.widget .widget-title {
+  font-size: 16px;
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.widget a {
+  text-decoration: none;
+}
+.widget a:hover {
+  opacity: .6;
+}
+.widget a:active {
+  opacity: .8;
+}
+.widget select {
+  width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-field {
+  box-sizing: border-box;
+  width: 100%;
+}
 .widget_search .search-submit {
   display: none;
 }
 
+/* List widget */
+.widget_recent_entries li a:before,
+.widget_pages li a:before,
+.widget_meta li a:before,
+.widget_nav_menu li a:before {
+  right: -25px;
+}
+
+/* RSS Widget */
+.widget_rss li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.widget_rss li .rsswidget:after {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 1px;
+  background: #bbbbbb;
+  vertical-align: middle;
+  margin: -2px 5px 0;
+}
+.widget_rss .rss-date,
+.widget_rss .rssSummary {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #d4d4d4;
+}
+.widget_rss cite {
+  font-style: normal;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #999;
+}
+
+body.admin-bar .drawer-content {
+  top: 46px;
+}
+body.admin-bar.scrolling .drawer-content {
+  top: 0;
+}
+
+/**
+* Admin bar large mobile screen adjustment
+*/
+@media screen and (min-width: 601px) {
+  body.admin-bar.scrolling .drawer-content {
+    top: 46px;
+  }
+}
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -1797,10 +2000,6 @@ a.entry-read-more:active {
 
 .tags-links .label:before {
   content: '\f302';
-}
-
-#secondary {
-  display: none;
 }
 
 /*--------------------------------------------------------------
