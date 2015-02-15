@@ -1848,6 +1848,39 @@ a.entry-read-more:active {
   margin-bottom: 20px;
 }
 
+#reply-title {
+  position: relative;
+}
+
+#cancel-comment-reply-link {
+  font-weight: 300;
+  border: 1px solid #6E6E6E;
+  color: #6E6E6E;
+  font-family: "Montserrat", sans-serif;
+  padding: .9em 2em;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
+  font-size: 12.4px;
+  font-size: 0.775rem;
+  text-decoration: none;
+  margin-top: 1em;
+  display: inline-block;
+  line-height: 1;
+  padding: .6em 1.2em;
+  position: absolute;
+  top: -12px;
+  right: 0;
+}
+#cancel-comment-reply-link:hover {
+  background: #6E6E6E;
+  color: #F5F5F5;
+}
+#cancel-comment-reply-link:active {
+  background: #1a1a1a;
+}
+
 #comment {
   display: block;
   width: 100%;

@@ -34,6 +34,19 @@
 	}
 }
 
+#reply-title{
+	position: relative;
+}
+
+#cancel-comment-reply-link{
+	font-weight: 300;
+	@include button-ghost;
+	padding: .6em 1.2em;
+	position: absolute;
+	top: -12px;
+	right: 0;
+}
+
 #comment{
 	display: block;
 	width: 100%;
