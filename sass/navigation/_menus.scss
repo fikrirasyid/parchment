@@ -83,10 +83,14 @@
 	font-family: $font__heading;
 	text-transform: uppercase;
 	@include font-size( .9 );
+	@include clearfix;
+	width: 100%;
+	margin-bottom: 6em;
 
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
+	.nav-links{
+		display: block;
+		width: 100%;
+		@include clearfix;
 	}
 
 	a{
@@ -106,15 +110,13 @@
 		width: 50%;
 
 		a{
-			padding-left: 30px;
-
 			&:before{
 				font-size: 32px;
 				font-family: 'genericons';
 				content: '\f430';
 				position: absolute;
 				top: -14px;
-				left: -5px;
+				left: -45px;
 			}
 		}
 	}
@@ -125,20 +127,14 @@
 		width: 50%;
 
 		a{
-			padding-right: 30px;
-
 			&:after{
 				font-size: 32px;
 				font-family: 'genericons';
 				content: '\f429';
 				position: absolute;
 				top: -16px;
-				right: -5px;
+				right: -45px;
 			}
 		}
 	}
-}
-
-.posts-navigation{
-	padding-bottom: 200px;
 }

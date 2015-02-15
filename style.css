@@ -1289,12 +1289,18 @@ a:hover, a:active {
   text-transform: uppercase;
   font-size: 14.4px;
   font-size: 0.9rem;
+  content: "";
+  display: table;
+  width: 100%;
+  margin-bottom: 6em;
 }
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
+.comment-navigation .nav-links,
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
+  display: block;
+  width: 100%;
+  content: "";
+  display: table;
 }
 .comment-navigation a,
 .posts-navigation a,
@@ -1317,11 +1323,6 @@ a:hover, a:active {
   float: left;
   width: 50%;
 }
-.comment-navigation .nav-previous a,
-.posts-navigation .nav-previous a,
-.post-navigation .nav-previous a {
-  padding-left: 30px;
-}
 .comment-navigation .nav-previous a:before,
 .posts-navigation .nav-previous a:before,
 .post-navigation .nav-previous a:before {
@@ -1330,7 +1331,7 @@ a:hover, a:active {
   content: '\f430';
   position: absolute;
   top: -14px;
-  left: -5px;
+  left: -45px;
 }
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
@@ -1338,11 +1339,6 @@ a:hover, a:active {
   float: right;
   text-align: right;
   width: 50%;
-}
-.comment-navigation .nav-next a,
-.posts-navigation .nav-next a,
-.post-navigation .nav-next a {
-  padding-right: 30px;
 }
 .comment-navigation .nav-next a:after,
 .posts-navigation .nav-next a:after,
@@ -1352,11 +1348,7 @@ a:hover, a:active {
   content: '\f429';
   position: absolute;
   top: -16px;
-  right: -5px;
-}
-
-.posts-navigation {
-  padding-bottom: 200px;
+  right: -45px;
 }
 
 /*--------------------------------------------------------------
