@@ -59,6 +59,17 @@
 	}	
 }
 
+// Hover UX
+@mixin hover-ux(){
+	&:hover{
+		opacity: .6;
+	}
+
+	&:active{
+		opacity: .8;
+	}	
+}
+
 // Layout wrapping
 @mixin wrap( $width ){
 	display: block;

@@ -58,6 +58,7 @@
 
 	a {
 		text-decoration: underline;
+		@include hover-ux();
 	}
 
 	b, strong {

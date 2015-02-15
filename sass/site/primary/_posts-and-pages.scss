@@ -48,6 +48,10 @@
 .entry-title{
 	@include font-size( 1.3 );
 	margin-bottom: .25em;
+
+	a{
+		@include hover-ux();
+	}
 }
 
 .entry-meta{
@@ -80,15 +84,6 @@ a.entry-read-more{
 	display: block;
 	margin-top: 4em;
 	position: relative;
-	
-	// &:before{
-	// 	content: '';
-	// 	width: 150px;
-	// 	height: 2px;
-	// 	display: block;
-	// 	background: darken( $color__background-body, 15% );
-	// 	margin: 0 auto 3em;
-	// }
 }
 
 .cat-links,
@@ -115,6 +110,7 @@ a.entry-read-more{
 
 	a{
 		text-decoration: underline;
+		@include hover-ux;
 	}
 }
 

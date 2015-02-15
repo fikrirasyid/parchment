@@ -6,5 +6,6 @@
 
 	a{
 		text-decoration: underline;
+		@include hover-ux();
 	}
 }

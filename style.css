@@ -880,6 +880,14 @@ h1, h2, h3, h4, h5, h6 {
 .entry-content a {
   text-decoration: underline;
 }
+.comment-body a:hover,
+.entry-content a:hover {
+  opacity: .6;
+}
+.comment-body a:active,
+.entry-content a:active {
+  opacity: .8;
+}
 .comment-body b, .comment-body strong,
 .entry-content b,
 .entry-content strong {
@@ -1542,6 +1550,12 @@ a:hover, a:active {
   font-size: 1.3rem;
   margin-bottom: .25em;
 }
+.entry-title a:hover {
+  opacity: .6;
+}
+.entry-title a:active {
+  opacity: .8;
+}
 
 .entry-meta {
   font-size: 14px;
@@ -1621,6 +1635,14 @@ a.entry-read-more:active {
 .cat-links a,
 .tags-links a {
   text-decoration: underline;
+}
+.cat-links a:hover,
+.tags-links a:hover {
+  opacity: .6;
+}
+.cat-links a:active,
+.tags-links a:active {
+  opacity: .8;
 }
 
 .cat-links .label:before {
@@ -1773,6 +1795,12 @@ a.comment-reply-link:active {
 }
 #colophon a {
   text-decoration: underline;
+}
+#colophon a:hover {
+  opacity: .6;
+}
+#colophon a:active {
+  opacity: .8;
 }
 
 /*--------------------------------------------------------------
