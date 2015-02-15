@@ -1819,6 +1819,12 @@ a.entry-read-more:active {
   margin-bottom: 5em;
 }
 
+.comments-title {
+  font-size: 20.8px;
+  font-size: 1.3rem;
+  margin-bottom: 1.3em;
+}
+
 .comment-content a {
   word-wrap: break-word;
 }
@@ -1850,6 +1856,8 @@ a.entry-read-more:active {
 
 #reply-title {
   position: relative;
+  font-size: 20.8px;
+  font-size: 1.3rem;
 }
 
 #cancel-comment-reply-link {

@@ -3,6 +3,11 @@
 	margin-bottom: 5em;
 }
 
+.comments-title{
+	@include font-size( 1.3 );
+	margin-bottom: 1.3em;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
@@ -36,6 +41,7 @@
 
 #reply-title{
 	position: relative;
+	@include font-size( 1.3 );
 }
 
 #cancel-comment-reply-link{
