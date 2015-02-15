@@ -30,14 +30,12 @@
 .drawer-content{
 	position: fixed;
 	top: 0;
-	right: 40px;
 	bottom: 0;
 	left: -100%;
 	background: lighten( $color__background-body, 10% );
 	box-shadow: 1px 0 10px darken( $color__background-body, 10% );
 	z-index: 70;
 	overflow-y: auto;
-
 	right: auto;
 	width: 320px;
 
@@ -234,15 +232,37 @@ body{
 }
 
 /**
-* Admin bar large mobile screen adjustment
+* Mobile Admin Bar Adjustment
 */
-@media screen and ( min-width: 601px ){
+@media screen and ( max-width: 783px ){
 	body{
 		&.admin-bar{
-			&.scrolling{
-				.drawer-content{
-					top: 46px;
-				}
+			#toggle-drawer{
+				top: 61px;
+				padding: 10px;
+				background: $color__background-body;
+				z-index: 10;
+				border: 1px solid darken( $color__background-body, 20% );				
+			}
+
+			.drawer-content{
+				top: 47px;
+				width: auto;
+				right: 40px;
+			}
+		}
+	}
+}
+
+@media screen and ( max-width: 601px ){
+	body{
+		&.admin-bar{
+			#toggle-drawer{
+				top: 15px;
+			}
+
+			.drawer-content{
+				top: 0;
 			}
 		}
 	}

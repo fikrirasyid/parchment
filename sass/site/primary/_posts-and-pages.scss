@@ -101,6 +101,7 @@ body{
 .entry-title{
 	@include font-size( 1.3 );
 	margin-bottom: .25em;
+	line-height: 1.2;
 
 	a{
 		@include hover-ux();
@@ -199,11 +200,27 @@ a.entry-read-more{
 /**
 * Mobile adjustment
 */
-@media screen and ( max-width: 640px ){
+@media screen and ( max-width: $size__breakpoint-mobile ){
 	#primary{
 		@include wrap( 90% );
 	}
 
+	body{
+		&.category,
+		&.tag,
+		&.date,
+		&.search{
+			.page-title{
+				margin-left: 35px;
+			}
+		}
+	}
+	
+	.hentry-day{
+		margin-top: 6em;
+		margin-bottom: 3em;
+		margin-left: 22px;
+	}
 
 	.entry-featured-image{
 		display: block;
@@ -212,5 +229,10 @@ a.entry-read-more{
 		line-height: .9;
 		margin: 20px 0%;
 		box-shadow: 0 2px 2px darken( $color__background-body, 20% );
+	}
+
+	.cat-links,
+	.tags-links{
+		margin-left: 22px;
 	}
 }

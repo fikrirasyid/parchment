@@ -1464,6 +1464,36 @@ a:hover, a:active {
   right: -45px;
 }
 
+/**
+* Mobile adjustment
+*/
+@media screen and (max-width: 640px) {
+  .comment-navigation .nav-previous a:before, .comment-navigation .nav-previous a:after,
+  .comment-navigation .nav-next a:before,
+  .comment-navigation .nav-next a:after,
+  .posts-navigation .nav-previous a:before,
+  .posts-navigation .nav-previous a:after,
+  .posts-navigation .nav-next a:before,
+  .posts-navigation .nav-next a:after,
+  .post-navigation .nav-previous a:before,
+  .post-navigation .nav-previous a:after,
+  .post-navigation .nav-next a:before,
+  .post-navigation .nav-next a:after {
+    display: none;
+  }
+  .comment-navigation .nav-previous a,
+  .posts-navigation .nav-previous a,
+  .post-navigation .nav-previous a {
+    padding-right: 10px;
+    display: block;
+  }
+  .comment-navigation .nav-next a,
+  .posts-navigation .nav-next a,
+  .post-navigation .nav-next a {
+    padding-left: 10px;
+    display: block;
+  }
+}
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
@@ -1581,7 +1611,6 @@ a:hover, a:active {
 .drawer-content {
   position: fixed;
   top: 0;
-  right: 40px;
   bottom: 0;
   left: -100%;
   background: white;
@@ -1760,11 +1789,28 @@ body.admin-bar.scrolling .drawer-content {
 }
 
 /**
-* Admin bar large mobile screen adjustment
+* Mobile Admin Bar Adjustment
 */
-@media screen and (min-width: 601px) {
-  body.admin-bar.scrolling .drawer-content {
-    top: 46px;
+@media screen and (max-width: 783px) {
+  body.admin-bar #toggle-drawer {
+    top: 61px;
+    padding: 10px;
+    background: #F5F5F5;
+    z-index: 10;
+    border: 1px solid #c2c2c2;
+  }
+  body.admin-bar .drawer-content {
+    top: 47px;
+    width: auto;
+    right: 40px;
+  }
+}
+@media screen and (max-width: 601px) {
+  body.admin-bar #toggle-drawer {
+    top: 15px;
+  }
+  body.admin-bar .drawer-content {
+    top: 0;
   }
 }
 /*--------------------------------------------------------------
@@ -1813,6 +1859,7 @@ body.admin-bar.scrolling .drawer-content {
     width: 90%;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 60px;
   }
 }
 /*--------------------------------------------------------------
@@ -1900,6 +1947,7 @@ body.search .page-title:before {
   font-size: 20.8px;
   font-size: 1.3rem;
   margin-bottom: .25em;
+  line-height: 1.2;
 }
 .entry-title a:hover {
   opacity: .6;
@@ -2051,6 +2099,16 @@ a.entry-read-more:active {
     margin-left: auto;
   }
 
+  body.category .page-title, body.tag .page-title, body.date .page-title, body.search .page-title {
+    margin-left: 35px;
+  }
+
+  .hentry-day {
+    margin-top: 6em;
+    margin-bottom: 3em;
+    margin-left: 22px;
+  }
+
   .entry-featured-image {
     display: block;
     padding: 0;
@@ -2058,6 +2116,11 @@ a.entry-read-more:active {
     line-height: .9;
     margin: 20px 0%;
     box-shadow: 0 2px 2px #c2c2c2;
+  }
+
+  .cat-links,
+  .tags-links {
+    margin-left: 22px;
   }
 }
 /*--------------------------------------------------------------
@@ -2109,6 +2172,12 @@ a.entry-read-more:active {
 }
 #respond .comment-form-comment {
   margin-bottom: 20px;
+}
+#respond a:hover {
+  opacity: .6;
+}
+#respond a:active {
+  opacity: .8;
 }
 
 #reply-title {
@@ -2227,6 +2296,47 @@ a.comment-reply-link:active {
   background: #1a1a1a;
 }
 
+/**
+* Mobile adjustment
+*/
+@media screen and (max-width: 640px) {
+  .comment-list .comment-body {
+    padding-left: 60px;
+  }
+  .comment-list .comment-body .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .comment-list .children {
+    margin-left: 60px;
+  }
+
+  #respond .comment-form-author,
+  #respond .comment-form-email,
+  #respond .comment-form-url {
+    margin-left: 0;
+    margin-bottom: 13px;
+    width: 80%;
+  }
+  #respond .comment-form-author input,
+  #respond .comment-form-email input,
+  #respond .comment-form-url input {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  #respond .comment-form-comment {
+    margin-top: 0;
+  }
+  #respond .comment-form-comment textarea {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+
+  #cancel-comment-reply-link {
+    position: relative;
+    margin-top: 3em;
+  }
+}
 /*--------------------------------------------------------------
 10.4 Footer
 --------------------------------------------------------------*/

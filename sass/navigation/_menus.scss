@@ -131,3 +131,36 @@
 		}
 	}
 }
+
+/**
+* Mobile adjustment
+*/
+@media screen and ( max-width: $size__breakpoint-mobile ){
+	.comment-navigation,
+	.posts-navigation,
+	.post-navigation {
+		.nav-previous,
+		.nav-next{
+			a{
+				&:before,
+				&:after{
+					display: none;
+				}
+			}
+		}
+
+		.nav-previous{
+			a{
+				padding-right: 10px;
+				display: block;
+			}
+		}
+
+		.nav-next{
+			a{
+				padding-left: 10px;
+				display: block;
+			}
+		}
+	}
+}

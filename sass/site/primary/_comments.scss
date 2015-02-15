@@ -37,6 +37,10 @@
 	.comment-form-comment{
 		margin-bottom: 20px;
 	}
+
+	a{
+		@include hover-ux();
+	}	
 }
 
 #reply-title{
@@ -118,4 +122,51 @@
 a.comment-reply-link{
 	@include button-ghost;
 	padding: .7em 2em;
+}
+
+/**
+* Mobile adjustment
+*/
+@media screen and ( max-width: $size__breakpoint-mobile ){
+	.comment-list{
+		.comment-body{
+			padding-left: 60px;
+
+			.avatar{
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		.children{
+			margin-left: 60px;
+		}
+	}
+
+	#respond{
+		.comment-form-author,
+		.comment-form-email,
+		.comment-form-url{
+			margin-left: 0;
+			margin-bottom: 13px;
+			width: 80%;
+
+			input{
+				@include font-size( 1 );
+			}
+		}
+
+		.comment-form-comment{
+			margin-top: 0;
+
+			textarea{
+				@include font-size( 1 );
+			}
+		}
+	}
+
+	#cancel-comment-reply-link{
+		position: relative;
+		margin-top: 3em;
+	}
 }
