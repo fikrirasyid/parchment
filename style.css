@@ -2660,3 +2660,29 @@ object {
 .entry-content ol.footnotes a.backlink {
   text-decoration: none;
 }
+
+#infinite-footer {
+  z-index: 20;
+}
+#infinite-footer .container {
+  background: none;
+  border: none;
+  padding: 5px 15px;
+}
+
+.infinite-loader {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.infinite-loader .spinner {
+  left: 50% !important;
+}
+
+/**
+* Mobile adjustment
+*/
+@media screen and (max-width: 640px) {
+  #infinite-footer {
+    padding-top: 40px;
+  }
+}
