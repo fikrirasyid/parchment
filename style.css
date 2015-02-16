@@ -2048,7 +2048,7 @@ body.search .page-title:before {
   opacity: .8;
 }
 
-a.entry-read-more {
+a.more-link {
   border: 1px solid #6E6E6E;
   color: #6E6E6E;
   font-family: "Montserrat", sans-serif;
@@ -2064,11 +2064,11 @@ a.entry-read-more {
   display: inline-block;
   line-height: 1;
 }
-a.entry-read-more:hover {
+a.more-link:hover {
   background: #6E6E6E;
   color: #F5F5F5;
 }
-a.entry-read-more:active {
+a.more-link:active {
   background: #1a1a1a;
 }
 

@@ -30,25 +30,15 @@ get_template_part( 'content', 'hentry-separator' );
 
 	<div class="entry-content">
 		<?php
-			// If it's aside, display all content. Otherwise, excerpt is enough
-			if( 'aside' == get_post_format() ){
-				
-				the_content( sprintf(
-					__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'manuscript' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				) );
+			the_content( sprintf(
+				__( 'Continue Reading', 'manuscript' ),
+				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+			) );
 
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'manuscript' ),
-					'after'  => '</div>',
-				) );
-
-			} else {
-	
-				/* translators: %s: Name of current post */
-				the_excerpt();
-
-			}
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'manuscript' ),
+				'after'  => '</div>',
+			) );
 		?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

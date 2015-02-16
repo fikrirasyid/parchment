@@ -126,7 +126,7 @@ function manuscript_excerpt_more(){
 	$more_title 	= sprintf( __( 'Permanent link to %s', 'manuscript' ), $post->post_title );
 	$more_copy 		= __( 'Continue Reading', 'manuscript' );
 
-	return " &hellip; </p><p><a href='{$more_url}' title='{$more_title}' class='entry-read-more'>{$more_copy}</a>";
+	return " &hellip; </p><p><a href='{$more_url}' title='{$more_title}' class='more-link'>{$more_copy}</a>";
 }	
 add_filter( 'excerpt_more', 'manuscript_excerpt_more' );
 
