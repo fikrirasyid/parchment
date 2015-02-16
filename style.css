@@ -1690,6 +1690,7 @@ a:hover, a:active {
 .drawer-content .drawer-navigation li.page_item_has_children {
   padding-bottom: 0;
 }
+.drawer-content .drawer-navigation .sub-menu,
 .drawer-content .drawer-navigation .children {
   font-size: 14px;
   font-size: 0.875rem;
@@ -1698,6 +1699,7 @@ a:hover, a:active {
   padding-top: 2px;
   line-height: 2;
 }
+.drawer-content .drawer-navigation .sub-menu li,
 .drawer-content .drawer-navigation .children li {
   list-style: disc;
 }
