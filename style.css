@@ -2306,6 +2306,18 @@ a.more-link:active {
 #respond a:active {
   opacity: .8;
 }
+#respond .form-submit {
+  margin-bottom: 40px;
+}
+#respond .comment-subscription-form {
+  margin-top: 0;
+  margin-bottom: .3em;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+#respond .comment-subscription-form input[type="checkbox"] {
+  margin-right: 10px;
+}
 
 #reply-title {
   position: relative;

@@ -40,6 +40,20 @@
 
 	a{
 		@include hover-ux();
+	}
+
+	.form-submit{
+		margin-bottom: 40px;
+	}
+
+	.comment-subscription-form{
+		margin-top: 0;
+		margin-bottom: .3em;
+		@include font-size( .875 );
+
+		input[type="checkbox"]{
+			margin-right: 10px;
+		}
 	}	
 }
 
