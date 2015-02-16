@@ -84,6 +84,30 @@
 	li.comment{
 		list-style: none;
 		margin-bottom: 4em;
+
+		&.bypostauthor{
+
+			> .comment-body{
+				.avatar{
+					border: 3px solid $color__link;
+				}
+
+				.fn{
+					position: relative;
+					padding-right: 22px;
+
+					&:after{
+						font-family: 'genericons';
+						content: '\f411';
+						position: absolute;
+						top: -2px;
+						right: 0;
+						color: $color__link;
+					}
+				}				
+			}
+
+		}
 	}
 
 	.children{

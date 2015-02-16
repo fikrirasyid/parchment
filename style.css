@@ -2368,6 +2368,21 @@ a.more-link:active {
   list-style: none;
   margin-bottom: 4em;
 }
+.comment-list li.comment.bypostauthor > .comment-body .avatar {
+  border: 3px solid #1a1a1a;
+}
+.comment-list li.comment.bypostauthor > .comment-body .fn {
+  position: relative;
+  padding-right: 22px;
+}
+.comment-list li.comment.bypostauthor > .comment-body .fn:after {
+  font-family: 'genericons';
+  content: '\f411';
+  position: absolute;
+  top: -2px;
+  right: 0;
+  color: #1a1a1a;
+}
 .comment-list .children {
   margin-top: 4em;
   padding-left: 0;
