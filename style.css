@@ -2030,6 +2030,15 @@ body.search .page-title:before {
 .entry-title a:active {
   opacity: .8;
 }
+.entry-title .entry-subtitle {
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #6E6E6E;
+  padding-top: 2px;
+  padding-bottom: 10px;
+}
 
 .entry-meta {
   font-size: 14px;

@@ -148,6 +148,15 @@ body{
 	a{
 		@include hover-ux();
 	}
+
+	.entry-subtitle{
+		font-weight: 300;
+		font-family: $font__heading;
+		@include font-size( .875 );
+		color: $color__text-main;
+		padding-top: 2px;
+		padding-bottom: 10px;
+	}
 }
 
 .entry-meta{
