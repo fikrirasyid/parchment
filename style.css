@@ -1833,17 +1833,21 @@ body.admin-bar.scrolling .drawer-content {
 * Mobile Admin Bar Adjustment
 */
 @media screen and (max-width: 783px) {
-  body.admin-bar #toggle-drawer {
-    top: 61px;
+  body #toggle-drawer {
     padding: 10px;
     background: #F5F5F5;
     z-index: 10;
     border: 1px solid #c2c2c2;
   }
-  body.admin-bar .drawer-content {
-    top: 47px;
+  body .drawer-content {
     width: auto;
     right: 40px;
+  }
+  body.admin-bar #toggle-drawer {
+    top: 61px;
+  }
+  body.admin-bar .drawer-content {
+    top: 47px;
   }
   body.admin-bar.rtl .drawer-content {
     right: 0;

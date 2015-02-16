@@ -276,19 +276,25 @@ body{
 */
 @media screen and ( max-width: 783px ){
 	body{
+		#toggle-drawer{
+			padding: 10px;
+			background: $color__background-body;
+			z-index: 10;
+			border: 1px solid darken( $color__background-body, 20% );			
+		}
+
+		.drawer-content{
+			width: auto;
+			right: 40px;			
+		}
+
 		&.admin-bar{
 			#toggle-drawer{
 				top: 61px;
-				padding: 10px;
-				background: $color__background-body;
-				z-index: 10;
-				border: 1px solid darken( $color__background-body, 20% );				
 			}
 
 			.drawer-content{
 				top: 47px;
-				width: auto;
-				right: 40px;
 			}
 
 			&.rtl{
