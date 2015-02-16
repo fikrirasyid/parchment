@@ -1955,6 +1955,16 @@ body.search .page-title:before {
 .sticky {
   display: block;
 }
+.sticky .entry-title {
+  position: relative;
+}
+.sticky .entry-title:before {
+  content: '\f408';
+  font-family: 'genericons';
+  position: absolute;
+  top: -2px;
+  left: -30px;
+}
 
 .hentry {
   margin-bottom: 6em;
@@ -2192,6 +2202,10 @@ a.entry-read-more:active {
     line-height: .9;
     margin: 20px 0%;
     box-shadow: 0 2px 2px #c2c2c2;
+  }
+
+  .sticky .entry-title {
+    margin-left: 30px;
   }
 
   .cat-links,

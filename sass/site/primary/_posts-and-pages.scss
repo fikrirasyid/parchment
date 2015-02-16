@@ -67,6 +67,18 @@ body{
 
 .sticky {
 	display: block;
+
+	.entry-title{
+		position: relative;
+
+		&:before{
+			content: '\f408';
+			font-family: 'genericons';
+			position: absolute;
+			top: -2px;
+			left: -30px;
+		}
+	}
 }
 
 .hentry {
@@ -270,6 +282,12 @@ a.entry-read-more{
 		line-height: .9;
 		margin: 20px 0%;
 		box-shadow: 0 2px 2px darken( $color__background-body, 20% );
+	}
+
+	.sticky{
+		.entry-title{
+			margin-left: 30px;
+		}
 	}
 
 	.cat-links,
