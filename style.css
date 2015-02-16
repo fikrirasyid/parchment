@@ -2680,8 +2680,8 @@ object {
   z-index: 20;
 }
 #infinite-footer .container {
-  background: none;
-  border: none;
+  background: none !important;
+  border: none !important;
   padding: 5px 15px;
 }
 
