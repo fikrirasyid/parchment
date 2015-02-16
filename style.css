@@ -1970,6 +1970,11 @@ body.search .page-title:before {
   left: -30px;
 }
 
+.rtl .sticky .entry-title:before {
+  left: auto;
+  right: -30px;
+}
+
 .hentry {
   margin-bottom: 6em;
 }
@@ -2210,6 +2215,11 @@ a.entry-read-more:active {
 
   .sticky .entry-title {
     margin-left: 30px;
+  }
+
+  .rtl .sticky .entry-title {
+    margin-left: 0;
+    margin-right: 30px;
   }
 
   .cat-links,
