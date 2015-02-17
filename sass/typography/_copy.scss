@@ -1,10 +1,10 @@
 @mixin copy{
-	line-height: 1.7;
+	@include font-size( 1.1 );
+	line-height: 1.8;
 
 	h1{
 		// font-weight: 300;
 		@include font-size( 2.4 );
-		color: $color__text-heading;
 		line-height: 1.2;
 		margin-top: 2em;
 		margin-bottom: .5em;
@@ -18,7 +18,6 @@
 	h2{
 		// font-weight: 300;
 		@include font-size( 1.9 );
-		color: $color__text-heading;
 		line-height: 1.3;
 		margin-top: 2em;
 		margin-bottom: .5em;
@@ -31,7 +30,6 @@
 
 	h3{
 		@include font-size( 1.6 );
-		color: $color__text-heading;
 		line-height: 1.3;
 		margin-top: 2em;
 		margin-bottom: .5em;
@@ -42,7 +40,6 @@
 
 	h4{
 		font-weight: 300;
-		color: $color__text-heading;
 		line-height: 1.4;
 		margin-top: .4em;
 		margin-bottom: .5em;
@@ -77,9 +74,6 @@
 		color: lighten( $color__text_main, 25% );
 		line-height: 1.6;
 		border-left: 2px solid darken( $color__background-body, 20% );
-
-		@include font-size( 1 );
-		// @include font-size-desktop( 2.4 );
 
 		p{
 			&:first-child{

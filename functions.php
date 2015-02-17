@@ -74,6 +74,12 @@ function manuscript_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Adding editor style
+	add_editor_style( array(
+		'//fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700|Montserrat:400,700',
+		'editor.css'
+	) );
 }
 endif; // manuscript_setup
 add_action( 'after_setup_theme', 'manuscript_setup' );
