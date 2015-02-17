@@ -76,6 +76,13 @@ body{
 	margin-bottom: 15em;
 }
 
+.single,
+.page{
+	.hentry {
+		margin-bottom: 10em;
+	}
+}
+
 .hentry-day {
 	margin-top: 10em;
 	margin-bottom: 3em;

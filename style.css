@@ -1936,6 +1936,11 @@ body.search .page-title:before {
   margin-bottom: 15em;
 }
 
+.single .hentry,
+.page .hentry {
+  margin-bottom: 10em;
+}
+
 .hentry-day {
   margin-top: 10em;
   margin-bottom: 3em;
