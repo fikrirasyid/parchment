@@ -25,7 +25,7 @@ get_template_part( 'content', 'hentry-separator' );
 			endif;
 		?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
+		<?php if ( 'post' == get_post_type() && 'aside' != get_post_format() ) : ?>
 		<div class="entry-meta">
 			<?php manuscript_posted_on(); ?>
 		</div><!-- .entry-meta -->
@@ -45,4 +45,10 @@ get_template_part( 'content', 'hentry-separator' );
 			) );
 		?>
 	</div><!-- .entry-content -->
+
+	<?php if ( 'post' == get_post_type() && 'aside' == get_post_format() ) : ?>
+	<div class="entry-meta">
+		<?php manuscript_posted_on(); ?>
+	</div><!-- .entry-meta -->
+	<?php endif; ?>	
 </article><!-- #post-## -->
