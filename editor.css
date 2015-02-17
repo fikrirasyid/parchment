@@ -885,46 +885,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 .comment-body h1,
 .entry-content h1 {
-  font-size: 38.4px;
-  font-size: 2.4rem;
   line-height: 1.2;
   margin-top: 2em;
   margin-bottom: .5em;
   font-weight: 700;
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
 }
 .comment-body h2,
 .entry-content h2 {
-  font-size: 30.4px;
-  font-size: 1.9rem;
   line-height: 1.3;
   margin-top: 2em;
   margin-bottom: .5em;
   font-weight: 700;
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-style: italic;
+  font-size: 22.4px;
+  font-size: 1.4rem;
 }
 .comment-body h3,
 .entry-content h3 {
-  font-size: 25.6px;
-  font-size: 1.6rem;
   line-height: 1.3;
   margin-top: 2em;
-  margin-bottom: .5em;
-  font-style: italic;
-  font-size: 16px;
-  font-size: 1rem;
+  margin-bottom: 1em;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: 1px dotted #b3b3b3;
+  padding-bottom: .3em;
 }
 .comment-body h4,
 .entry-content h4 {
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.5;
   margin-top: .4em;
   margin-bottom: .5em;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 17.6px;
+  font-size: 1.1rem;
 }
 .comment-body p,
 .entry-content p {
@@ -1151,43 +1149,41 @@ body#tinymce {
   background: white;
 }
 body#tinymce h1 {
-  font-size: 38.4px;
-  font-size: 2.4rem;
   line-height: 1.2;
   margin-top: 2em;
   margin-bottom: .5em;
   font-weight: 700;
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
 }
 body#tinymce h2 {
-  font-size: 30.4px;
-  font-size: 1.9rem;
   line-height: 1.3;
   margin-top: 2em;
   margin-bottom: .5em;
   font-weight: 700;
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-style: italic;
+  font-size: 22.4px;
+  font-size: 1.4rem;
 }
 body#tinymce h3 {
-  font-size: 25.6px;
-  font-size: 1.6rem;
   line-height: 1.3;
   margin-top: 2em;
-  margin-bottom: .5em;
-  font-style: italic;
-  font-size: 16px;
-  font-size: 1rem;
+  margin-bottom: 1em;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: 1px dotted #b3b3b3;
+  padding-bottom: .3em;
 }
 body#tinymce h4 {
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.5;
   margin-top: .4em;
   margin-bottom: .5em;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 17.6px;
+  font-size: 1.1rem;
 }
 body#tinymce p {
   margin-top: .2em;
