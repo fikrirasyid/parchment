@@ -19,7 +19,11 @@ get_template_part( 'content', 'hentry-separator' );
 	?>
 
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		<?php 
+			if( ! manuscript_is_auto_hide_title() ) :
+				the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); 
+			endif;
+		?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">

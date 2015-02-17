@@ -252,3 +252,23 @@ function manuscript_category_transient_flusher() {
 }
 add_action( 'edit_category', 'manuscript_category_transient_flusher' );
 add_action( 'save_post',     'manuscript_category_transient_flusher' );
+
+/**
+ * If the first 20 characters of title is equal to the first 20 characters of content, 
+ * there is a chance that the title is generated from content. Auto hide this redundancy
+ * 
+ * @return bool
+ */
+if( ! function_exists( 'manuscript_is_auto_hide_title' ) ) :
+function manuscript_is_auto_hide_title(){
+	global $post;
+
+	if( substr( $post->post_title, 0, 20 ) == substr( strip_tags( $post->post_content ), 0, 20 ) ){
+		$do = true;
+	} else {
+		$do = false;
+	}
+
+	return apply_filters( 'manuscript_is_auto_hide_title', $do, $post );
+}
+endif;
