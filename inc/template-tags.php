@@ -72,15 +72,18 @@ if ( ! function_exists( 'manuscript_posted_on' ) ) :
 function manuscript_posted_on() {
 	$author = get_the_author();
 
-	if( ! $author )
-		return;
+	if( $author ) :
 
-	$byline = sprintf(
-		_x( 'by %s', 'post author', 'manuscript' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( $author ) . '</a></span>'
-	);
+		$byline = sprintf(
+			_x( 'by %s', 'post author', 'manuscript' ),
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( $author ) . '</a></span>'
+		);
 
-	echo '<span class="byline"> ' . $byline . '</span>';
+		echo '<span class="byline"> ' . $byline . '</span> <span class="genericon genericon-dot"></span>';
+
+	endif;
+
+	comments_popup_link( __( 'Add Your Comment', 'manuscript' ) );
 
 }
 endif;

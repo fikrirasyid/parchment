@@ -166,11 +166,19 @@ body{
 .entry-meta{
 	color: lighten( $color__text-main, 20% );
 	font-style: italic;
+	@include font-size( .875 );
 
 	a{
 		color: lighten( $color__text-main, 20% );
 		font-style: normal;
 		@include hover-ux();
+	}
+
+	.genericon-dot{
+		&:before{		
+			line-height: 1.4;
+			margin: 0 1px;
+		}
 	}
 }
 

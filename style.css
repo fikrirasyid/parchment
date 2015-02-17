@@ -2045,6 +2045,8 @@ body.search .page-title:before {
 .entry-meta {
   color: #6e6e6e;
   font-style: italic;
+  font-size: 14px;
+  font-size: 0.875rem;
 }
 .entry-meta a {
   color: #6e6e6e;
@@ -2055,6 +2057,10 @@ body.search .page-title:before {
 }
 .entry-meta a:active {
   opacity: .8;
+}
+.entry-meta .genericon-dot:before {
+  line-height: 1.4;
+  margin: 0 1px;
 }
 
 a.more-link {
