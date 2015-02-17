@@ -1976,12 +1976,12 @@ body.search .page-title:before {
   font-family: 'genericons';
   position: absolute;
   top: -2px;
-  left: -40px;
+  left: -30px;
 }
 
 .rtl .sticky .entry-title:before {
   left: auto;
-  right: -40px;
+  right: -30px;
 }
 
 .hentry {
