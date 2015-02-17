@@ -60,7 +60,6 @@
 
 	b, strong {
 		font-weight: 700;
-		color: $color__text-heading;
 	}
 
 	dfn, cite, em, i {
@@ -90,7 +89,6 @@
 		margin: 0 0 1em;
 		font-style: italic;
 		line-height: 1.4;
-		color: $color__text-heading;
 	}
 
 	pre {
@@ -105,7 +103,6 @@
 
 	code, kbd, tt, var {
 		font-family: $font__code;
-		color: $color__text-heading;
 	}
 
 	code{

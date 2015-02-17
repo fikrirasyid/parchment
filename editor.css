@@ -947,7 +947,6 @@ h1, h2, h3, h4, h5, h6 {
 .entry-content b,
 .entry-content strong {
   font-weight: 700;
-  color: #4a4a4a;
 }
 .comment-body dfn, .comment-body cite, .comment-body em, .comment-body i,
 .entry-content dfn,
@@ -978,7 +977,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1em;
   font-style: italic;
   line-height: 1.4;
-  color: #4a4a4a;
 }
 .comment-body pre,
 .entry-content pre {
@@ -996,7 +994,6 @@ h1, h2, h3, h4, h5, h6 {
 .entry-content tt,
 .entry-content var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  color: #4a4a4a;
 }
 .comment-body code,
 .entry-content code {
@@ -1191,7 +1188,6 @@ body#tinymce a:active {
 }
 body#tinymce b, body#tinymce strong {
   font-weight: 700;
-  color: #4a4a4a;
 }
 body#tinymce dfn, body#tinymce cite, body#tinymce em, body#tinymce i {
   font-style: italic;
@@ -1214,7 +1210,6 @@ body#tinymce address {
   margin: 0 0 1em;
   font-style: italic;
   line-height: 1.4;
-  color: #4a4a4a;
 }
 body#tinymce pre {
   background: #eee;
@@ -1227,7 +1222,6 @@ body#tinymce pre {
 }
 body#tinymce code, body#tinymce kbd, body#tinymce tt, body#tinymce var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  color: #4a4a4a;
 }
 body#tinymce code {
   background: #FAFAFA;
