@@ -1142,6 +1142,22 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .9em;
   line-height: 1.4;
 }
+.comment-body img,
+.entry-content img {
+  padding: 5px 5px 4px;
+  margin: -5px -5px -4px;
+  background: white;
+  line-height: .9;
+  box-shadow: 0 2px 2px #c2c2c2;
+}
+.comment-body img.wp-smiley,
+.entry-content img.wp-smiley {
+  background: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  line-height: 1;
+}
 .comment-body .post-password-form,
 .entry-content .post-password-form {
   margin-top: 1em;
