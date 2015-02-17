@@ -2396,17 +2396,25 @@ a.more-link:active {
   padding-left: 0;
   padding-right: 0;
 }
+.comment-list li.trackback,
+.comment-list li.pingback,
 .comment-list li.comment {
   list-style: none;
   margin-bottom: 4em;
 }
+.comment-list li.trackback.bypostauthor > .comment-body .avatar,
+.comment-list li.pingback.bypostauthor > .comment-body .avatar,
 .comment-list li.comment.bypostauthor > .comment-body .avatar {
   border: 3px solid black;
 }
+.comment-list li.trackback.bypostauthor > .comment-body .fn,
+.comment-list li.pingback.bypostauthor > .comment-body .fn,
 .comment-list li.comment.bypostauthor > .comment-body .fn {
   position: relative;
   padding-right: 22px;
 }
+.comment-list li.trackback.bypostauthor > .comment-body .fn:after,
+.comment-list li.pingback.bypostauthor > .comment-body .fn:after,
 .comment-list li.comment.bypostauthor > .comment-body .fn:after {
   font-family: 'genericons';
   content: '\f411';
@@ -2444,6 +2452,9 @@ a.more-link:active {
   /* stops bg color from leaking outside the border: */
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
 }
 .comment-list #respond {
   padding: 1.5em 0;
@@ -2457,6 +2468,17 @@ a.more-link:active {
 }
 .comment-list #respond .comment-form-url {
   margin-bottom: 0;
+}
+
+li.trackback .comment-body,
+li.pingback .comment-body {
+  padding: .85em 0;
+  font-weight: 700;
+  font-style: italic;
+}
+li.trackback .comment-body a,
+li.pingback .comment-body a {
+  font-weight: 300;
 }
 
 a.comment-reply-link {

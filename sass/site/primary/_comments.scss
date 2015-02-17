@@ -80,7 +80,9 @@
 	margin-left: 0;
 	padding-left: 0;
 	padding-right: 0;
-
+	
+	li.trackback,
+	li.pingback,
 	li.comment{
 		list-style: none;
 		margin-bottom: 4em;
@@ -139,6 +141,9 @@
 			top: 0;
 			left: 0;
 			@include border-radius( 50% );
+			padding: 0;
+			margin: 0;
+			box-shadow: none;
 		}
 	}
 
@@ -155,6 +160,20 @@
 
 		.comment-form-url{
 			margin-bottom: 0;
+		}
+	}
+}
+
+li.trackback,
+li.pingback{
+	.comment-body{
+		padding: .85em 0;
+		font-weight: 700;
+		font-style: italic;
+
+		a{
+			font-weight: 300;
+			// font-style: normal;
 		}
 	}
 }
