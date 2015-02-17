@@ -211,6 +211,13 @@ a.more-link{
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+	font-weight: 700;
+	font-style: italic;
+	letter-spacing: 1px;
+
+	a{
+		opacity: .4;
+	}
 }
 
 .entry-footer{
