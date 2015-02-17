@@ -2620,6 +2620,7 @@ object {
 }
 .gallery figure {
   margin: 0;
+  padding-bottom: 1.5em;
 }
 
 .gallery-item {
