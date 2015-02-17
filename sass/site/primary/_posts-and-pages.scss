@@ -50,15 +50,6 @@ body{
 	}
 }
 
-.rtl{
-	.page-title{
-		&:before{
-			left: auto;
-			right: -40px;
-		}
-	}
-}
-
 .taxonomy-description{
 	p{
 		margin-top:0;
@@ -78,17 +69,6 @@ body{
 			top: -2px;
 			left: -30px;
 		}
-	}
-}
-
-.rtl{
-	.sticky{
-		.entry-title{
-			&:before{
-				left: auto;
-				right: -30px;
-			}
-		}		
 	}
 }
 
@@ -113,15 +93,6 @@ body{
 		position: absolute;
 		top: -2px;
 		left: -25px;
-	}
-}
-
-.rtl{
-	.hentry-day{
-		&:before{
-			left: auto;
-			right: -25px;
-		}
 	}
 }
 
@@ -286,24 +257,6 @@ a.more-link{
 	}
 }
 
-.rtl{
-	.cat-links,
-	.tags-links{
-		padding-left: 0;
-		padding-right: 110px;
-		
-		.label{
-			left: auto;
-			right: 0;
-
-			&:before{
-				left: auto;
-				right: -23px;
-			}
-		}
-	}
-}
-
 /**
 * Mobile adjustment
 */
@@ -344,40 +297,8 @@ a.more-link{
 		}
 	}
 
-	.rtl{
-		.sticky{
-			.entry-title{
-				margin-left: 0;
-				margin-right: 30px;
-			}		
-		}
-	}	
-
 	.cat-links,
 	.tags-links{
 		margin-left: 22px;
-	}
-
-	body.rtl{
-		&.category,
-		&.tag,
-		&.date,
-		&.search{
-			.page-title{
-				margin-left: 0;
-				margin-right: 35px;
-			}
-		}
-
-		.hentry-day{
-			margin-left: 0;
-			margin-right: 22px;
-		}
-
-		.cat-links,
-		.tags-links{
-			margin-left: 0;
-			margin-right: 22px;
-		}
 	}
 }

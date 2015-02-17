@@ -183,30 +183,6 @@ a.comment-reply-link{
 	padding: .7em 2em;
 }
 
-.rtl{
-	.comment-list{
-		.comment-body{
-			padding-left: 0;
-			padding-right: 85px;
-
-			.avatar{
-				left: auto;
-				right: 0;
-			}
-		}
-
-		.children{
-			margin-left: 0;
-			margin-right: 85px;
-		}
-	}
-
-	#cancel-comment-reply-link{
-		right: auto;
-		left: 0;
-	}
-}
-
 /**
 * Mobile adjustment
 */

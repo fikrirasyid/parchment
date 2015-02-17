@@ -1,17 +1,109 @@
-/*
-Theme Name: Manuscript
-
-Adding support for language written in a Right To Left (RTL) direction is easy -
-it's just a matter of overwriting all the horizontal positioning attributes
-of your CSS stylesheet in a separate stylesheet file named rtl.css.
-
-http://codex.wordpress.org/Right_to_Left_Language_Support
-
-*/
-
-/*
-body {
-	direction: rtl;
-	unicode-bidi: embed;
+.rtl .page-title:before {
+  left: auto;
+  right: -40px;
 }
+.rtl .sticky .entry-title:before {
+  left: auto;
+  right: -30px;
+}
+.rtl .hentry-day:before {
+  left: auto;
+  right: -25px;
+}
+.rtl .comment-body blockquote,
+.rtl .entry-content blockquote {
+  border-left: none;
+  border-right: 2px solid #c2c2c2;
+}
+.rtl .cat-links,
+.rtl .tags-links {
+  padding-left: 0;
+  padding-right: 110px;
+}
+.rtl .cat-links .label,
+.rtl .tags-links .label {
+  left: auto;
+  right: 0;
+}
+.rtl .cat-links .label:before,
+.rtl .tags-links .label:before {
+  left: auto;
+  right: -23px;
+}
+.rtl .comment-navigation .nav-previous,
+.rtl .posts-navigation .nav-previous,
+.rtl .post-navigation .nav-previous {
+  text-align: left;
+}
+.rtl .comment-list .comment-body {
+  padding-left: 0;
+  padding-right: 85px;
+}
+.rtl .comment-list .comment-body .avatar {
+  left: auto;
+  right: 0;
+}
+.rtl .comment-list .children {
+  margin-left: 0;
+  margin-right: 85px;
+}
+.rtl #cancel-comment-reply-link {
+  right: auto;
+  left: 0;
+}
+.rtl #toggle-drawer {
+  left: auto;
+  right: 15px;
+}
+.rtl .drawer-content .drawer-header {
+  padding-right: 54px;
+  padding-left: 15px;
+}
+.rtl .drawer-content .drawer-header .toggle-button {
+  left: auto;
+  right: 19px;
+}
+.rtl .drawer-content .drawer-navigation {
+  padding-right: 50px;
+  padding-left: 15px;
+}
+.rtl .drawer-content .drawer-navigation .children {
+  padding-left: 0;
+  padding-right: 15px;
+}
+.rtl .drawer-content .drawer-widgets .widget {
+  padding-right: 50px;
+  padding-left: 25px;
+}
+
+/**
+* Mobile adjustment
 */
+@media screen and (max-width: 640px) {
+  .rtl .sticky .entry-title {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+  .rtl.category .page-title, .rtl.tag .page-title, .rtl.date .page-title, .rtl.search .page-title {
+    margin-left: 0;
+    margin-right: 35px;
+  }
+  .rtl .hentry-day {
+    margin-left: 0;
+    margin-right: 22px;
+  }
+  .rtl .cat-links,
+  .rtl .tags-links {
+    margin-left: 0;
+    margin-right: 22px;
+  }
+}
+/**
+* Mobile Admin Bar Adjustment
+*/
+@media screen and (max-width: 783px) {
+  body.admin-bar.rtl .drawer-content {
+    right: 0;
+    left: 40px;
+  }
+}

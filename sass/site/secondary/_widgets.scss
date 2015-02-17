@@ -21,13 +21,6 @@
 	}
 }
 
-.rtl{
-	#toggle-drawer{	
-		left: auto;
-		right: 15px;
-	}
-}
-
 #drawer{
 	position: relative;
 	z-index: 60;
@@ -120,37 +113,6 @@
 		.widget{
 			padding: 15px 25px 15px 50px;
 			border-bottom: 1px solid darken( $color__background-body, 10% );
-		}
-	}
-}
-
-.rtl{
-	.drawer-content{
-		.drawer-header{
-			padding-right: 54px;
-			padding-left: 15px;
-
-			.toggle-button{
-				left: auto;
-				right: 19px;
-			}
-		}
-
-		.drawer-navigation{
-			padding-right: 50px;
-			padding-left: 15px;
-
-			.children{
-				padding-left: 0;
-				padding-right: 15px;
-			}
-		}
-
-		.drawer-widgets{
-			.widget{
-				padding-right: 50px;
-				padding-left: 25px;
-			}
 		}
 	}
 }
@@ -296,13 +258,6 @@ body{
 
 			.drawer-content{
 				top: 47px;
-			}
-
-			&.rtl{
-				.drawer-content{
-					right: 0;
-					left: 40px;
-				}
 			}
 		}
 	}

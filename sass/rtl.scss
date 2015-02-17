@@ -1,0 +1,165 @@
+@import "variables-site/variables-site";
+
+.rtl{
+	.page-title{
+		&:before{
+			left: auto;
+			right: -40px;
+		}
+	}
+
+	.sticky{
+		.entry-title{
+			&:before{
+				left: auto;
+				right: -30px;
+			}
+		}		
+	}
+
+	.hentry-day{
+		&:before{
+			left: auto;
+			right: -25px;
+		}
+	}
+
+	.comment-body,
+	.entry-content{
+		blockquote{
+			border-left: none;			
+			border-right: 2px solid darken( $color__background-body, 20% );			
+		}
+	}
+
+	.cat-links,
+	.tags-links{
+		padding-left: 0;
+		padding-right: 110px;
+		
+		.label{
+			left: auto;
+			right: 0;
+
+			&:before{
+				left: auto;
+				right: -23px;
+			}
+		}
+	}
+
+	.comment-navigation,
+	.posts-navigation,
+	.post-navigation{
+		.nav-previous{
+			text-align: left;
+		}
+	}	
+
+	.comment-list{
+		.comment-body{
+			padding-left: 0;
+			padding-right: 85px;
+
+			.avatar{
+				left: auto;
+				right: 0;
+			}
+		}
+
+		.children{
+			margin-left: 0;
+			margin-right: 85px;
+		}
+	}
+
+	#cancel-comment-reply-link{
+		right: auto;
+		left: 0;
+	}
+
+	#toggle-drawer{	
+		left: auto;
+		right: 15px;
+	}
+
+	.drawer-content{
+		.drawer-header{
+			padding-right: 54px;
+			padding-left: 15px;
+
+			.toggle-button{
+				left: auto;
+				right: 19px;
+			}
+		}
+
+		.drawer-navigation{
+			padding-right: 50px;
+			padding-left: 15px;
+
+			.children{
+				padding-left: 0;
+				padding-right: 15px;
+			}
+		}
+
+		.drawer-widgets{
+			.widget{
+				padding-right: 50px;
+				padding-left: 25px;
+			}
+		}
+	}	
+}
+
+/**
+* Mobile adjustment
+*/
+@media screen and ( max-width: $size__breakpoint-mobile ){
+
+	.rtl{
+		.sticky{
+			.entry-title{
+				margin-left: 0;
+				margin-right: 30px;
+			}		
+		}
+		
+		&.category,
+		&.tag,
+		&.date,
+		&.search{
+			.page-title{
+				margin-left: 0;
+				margin-right: 35px;
+			}
+		}
+
+		.hentry-day{
+			margin-left: 0;
+			margin-right: 22px;
+		}
+
+		.cat-links,
+		.tags-links{
+			margin-left: 0;
+			margin-right: 22px;
+		}
+	}	
+
+}
+
+/**
+* Mobile Admin Bar Adjustment
+*/
+@media screen and ( max-width: 783px ){
+	body.admin-bar{
+		&.rtl{
+			.drawer-content{
+				right: 0;
+				left: 40px;
+			}
+		}		
+	}
+}

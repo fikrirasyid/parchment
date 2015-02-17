@@ -1173,12 +1173,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 80%;
 }
 
-.rtl .comment-body blockquote,
-.rtl .entry-content blockquote {
-  border-left: none;
-  border-right: 2px solid #c2c2c2;
-}
-
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
@@ -1490,12 +1484,6 @@ a:hover, a:active {
   right: -45px;
 }
 
-.rtl .comment-navigation .nav-previous,
-.rtl .posts-navigation .nav-previous,
-.rtl .post-navigation .nav-previous {
-  text-align: left;
-}
-
 /**
 * Mobile adjustment
 */
@@ -1622,11 +1610,6 @@ a:hover, a:active {
   top: 47px;
 }
 
-.rtl #toggle-drawer {
-  left: auto;
-  right: 15px;
-}
-
 #drawer {
   position: relative;
   z-index: 60;
@@ -1719,27 +1702,6 @@ a:hover, a:active {
 .drawer-content .drawer-widgets .widget {
   padding: 15px 25px 15px 50px;
   border-bottom: 1px solid gainsboro;
-}
-
-.rtl .drawer-content .drawer-header {
-  padding-right: 54px;
-  padding-left: 15px;
-}
-.rtl .drawer-content .drawer-header .toggle-button {
-  left: auto;
-  right: 19px;
-}
-.rtl .drawer-content .drawer-navigation {
-  padding-right: 50px;
-  padding-left: 15px;
-}
-.rtl .drawer-content .drawer-navigation .children {
-  padding-left: 0;
-  padding-right: 15px;
-}
-.rtl .drawer-content .drawer-widgets .widget {
-  padding-right: 50px;
-  padding-left: 25px;
 }
 
 .drawer-overlay {
@@ -1858,10 +1820,6 @@ body.admin-bar.scrolling .drawer-content {
   body.admin-bar .drawer-content {
     top: 47px;
   }
-  body.admin-bar.rtl .drawer-content {
-    right: 0;
-    left: 40px;
-  }
 }
 @media screen and (max-width: 601px) {
   body.admin-bar #toggle-drawer {
@@ -1956,11 +1914,6 @@ body.search .page-title:before {
   content: '\f400';
 }
 
-.rtl .page-title:before {
-  left: auto;
-  right: -40px;
-}
-
 .taxonomy-description p {
   margin-top: 0;
 }
@@ -1977,11 +1930,6 @@ body.search .page-title:before {
   position: absolute;
   top: -2px;
   left: -30px;
-}
-
-.rtl .sticky .entry-title:before {
-  left: auto;
-  right: -30px;
 }
 
 .hentry {
@@ -2006,11 +1954,6 @@ body.search .page-title:before {
   position: absolute;
   top: -2px;
   left: -25px;
-}
-
-.rtl .hentry-day:before {
-  left: auto;
-  right: -25px;
 }
 
 .entry-featured-image {
@@ -2208,22 +2151,6 @@ a.more-link:active {
   content: '\f302';
 }
 
-.rtl .cat-links,
-.rtl .tags-links {
-  padding-left: 0;
-  padding-right: 110px;
-}
-.rtl .cat-links .label,
-.rtl .tags-links .label {
-  left: auto;
-  right: 0;
-}
-.rtl .cat-links .label:before,
-.rtl .tags-links .label:before {
-  left: auto;
-  right: -23px;
-}
-
 /**
 * Mobile adjustment
 */
@@ -2258,28 +2185,9 @@ a.more-link:active {
     margin-left: 30px;
   }
 
-  .rtl .sticky .entry-title {
-    margin-left: 0;
-    margin-right: 30px;
-  }
-
   .cat-links,
   .tags-links {
     margin-left: 22px;
-  }
-
-  body.rtl.category .page-title, body.rtl.tag .page-title, body.rtl.date .page-title, body.rtl.search .page-title {
-    margin-left: 0;
-    margin-right: 35px;
-  }
-  body.rtl .hentry-day {
-    margin-left: 0;
-    margin-right: 22px;
-  }
-  body.rtl .cat-links,
-  body.rtl .tags-links {
-    margin-left: 0;
-    margin-right: 22px;
   }
 }
 /*--------------------------------------------------------------
@@ -2504,23 +2412,6 @@ a.comment-reply-link:hover {
 }
 a.comment-reply-link:active {
   background: black;
-}
-
-.rtl .comment-list .comment-body {
-  padding-left: 0;
-  padding-right: 85px;
-}
-.rtl .comment-list .comment-body .avatar {
-  left: auto;
-  right: 0;
-}
-.rtl .comment-list .children {
-  margin-left: 0;
-  margin-right: 85px;
-}
-.rtl #cancel-comment-reply-link {
-  right: auto;
-  left: 0;
 }
 
 /**
