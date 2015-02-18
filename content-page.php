@@ -13,8 +13,10 @@
 
 	<?php
 		// Append post thumbnail
+		// Use strip tags instead of esc_attr because some plugin such as https://wordpress.org/plugins/subtitles/ 
+		// filters get_the_title() output by adding HTML on it
 		if( has_post_thumbnail() ){
-			echo sprintf( '<a href="%s" class="entry-featured-image" title="%s">', get_permalink( get_the_ID() ), sprintf( __( 'Permanent link to %s', 'manuscript' ), get_the_title() ) ); 
+			echo sprintf( '<a href="%s" class="entry-featured-image" title="%s">', get_permalink( get_the_ID() ), sprintf( __( 'Permanent link to %s', 'manuscript' ), strip_tags( get_the_title() ) ) ); 
 			the_post_thumbnail( 'large' );
 			echo '</a>';
 		}
