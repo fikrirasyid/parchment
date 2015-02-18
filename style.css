@@ -2627,6 +2627,9 @@ object {
   text-decoration: none;
 }
 
+/**
+* Infinite Scroll
+*/
 #infinite-footer {
   z-index: 20;
 }
@@ -2642,6 +2645,13 @@ object {
 }
 .infinite-loader .spinner {
   left: 50% !important;
+}
+
+/**
+* Related Posts
+*/
+.entry-content h3.jp-relatedposts-headline {
+  border-bottom: none;
 }
 
 /**
