@@ -62,7 +62,7 @@
 		margin: 1.5em 0;
 		padding: .7em 1.2em;
 		font-weight: 300;
-		color: lighten( $color__text_main, 25% );
+		color: lighten( $color__text_main, 20% );
 		line-height: 1.6;
 		border-left: 2px solid darken( $color__background-body, 20% );
 
@@ -176,7 +176,7 @@
 	}
 
 	table{
-		border-top: 1px solid lighten( $color__text-main, 40% );
+		border-top: 1px solid lighten( $color__text-main, 30% );
 		margin: 2em 0;
 
 		thead{
@@ -189,7 +189,7 @@
 
 		tr,th{
 			td{
-				border-bottom: 1px solid lighten( $color__text-main, 40% );
+				border-bottom: 1px solid lighten( $color__text-main, 30% );
 				padding: .7em .7em .65em;
 				font-size: .9em;
 				line-height: 1.4;

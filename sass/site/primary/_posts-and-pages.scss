@@ -141,12 +141,12 @@ body{
 }
 
 .entry-meta{
-	color: lighten( $color__text-main, 20% );
+	color: lighten( $color__text-main, 30% );
 	font-style: italic;
 	@include font-size( .875 );
 
 	a{
-		color: lighten( $color__text-main, 20% );
+		color: lighten( $color__text-main, 30% );
 		font-style: normal;
 		@include hover-ux();
 	}

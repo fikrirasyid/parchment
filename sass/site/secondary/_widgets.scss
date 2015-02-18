@@ -209,7 +209,7 @@
 	.rss-date,
 	.rssSummary{
 		@include font-size( .875 );
-		color: lighten( $color__text-main, 40% );
+		color: lighten( $color__text-main, 30% );
 	}
 
 	cite{

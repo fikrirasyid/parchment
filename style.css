@@ -999,7 +999,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1.5em 0;
   padding: .7em 1.2em;
   font-weight: 300;
-  color: #7b7b7b;
+  color: #6e6e6e;
   line-height: 1.6;
   border-left: 2px solid #c2c2c2;
 }
@@ -1123,7 +1123,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .comment-body table,
 .entry-content table {
-  border-top: 1px solid #a1a1a1;
+  border-top: 1px solid #888888;
   margin: 2em 0;
 }
 .comment-body table thead td,
@@ -1135,7 +1135,7 @@ h1, h2, h3, h4, h5, h6 {
 .comment-body table tr td, .comment-body table th td,
 .entry-content table tr td,
 .entry-content table th td {
-  border-bottom: 1px solid #a1a1a1;
+  border-bottom: 1px solid #888888;
   padding: .7em .7em .65em;
   font-size: .9em;
   line-height: 1.4;
@@ -1784,7 +1784,7 @@ a:hover, a:active {
 .widget_rss .rssSummary {
   font-size: 14px;
   font-size: 0.875rem;
-  color: #a1a1a1;
+  color: #888888;
 }
 .widget_rss cite {
   font-style: normal;
@@ -2000,13 +2000,13 @@ body.search .page-title:before {
 }
 
 .entry-meta {
-  color: #6e6e6e;
+  color: #888888;
   font-style: italic;
   font-size: 14px;
   font-size: 0.875rem;
 }
 .entry-meta a {
-  color: #6e6e6e;
+  color: #888888;
   font-style: normal;
 }
 .entry-meta a:hover {
@@ -2536,7 +2536,7 @@ object {
   font-size: 0.8rem;
   padding: .4em;
   line-height: 1.3;
-  color: #6e6e6e;
+  color: #888888;
 }
 
 /*--------------------------------------------------------------
