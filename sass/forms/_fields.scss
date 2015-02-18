@@ -6,12 +6,12 @@ input[type="search"],
 textarea {
 	color: $color__text-input;
 	border: none;
-	border-bottom: 1px solid $color__border-input;
+	border-bottom: 1px solid darken( $color__background-body, 20% );
 	padding: 12px 15px 10px;
 	@include font-size( .875 );
 
 	&:focus {
 		outline: none;
-		color: $color__text-input-focus;
+		color: darken( $color__text-input, 20% );
 	}
 }

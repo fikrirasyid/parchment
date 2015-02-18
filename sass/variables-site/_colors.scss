@@ -5,13 +5,6 @@ $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
-$color__text-input: #666;
-$color__text-input-focus: #111;
-$color__text-main: darken( #6E6E6E, 20% );
+$color__text-main: #3B3B3B;
+$color__text-input: #6E6E6E;
 $color__link: darken( $color__text-main, 33% ); // #1E1E1E
-
-$color__border-button: #ccc #ccc #bbb;
-$color__border-button-hover: #ccc #bbb #aaa;
-$color__border-button-focus: #aaa #bbb #bbb;
-$color__border-input: #ccc;
-$color__border-abbr: #666;
