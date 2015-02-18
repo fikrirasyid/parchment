@@ -12,7 +12,7 @@ body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 	position: relative;
 
-	&:after{
+	&.not-touch-device:after{
 		content: '';
 		position: fixed;
 		bottom: 0;

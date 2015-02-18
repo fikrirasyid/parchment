@@ -1,5 +1,12 @@
 jQuery(document).ready(function($) { 
 	/**
+	* Detect touch device
+	*/
+	if( is_touch_device() == false ){
+		$('body').addClass( 'not-touch-device' );
+	}
+	
+	/**
 	* Civil Footnotes Support
 	* Slide the window instead of jumping it
 	*/
@@ -51,3 +58,11 @@ jQuery(document).ready(function($) {
 		$('body').toggleClass( target_id + '-expanded' );
 	});		
 });
+
+/**
+* Detect touch device
+*/
+function is_touch_device() {
+	return 'ontouchstart' in window // works on most browsers 
+		|| 'onmsgesturechange' in window; // works on ie10
+};

@@ -1192,7 +1192,7 @@ body {
   /* Fallback for when there is no custom background color defined. */
   position: relative;
 }
-body:after {
+body.not-touch-device:after {
   content: '';
   position: fixed;
   bottom: 0;
