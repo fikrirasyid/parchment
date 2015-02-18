@@ -197,22 +197,6 @@
 		}
 	}
 
-	img{
-		padding: 5px 5px 4px;
-		margin: -5px -5px -4px;
-		background: white;
-		line-height: .9;
-		box-shadow: 0 2px 2px darken( $color__background-body, 20% );
-
-		&.wp-smiley{
-			background: none;
-			padding: 0;
-			margin: 0;
-			box-shadow: none;
-			line-height: 1;
-		}
-	}	
-
 	.post-password-form{
 		margin-top: 1em;
 		
@@ -233,4 +217,20 @@
 .comment-body,
 .entry-content{
 	@include copy;	
+
+	img{
+		padding: 5px 5px 4px;
+		margin: -5px -5px -4px;
+		background: white;
+		line-height: .9;
+		box-shadow: 0 2px 2px darken( $color__background-body, 20% );
+		
+		&.wp-smiley{
+			background: none;
+			padding: 0;
+			margin: 0;
+			box-shadow: none;
+			line-height: 1;
+		}
+	}		
 }
