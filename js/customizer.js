@@ -16,21 +16,26 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
-	// Header text color.
-	wp.customize( 'header_textcolor', function( value ) {
+
+	// Background color.
+	wp.customize( 'background_color', function( value ) {
 		value.bind( function( to ) {
-			if ( 'blank' === to ) {
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'rect(1px, 1px, 1px, 1px)',
-					'position': 'absolute'
-				} );
-			} else {
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'auto',
-					'color': to,
-					'position': 'relative'
-				} );
-			}
+						
+			// Updating the color scheme
+			var background_color = to.substr( 1 );
+
+			$.getJSON( manuscript_customizer_params.generate_color_scheme_endpoint, { background_color : background_color }, function( data ){
+				if( true == data.status ){
+					$('body').append( '<style type="text/css" media="screen">'+data.colorscheme+'</style>');
+				} else {
+					alert( manuscript_customizer_params.generate_color_scheme_error_message );
+				}
+			});
 		} );
 	} );
+
+	// Clear temporary settings if customizer is closed
+	window.addEventListener("beforeunload", function (e) {
+		$.post( manuscript_customizer_params.clear_customizer_settings );
+	});	
 } )( jQuery );
