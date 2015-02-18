@@ -18,7 +18,7 @@ body#tinymce{
 	max-width: 660px;
 	@include copy;
 	font-size: 18px;
-	color: darken( $color__text-main, 15% );
+	color: $color__text-main;
 	background: white;
 
 	blockquote{
