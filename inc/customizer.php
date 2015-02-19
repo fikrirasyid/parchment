@@ -53,7 +53,7 @@ function manuscript_customize_preview_js( $wp_customize ) {
 	wp_localize_script( 'manuscript_customizer', 'manuscript_customizer_params', apply_filters( 'manuscript_customizer_params', $manuscript_customizer_params ) );
 
 	// Display color scheme previewer
-	$color_scheme = get_theme_mod( 'color_scheme_customizer', false );
+	$color_scheme = get_theme_mod( 'background_color_scheme_customizer', false );
 
 	if( $color_scheme ){
 		remove_action( 'wp_enqueue_scripts', 'manuscript_color_scheme' );
@@ -226,7 +226,7 @@ function manuscript_generate_customizer_color_scheme(){
 			$css = manuscript_generate_color_scheme_css( $background_color );
 
 			// Set Color Scheme
-			set_theme_mod( 'color_scheme_customizer', $css );
+			set_theme_mod( 'background_color_scheme_customizer', $css );
 
 			$generate = array( 'status' => true, 'colorscheme' => $css );
 
@@ -268,10 +268,10 @@ function manuscript_generate_color_scheme(){
 		}
 
 		// Set Color Scheme
-		set_theme_mod( 'color_scheme', $css );
+		set_theme_mod( 'background_color_scheme', $css );
 
 		// Remove Customizer Color Scheme
-		remove_theme_mod( 'color_scheme_customizer' );
+		remove_theme_mod( 'background_color_scheme_customizer' );
 	}
 
 }
@@ -287,7 +287,7 @@ add_action( 'customize_save_after', 'manuscript_generate_color_scheme' );
 if( ! function_exists( 'manuscript_clear_customizer_settings' ) ) :
 function manuscript_clear_customizer_settings(){
 	if( current_user_can( 'customize' ) ){
-		remove_theme_mod( 'color_scheme_customizer' );		
+		remove_theme_mod( 'background_color_scheme_customizer' );		
 	}
 
 	die();
