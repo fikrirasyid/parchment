@@ -101,107 +101,120 @@ endif;
  * @uses Manuscript_Simple_Color_Adjuster
  */
 if( ! function_exists( 'manuscript_generate_color_scheme_css' ) ) :
-function manuscript_generate_color_scheme_css( $background_color ){
+function manuscript_generate_color_scheme_css( $color, $mode = false ){
 
 	// Verify color
-	if( ! manuscript_sanitize_hex_color( $background_color ) ){
+	if( ! manuscript_sanitize_hex_color( $color ) ){
 		return false;
 	}
 
-	$color = new Manuscript_Simple_Color_Adjuster;
-	$css = "
-		.rtl .entry-content blockquote,
-		.rtl .comment-body blockquote{
-			border-right: 2px solid " . $color->darken( $background_color, 20 ) . ";	
-		}
+	$simple_color_adjuster = new Manuscript_Simple_Color_Adjuster;
 
-		body {
-			background: {$background_color}; /* Fallback for when there is no custom background color defined. */
-			position: relative;
-		}
+	switch ( $mode ) {
+		case 'background_color':
 
-		body.not-touch-device:after{
-			background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, {$background_color} 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,{$background_color})); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,{$background_color} 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,{$background_color} 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,{$background_color} 100%); /* IE10+ */
-			background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,{$background_color} 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */		
-		}
+			$css = "
+				.rtl .entry-content blockquote,
+				.rtl .comment-body blockquote{
+					border-right: 2px solid " . $simple_color_adjuster->darken( $color, 20 ) . ";	
+				}
 
-		input[type='text'],
-		input[type='email'],
-		input[type='url'],
-		input[type='password'],
-		input[type='search'],
-		textarea {
-			border-bottom: 1px solid " . $color->darken( $background_color, 20 ) . ";
-		}
+				body {
+					background: {$color}; /* Fallback for when there is no custom background color defined. */
+					position: relative;
+				}
 
-		.entry-content ol.footnotes:before{
-			background: " . $color->darken( $background_color, 10 ) . ";
-		}
+				body.not-touch-device:after{
+					background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, {$color} 100%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,{$color})); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,{$color} 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,{$color} 100%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,{$color} 100%); /* IE10+ */
+					background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,{$color} 100%); /* W3C */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */		
+				}
 
-		.entry-featured-image{
-			box-shadow: 0 2px 2px " . $color->darken( $background_color, 20 ) . ";
-		}
+				input[type='text'],
+				input[type='email'],
+				input[type='url'],
+				input[type='password'],
+				input[type='search'],
+				textarea {
+					border-bottom: 1px solid " . $simple_color_adjuster->darken( $color, 20 ) . ";
+				}
 
-		@media screen and ( max-width: 640px ){
-			.entry-featured-image{
-				box-shadow: 0 2px 2px " . $color->darken( $background_color, 20 ) . ";
-			}
-		}
+				.entry-content ol.footnotes:before{
+					background: " . $simple_color_adjuster->darken( $color, 10 ) . ";
+				}
 
-		.drawer-content{
-			background: " . $color->lighten( $background_color, 10 ) . ";
-			box-shadow: 1px 0 10px " . $color->darken( $background_color, 10 ) . ";
-		}
+				.entry-featured-image{
+					box-shadow: 0 2px 2px " . $simple_color_adjuster->darken( $color, 20 ) . ";
+				}
 
-		.drawer-content .drawer-header{
-			border-bottom: 1px solid " . $color->darken( $background_color, 10 ) . ";
-		}
+				@media screen and ( max-width: 640px ){
+					.entry-featured-image{
+						box-shadow: 0 2px 2px " . $simple_color_adjuster->darken( $color, 20 ) . ";
+					}
+				}
 
-		.drawer-content .drawer-navigation{
-			border-bottom: 1px solid " . $color->darken( $background_color, 10 ) . ";	
-		}
+				.drawer-content{
+					background: " . $simple_color_adjuster->lighten( $color, 10 ) . ";
+					box-shadow: 1px 0 10px " . $simple_color_adjuster->darken( $color, 10 ) . ";
+				}
 
-		.drawer-content .drawer-widgets .widget{
-			border-bottom: 1px solid " . $color->darken( $background_color, 10 ) . ";	
-		}
+				.drawer-content .drawer-header{
+					border-bottom: 1px solid " . $simple_color_adjuster->darken( $color, 10 ) . ";
+				}
 
-		.drawer-overlay{
-			background: {$background_color};
-		}
+				.drawer-content .drawer-navigation{
+					border-bottom: 1px solid " . $simple_color_adjuster->darken( $color, 10 ) . ";	
+				}
 
-		@media screen and ( max-width: 783px ){
-			body #toggle-drawer{
-				background: {$background_color};
-				border: 1px solid " . $color->darken( $background_color, 20 ) . ";			
-			}
-		}
+				.drawer-content .drawer-widgets .widget{
+					border-bottom: 1px solid " . $simple_color_adjuster->darken( $color, 10 ) . ";	
+				}
 
-		.entry-content blockquote,
-		.comment-body blockquote{
-			border-left: 2px solid " . $color->darken( $background_color, 20 ) . ";	
-		}
+				.drawer-overlay{
+					background: {$color};
+				}
 
-		.entry-content table thead td,
-		.comment-body table thead td{
-			background: " . $color->lighten( $background_color, 5 ) . ";			
-		}
+				@media screen and ( max-width: 783px ){
+					body #toggle-drawer{
+						background: {$color};
+						border: 1px solid " . $simple_color_adjuster->darken( $color, 20 ) . ";			
+					}
+				}
 
-		.comment-body img,
-		.entry-content img{
-			box-shadow: 0 2px 2px " . $color->darken( $background_color, 20 ) . ";
-		}
+				.entry-content blockquote,
+				.comment-body blockquote{
+					border-left: 2px solid " . $simple_color_adjuster->darken( $color, 20 ) . ";	
+				}
 
-		#cancel-comment-reply-link:hover,
-		a.comment-reply-link:hover,
-		a.more-link:hover{
-			color: {$background_color};
-		}
-	";
+				.entry-content table thead td,
+				.comment-body table thead td{
+					background: " . $simple_color_adjuster->lighten( $color, 5 ) . ";			
+				}
+
+				.comment-body img,
+				.entry-content img{
+					box-shadow: 0 2px 2px " . $simple_color_adjuster->darken( $color, 20 ) . ";
+				}
+
+				#cancel-comment-reply-link:hover,
+				a.comment-reply-link:hover,
+				a.more-link:hover{
+					color: {$color};
+				}
+			";
+
+			break;
+		
+		default:
+
+			$css = false;
+
+			break;
+	}
 
 	return $css;
 }
@@ -223,7 +236,7 @@ function manuscript_generate_customizer_color_scheme(){
 			$background_color = '#' . $background_color;
 
 			// Generate color scheme css
-			$css = manuscript_generate_color_scheme_css( $background_color );
+			$css = manuscript_generate_color_scheme_css( $background_color, 'background_color' );
 
 			// Set Color Scheme
 			set_theme_mod( 'background_color_scheme_customizer', $css );
@@ -260,7 +273,7 @@ function manuscript_generate_color_scheme(){
 	if( $background_color ){
 
 		// SCSS template
-		$css = manuscript_generate_color_scheme_css( $background_color );
+		$css = manuscript_generate_color_scheme_css( $background_color, 'background_color' );
 
 		// Bail if color scheme doesn't generate valid CSS
 		if( ! $css ){
