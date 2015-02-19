@@ -15,7 +15,7 @@ function manuscript_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport  = 'postMessage';
 
-	// Adding accent color control
+	// Adding color control
 	$wp_customize->add_setting( 'text_color', array(
 		'default'           => '#3B3B3B',
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -96,14 +96,14 @@ function manuscript_sanitize_hex_color_no_hash( $color ){
 endif;
 
 /**
- * Generate color scheme based on color accent given
+ * Generate color scheme based on color given
  * 
  * @uses Manuscript_Simple_Color_Adjuster
  */
 if( ! function_exists( 'manuscript_generate_color_scheme_css' ) ) :
 function manuscript_generate_color_scheme_css( $background_color ){
 
-	// Verify color accent
+	// Verify color
 	if( ! manuscript_sanitize_hex_color( $background_color ) ){
 		return false;
 	}
@@ -215,7 +215,7 @@ function manuscript_generate_customizer_color_scheme(){
 
 	if( current_user_can( 'customize' ) && isset( $_GET['background_color'] ) && manuscript_sanitize_hex_color_no_hash( $_GET['background_color'] ) ){
 
-		// Get accent color
+		// Get color
 		$background_color = manuscript_sanitize_hex_color_no_hash( $_GET['background_color'] );
 
 		if( $background_color ){
@@ -250,7 +250,7 @@ endif;
 add_action( 'wp_ajax_manuscript_generate_customizer_color_scheme', 'manuscript_generate_customizer_color_scheme' );
 
 /**
- * Generate color scheme based on one accent color choosen by user
+ * Generate color scheme based on color choosen by user
  */
 if ( ! function_exists( 'manuscript_generate_color_scheme' ) ) :
 function manuscript_generate_color_scheme(){
