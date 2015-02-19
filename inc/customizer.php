@@ -19,7 +19,7 @@ function manuscript_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'text_color', array(
 		'default'           => '#3B3B3B',
 		'sanitize_callback' => 'sanitize_hex_color',
-			'transport'			=> 'postMessage'
+		'transport'			=> 'postMessage'
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'text_color', array(
@@ -34,7 +34,7 @@ add_action( 'customize_register', 'manuscript_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function manuscript_customize_preview_js( $wp_customize ) {
-	wp_enqueue_script( 'manuscript_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20150219', true );
+	wp_enqueue_script( 'manuscript_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20150219.1', true );
 
 	// Default params
 	$manuscript_customizer_params = array(
@@ -202,11 +202,160 @@ function manuscript_generate_color_scheme_css( $color, $mode = false ){
 
 				#cancel-comment-reply-link:hover,
 				a.comment-reply-link:hover,
-				a.more-link:hover{
+				a.more-link:hover,,
+				.entry-footer .post-edit-link:hover{
 					color: {$color};
 				}
 			";
 
+			break;
+
+		case 'text_color':
+			$color_link = $simple_color_adjuster->darken( $color, 33 );
+			$css = "
+				.wp-caption-text {
+					color: " . $simple_color_adjuster->lighten( $color, 30 ) .";
+				}
+
+				.comment-list .comment-metadata a{
+					color: {$color};
+				}
+
+				.hentry-day {
+					color: " . $simple_color_adjuster->lighten( $color, 30 ) .";
+				}
+
+				.entry-title .entry-subtitle{
+					color: {$color};
+				}
+
+				.entry-meta{
+					color: " . $simple_color_adjuster->lighten( $color, 30 ) .";
+				}
+
+				.entry-meta a{
+					color: " . $simple_color_adjuster->lighten( $color, 30 ) .";
+				}
+
+				#toggle-drawer{
+					color: {$color};
+				}
+
+				.widget_rss li .rsswidget:after{
+					background: " . $simple_color_adjuster->lighten( $color, 30 ) .";
+				}
+
+				.widget_rss	.rss-date,
+				.widget_rss .rssSummary{
+					color: " . $simple_color_adjuster->lighten( $color, 30 ) .";
+				}
+
+
+				.entry-content blockquote,
+				.comment-body blockquote {
+					color: " . $simple_color_adjuster->lighten( $color, 20 ) .";
+				}
+
+				.entry-content table,
+				.comment-body table{
+					border-top: 1px solid " . $simple_color_adjuster->lighten( $color, 30 ) .";
+				}
+
+				.entry-content table tr td,
+				.comment-body table tr td,
+				.entry-content table th td,
+				.comment-body table th td{
+					border-bottom: 1px solid " . $simple_color_adjuster->lighten( $color, 30 ) .";	
+				}
+
+				body,
+				button,
+				input,
+				select,
+				textarea {
+					color: {$color};
+				}
+
+				#cancel-comment-reply-link,
+				a.comment-reply-link,
+				a.more-link,
+				.entry-footer .post-edit-link{
+					color: {$color};
+					border: 1px solid {$color};
+				}
+
+				#cancel-comment-reply-link:hover,
+				a.comment-reply-link:hover,
+				a.more-link:hover,
+				.entry-footer .post-edit-link:hover{
+					background: {$color};
+				}
+
+				button,
+				input[type='button'],
+				input[type='reset'],
+				input[type='submit'] {
+					background: {$color_link};
+					
+					&:focus,
+					&:active{
+						outline: none;
+						background: " . $simple_color_adjuster->darken( $color_link, 20 ) .";
+					}
+				}
+
+				button:focus,
+				input[type='button']:focus,
+				input[type='reset']:focus,
+				input[type='submit']:focus,
+				button:active,
+				input[type='button']:active,
+				input[type='reset']:active,
+				input[type='submit']:active{
+					background: " . $simple_color_adjuster->lighten( $color_link, 10 ) .";		
+				}
+
+				#cancel-comment-reply-link:active,
+				a.comment-reply-link:active,
+				a.more-link:active,
+				.entry-footer .post-edit-link:active{
+					background: {$color_link};	
+				}
+
+				a {
+					color: {$color_link};
+				}
+
+				.site-description{
+					color: {$color_link};
+				}
+
+				.comment-list li.comment.bypostauthor > .comment-body .avatar{
+					border: 3px solid {$color_link};
+				}
+
+				.comment-list li.comment.bypostauthor > .comment-body .fn:after{
+					color: {$color_link};
+				}
+
+				.drawer-content .drawer-header{
+					color: {$color_link};	
+				}
+
+				.widget .widgettitle,	
+				.widget .widget-title{
+					color: {$color_link};
+				}
+
+				h1, h2, h3, h4, h5, h6 {
+					color: {$color_link};
+				}
+
+				.entry-content h3,
+				.comment-body h3{
+					border-bottom: 1px dotted " . $simple_color_adjuster->lighten( $color_link, 70 ) .";	
+				}
+			";
 			break;
 		
 		default:
@@ -248,6 +397,30 @@ function manuscript_generate_customizer_color_scheme(){
 			$generate = array( 'status' => false, 'colorscheme' => false );
 
 		}
+
+	} elseif( current_user_can( 'customize' ) && isset( $_GET['text_color'] ) && manuscript_sanitize_hex_color_no_hash( $_GET['text_color'] ) ){
+
+		// Get color
+		$text_color = manuscript_sanitize_hex_color_no_hash( $_GET['text_color'] );
+
+		if( $text_color ){
+
+			$text_color = '#' . $text_color;
+
+			// Generate color scheme css
+			$css = manuscript_generate_color_scheme_css( $text_color, 'text_color' );
+
+			// Set Color Scheme
+			set_theme_mod( 'text_color_scheme_customizer', $css );
+
+			$generate = array( 'status' => true, 'colorscheme' => $css );
+
+		} else {
+
+			$generate = array( 'status' => false, 'colorscheme' => false );
+
+		}
+
 	} else {
 
 		$generate = array( 'status' => false, 'colorscheme' => false );
@@ -268,6 +441,9 @@ add_action( 'wp_ajax_manuscript_generate_customizer_color_scheme', 'manuscript_g
 if ( ! function_exists( 'manuscript_generate_color_scheme' ) ) :
 function manuscript_generate_color_scheme(){
 
+	/**
+	 * Background Color
+	 */
 	$background_color = get_theme_mod( 'background_color', false );
 
 	if( $background_color ){
@@ -286,6 +462,29 @@ function manuscript_generate_color_scheme(){
 		// Remove Customizer Color Scheme
 		remove_theme_mod( 'background_color_scheme_customizer' );
 	}
+
+
+	/**
+	 * Text Color
+	 */
+	$text_color = get_theme_mod( 'text_color', false );
+
+	if( $text_color ){
+
+		// SCSS template
+		$css = manuscript_generate_color_scheme_css( $text_color, 'text_color' );
+
+		// Bail if color scheme doesn't generate valid CSS
+		if( ! $css ){
+			return;
+		}
+
+		// Set Color Scheme
+		set_theme_mod( 'text_color_scheme', $css );
+
+		// Remove Customizer Color Scheme
+		remove_theme_mod( 'text_color_scheme_customizer' );
+	}	
 
 }
 endif;
