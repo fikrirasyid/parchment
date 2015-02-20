@@ -15,7 +15,20 @@ function manuscript_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport  = 'postMessage';
 
-	// Adding color control
+	// Adding link color control
+	$wp_customize->add_setting( 'link_color', array(
+		'default'           => '#000000',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'			=> 'postMessage'
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+		'label'       => esc_html__( 'Link color', 'manuscript' ),
+		'description' => esc_html__( 'Select color for your link', 'manuscript' ),
+		'section'     => 'colors',
+	) ) );	
+
+	// Adding text color control
 	$wp_customize->add_setting( 'text_color', array(
 		'default'           => '#3B3B3B',
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -34,7 +47,7 @@ add_action( 'customize_register', 'manuscript_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function manuscript_customize_preview_js( $wp_customize ) {
-	wp_enqueue_script( 'manuscript_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20150219.1', true );
+	wp_enqueue_script( 'manuscript_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20150220', true );
 
 	// Default params
 	$manuscript_customizer_params = array(
@@ -211,7 +224,6 @@ function manuscript_generate_color_scheme_css( $color, $mode = false ){
 			break;
 
 		case 'text_color':
-			$color_link = $simple_color_adjuster->darken( $color, 33 );
 			$css = "
 				.wp-caption-text {
 					color: " . $simple_color_adjuster->lighten( $color, 30 ) .";
@@ -290,17 +302,22 @@ function manuscript_generate_color_scheme_css( $color, $mode = false ){
 				.entry-footer .post-edit-link:hover{
 					background: {$color};
 				}
+			";
+			break;
+		
+		case 'link_color':
 
+			$css = "
 				button,
 				input[type='button'],
 				input[type='reset'],
 				input[type='submit'] {
-					background: {$color_link};
+					background: {$color};
 					
 					&:focus,
 					&:active{
 						outline: none;
-						background: " . $simple_color_adjuster->darken( $color_link, 20 ) .";
+						background: " . $simple_color_adjuster->darken( $color, 20 ) .";
 					}
 				}
 
@@ -312,52 +329,53 @@ function manuscript_generate_color_scheme_css( $color, $mode = false ){
 				input[type='button']:active,
 				input[type='reset']:active,
 				input[type='submit']:active{
-					background: " . $simple_color_adjuster->lighten( $color_link, 10 ) .";		
+					background: " . $simple_color_adjuster->lighten( $color, 10 ) .";		
 				}
 
 				#cancel-comment-reply-link:active,
 				a.comment-reply-link:active,
 				a.more-link:active,
 				.entry-footer .post-edit-link:active{
-					background: {$color_link};	
+					background: {$color};	
 				}
 
 				a {
-					color: {$color_link};
+					color: {$color};
 				}
 
 				.site-description{
-					color: {$color_link};
+					color: {$color};
 				}
 
 				.comment-list li.comment.bypostauthor > .comment-body .avatar{
-					border: 3px solid {$color_link};
+					border: 3px solid {$color};
 				}
 
 				.comment-list li.comment.bypostauthor > .comment-body .fn:after{
-					color: {$color_link};
+					color: {$color};
 				}
 
 				.drawer-content .drawer-header{
-					color: {$color_link};	
+					color: {$color};	
 				}
 
 				.widget .widgettitle,	
 				.widget .widget-title{
-					color: {$color_link};
+					color: {$color};
 				}
 
 				h1, h2, h3, h4, h5, h6 {
-					color: {$color_link};
+					color: {$color};
 				}
 
 				.entry-content h3,
 				.comment-body h3{
-					border-bottom: 1px dotted " . $simple_color_adjuster->lighten( $color_link, 70 ) .";	
+					border-bottom: 1px dotted " . $simple_color_adjuster->lighten( $color, 70 ) .";	
 				}
 			";
+
 			break;
-		
+
 		default:
 
 			$css = false;
@@ -375,45 +393,44 @@ endif;
 if( ! function_exists( 'manuscript_generate_customizer_color_scheme' ) ) :
 function manuscript_generate_customizer_color_scheme(){
 
-	if( current_user_can( 'customize' ) && isset( $_GET['background_color'] ) && manuscript_sanitize_hex_color_no_hash( $_GET['background_color'] ) ){
+	if( current_user_can( 'customize' ) ){
 
-		// Get color
-		$background_color = manuscript_sanitize_hex_color_no_hash( $_GET['background_color'] );
-
-		if( $background_color ){
-
-			$background_color = '#' . $background_color;
-
-			// Generate color scheme css
-			$css = manuscript_generate_color_scheme_css( $background_color, 'background_color' );
-
-			// Set Color Scheme
-			set_theme_mod( 'background_color_scheme_customizer', $css );
-
-			$generate = array( 'status' => true, 'colorscheme' => $css );
-
+		// Determine color key
+		if( isset( $_GET['background_color'] ) && manuscript_sanitize_hex_color_no_hash( $_GET['background_color'] ) ){
+			$prefix = 'background';
+		} elseif( isset( $_GET['text_color'] ) && manuscript_sanitize_hex_color_no_hash( $_GET['text_color'] ) ){
+			$prefix = 'text';
+		} elseif( isset( $_GET['link_color'] ) && manuscript_sanitize_hex_color_no_hash( $_GET['link_color'] ) ){
+			$prefix = 'link';
 		} else {
-
-			$generate = array( 'status' => false, 'colorscheme' => false );
-
+			$prefix = false;
 		}
 
-	} elseif( current_user_can( 'customize' ) && isset( $_GET['text_color'] ) && manuscript_sanitize_hex_color_no_hash( $_GET['text_color'] ) ){
+		// Saving color
+		if( $prefix ){
 
-		// Get color
-		$text_color = manuscript_sanitize_hex_color_no_hash( $_GET['text_color'] );
+			$key = $prefix . '_color';
 
-		if( $text_color ){
+			// Get color
+			$color = manuscript_sanitize_hex_color_no_hash( $_GET[ $key ] );
 
-			$text_color = '#' . $text_color;
+			if( $color ){
 
-			// Generate color scheme css
-			$css = manuscript_generate_color_scheme_css( $text_color, 'text_color' );
+				$color = '#' . $color;
 
-			// Set Color Scheme
-			set_theme_mod( 'text_color_scheme_customizer', $css );
+				// Generate color scheme css
+				$css = manuscript_generate_color_scheme_css( $color, $key );
 
-			$generate = array( 'status' => true, 'colorscheme' => $css );
+				// Set Color Scheme
+				set_theme_mod( $key . '_scheme_customizer', $css );
+
+				$generate = array( 'status' => true, 'colorscheme' => $css );
+
+			} else {
+
+				$generate = array( 'status' => false, 'colorscheme' => false );
+
+			}
 
 		} else {
 
@@ -438,8 +455,8 @@ add_action( 'wp_ajax_manuscript_generate_customizer_color_scheme', 'manuscript_g
 /**
  * Generate color scheme based on color choosen by user
  */
-if ( ! function_exists( 'manuscript_generate_color_scheme' ) ) :
-function manuscript_generate_color_scheme(){
+if ( ! function_exists( 'manuscript_save_color_scheme' ) ) :
+function manuscript_save_color_scheme(){
 
 	/**
 	 * Background Color
@@ -488,7 +505,7 @@ function manuscript_generate_color_scheme(){
 
 }
 endif;
-add_action( 'customize_save_after', 'manuscript_generate_color_scheme' );
+add_action( 'customize_save_after', 'manuscript_save_color_scheme' );
 
 /**
  * Endpoint for clearing all customizer temporary settings
