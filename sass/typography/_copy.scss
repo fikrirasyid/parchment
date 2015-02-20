@@ -84,7 +84,6 @@
 	}
 
 	pre {
-		background: $color__background-pre;
 		font-family: $font__pre;
 		line-height: $font__line-height-pre;
 		margin-bottom: 1.6em;
@@ -98,7 +97,6 @@
 	}
 
 	code{
-		background: #FAFAFA;
 		padding: 0 3px;
 		@include border-radius( 3px );
 	}
@@ -118,7 +116,6 @@
 	}
 
 	mark, ins {
-		background: $color__background-ins;
 		text-decoration: none;
 	}
 

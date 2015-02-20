@@ -978,7 +978,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .comment-body pre,
 .entry-content pre {
-  background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
   line-height: 1.6;
   margin-bottom: 1.6em;
@@ -995,7 +994,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .comment-body code,
 .entry-content code {
-  background: #FAFAFA;
   padding: 0 3px;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
@@ -1021,7 +1019,6 @@ h1, h2, h3, h4, h5, h6 {
 .comment-body mark, .comment-body ins,
 .entry-content mark,
 .entry-content ins {
-  background: #fff9c0;
   text-decoration: none;
 }
 .comment-body sup,
@@ -1218,7 +1215,6 @@ body#tinymce address {
   line-height: 1.4;
 }
 body#tinymce pre {
-  background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
   line-height: 1.6;
   margin-bottom: 1.6em;
@@ -1230,7 +1226,6 @@ body#tinymce code, body#tinymce kbd, body#tinymce tt, body#tinymce var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 body#tinymce code {
-  background: #FAFAFA;
   padding: 0 3px;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
@@ -1251,7 +1246,6 @@ body#tinymce abbr, body#tinymce acronym {
   cursor: help;
 }
 body#tinymce mark, body#tinymce ins {
-  background: #fff9c0;
   text-decoration: none;
 }
 body#tinymce sup,

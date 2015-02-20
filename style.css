@@ -1019,7 +1019,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .comment-body pre,
 .entry-content pre {
-  background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
   line-height: 1.6;
   margin-bottom: 1.6em;
@@ -1036,7 +1035,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .comment-body code,
 .entry-content code {
-  background: #FAFAFA;
   padding: 0 3px;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
@@ -1062,7 +1060,6 @@ h1, h2, h3, h4, h5, h6 {
 .comment-body mark, .comment-body ins,
 .entry-content mark,
 .entry-content ins {
-  background: #fff9c0;
   text-decoration: none;
 }
 .comment-body sup,
@@ -1223,7 +1220,6 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 
 hr {
-  background-color: #ccc;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
