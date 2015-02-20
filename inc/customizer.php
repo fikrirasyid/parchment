@@ -86,8 +86,14 @@ add_action( 'customize_preview_init', 'manuscript_customize_preview_js' );
  */
 if( ! function_exists( 'manuscript_sanitize_hex_color' ) ) :
 function manuscript_sanitize_hex_color( $color ){
-	if ( '' === $color )
-		return '';
+	if ( '' === $color ){
+		return '';	
+	}
+
+	// If given string has no hash, auto add hash
+	if( '#' != substr( $color, 0, 1 ) ){
+		$color = '#' . $color;
+	}
 
 	// 3 or 6 hex digits, or the empty string.
 	if ( preg_match('|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) )
@@ -115,6 +121,11 @@ endif;
  */
 if( ! function_exists( 'manuscript_generate_color_scheme_css' ) ) :
 function manuscript_generate_color_scheme_css( $color, $mode = false ){
+	
+	// If given string has no hash, auto add hash
+	if( '#' != substr( $color, 0, 1 ) ){
+		$color = '#' . $color;
+	}
 
 	// Verify color
 	if( ! manuscript_sanitize_hex_color( $color ) ){
@@ -459,50 +470,34 @@ if ( ! function_exists( 'manuscript_save_color_scheme' ) ) :
 function manuscript_save_color_scheme(){
 
 	/**
-	 * Background Color
+	 * Colors
 	 */
-	$background_color = get_theme_mod( 'background_color', false );
-
-	if( $background_color ){
-
-		// SCSS template
-		$css = manuscript_generate_color_scheme_css( $background_color, 'background_color' );
-
-		// Bail if color scheme doesn't generate valid CSS
-		if( ! $css ){
-			return;
-		}
-
-		// Set Color Scheme
-		set_theme_mod( 'background_color_scheme', $css );
-
-		// Remove Customizer Color Scheme
-		remove_theme_mod( 'background_color_scheme_customizer' );
-	}
-
+	$colors = array( 'background', 'text', 'link' );
 
 	/**
-	 * Text Color
+	 * Loop and save
 	 */
-	$text_color = get_theme_mod( 'text_color', false );
+	foreach ( $colors as $color_prefix ) {
 
-	if( $text_color ){
+		$key = $color_prefix . '_color';
 
-		// SCSS template
-		$css = manuscript_generate_color_scheme_css( $text_color, 'text_color' );
+		$color = get_theme_mod( $key, false );
 
-		// Bail if color scheme doesn't generate valid CSS
-		if( ! $css ){
-			return;
+		if( $color ){
+
+			$css = manuscript_generate_color_scheme_css( $color, $key );
+
+			if( $css ){
+
+				// Set color scheme
+				set_theme_mod( $key . '_scheme', $css );
+
+				// Remove customizer scheme
+				remove_theme_mod( $key . '_scheme_customizer' );
+
+			}
 		}
-
-		// Set Color Scheme
-		set_theme_mod( 'text_color_scheme', $css );
-
-		// Remove Customizer Color Scheme
-		remove_theme_mod( 'text_color_scheme_customizer' );
-	}	
-
+	}
 }
 endif;
 add_action( 'customize_save_after', 'manuscript_save_color_scheme' );

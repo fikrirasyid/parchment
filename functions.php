@@ -123,6 +123,33 @@ function manuscript_scripts() {
 add_action( 'wp_enqueue_scripts', 'manuscript_scripts' );
 
 /**
+ * Display custom color scheme
+ */
+if( ! function_exists( 'manuscript_color_scheme' ) ) :
+function manuscript_color_scheme(){
+	/**
+	 * Colors
+	 */
+	$colors = array( 'background', 'text', 'link' );
+
+	/**
+	 * Loop and display custom color schemes
+	 */
+	foreach ( $colors as $color_prefix ) {
+
+		$name = $color_prefix . '_color_scheme';
+
+		$color_scheme = get_theme_mod( $name, 'false' );
+
+		if( $color_scheme ){
+			wp_add_inline_style( 'manuscript-style', $color_scheme );
+		}
+	}
+}
+endif;
+add_action( 'wp_enqueue_scripts', 'manuscript_color_scheme', 20 );
+
+/**
  * Modifying excerpt suffix
  */
 function manuscript_excerpt_more(){
