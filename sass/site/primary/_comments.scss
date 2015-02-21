@@ -71,6 +71,12 @@
 	right: 0;
 }
 
+body.monospace{
+	#cancel-comment-reply-link{
+		font-family: $font__code;
+	}
+}
+
 #comment{
 	display: block;
 	width: 100%;
@@ -181,6 +187,12 @@ li.pingback{
 a.comment-reply-link{
 	@include button-ghost;
 	padding: .7em 2em;
+}
+
+body.monospace{
+	a.comment-reply-link{
+		font-family: $font__code;
+	}
 }
 
 /**

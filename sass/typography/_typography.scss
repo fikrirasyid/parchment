@@ -9,6 +9,28 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+body.sansserif{
+	font-family: $font__main_sansserif;
+
+	button,
+	input,
+	select,
+	textarea {
+		font-family: $font__main_sansserif;
+	}
+}
+
+body.monospace{
+	font-family: $font__code;
+
+	button,
+	input,
+	select,
+	textarea {
+		font-family: $font__code;
+	}	
+}
+
 @import "genericons";
 
 @import "headings";

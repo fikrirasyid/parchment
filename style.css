@@ -275,6 +275,26 @@ textarea {
   line-height: 1.5;
 }
 
+body.sansserif {
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+}
+body.sansserif button,
+body.sansserif input,
+body.sansserif select,
+body.sansserif textarea {
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+}
+
+body.monospace {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+body.monospace button,
+body.monospace input,
+body.monospace select,
+body.monospace textarea {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
 /**
 
 	Genericons
@@ -1031,7 +1051,7 @@ h1, h2, h3, h4, h5, h6 {
 .entry-content kbd,
 .entry-content tt,
 .entry-content var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 .comment-body code,
 .entry-content code {
@@ -1168,6 +1188,61 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   box-shadow: none;
   line-height: 1;
+}
+
+body.monospace .comment-body,
+body.monospace .entry-content {
+  font-size: 16px;
+  font-size: 1rem;
+}
+body.monospace .comment-body h1,
+body.monospace .entry-content h1 {
+  font-style: normal;
+  position: relative;
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+body.monospace .comment-body h1:before,
+body.monospace .entry-content h1:before {
+  position: absolute;
+  top: 2px;
+  left: -30px;
+  content: '# ';
+}
+body.monospace .comment-body h2,
+body.monospace .entry-content h2 {
+  font-style: normal;
+  position: relative;
+}
+body.monospace .comment-body h2:before,
+body.monospace .entry-content h2:before {
+  position: absolute;
+  top: 2px;
+  left: -40px;
+  content: '##';
+}
+body.monospace .comment-body h3,
+body.monospace .entry-content h3 {
+  position: relative;
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+body.monospace .comment-body h3:before,
+body.monospace .entry-content h3:before {
+  position: absolute;
+  top: 2px;
+  left: -55px;
+  content: '###';
+}
+body.monospace .comment-body h4,
+body.monospace .entry-content h4 {
+  position: relative;
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+body.monospace .comment-body h4:before,
+body.monospace .entry-content h4:before {
+  position: absolute;
+  top: 2px;
+  left: -55px;
+  content: '####';
 }
 
 /*--------------------------------------------------------------
@@ -1480,6 +1555,12 @@ a:hover, a:active {
   right: -45px;
 }
 
+body.monospace .comment-navigation,
+body.monospace .posts-navigation,
+body.monospace .post-navigation {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
 /**
 * Mobile adjustment
 */
@@ -1700,6 +1781,14 @@ a:hover, a:active {
   border-bottom: 1px solid gainsboro;
 }
 
+body.monospace .drawer-content {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+body.monospace .drawer-content .drawer-header .site-name {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
 .drawer-overlay {
   content: '';
   position: fixed;
@@ -1743,6 +1832,11 @@ a:hover, a:active {
 }
 .widget select {
   width: 100%;
+}
+
+body.monospace .widget .widgettitle,
+body.monospace .widget .widget-title {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
 /* Search widget */
@@ -1854,6 +1948,10 @@ body.admin-bar.scrolling .drawer-content {
   opacity: .8;
 }
 
+body.monospace .site-title {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
 body.has-site-logo .site-title {
   display: none;
 }
@@ -1961,6 +2059,12 @@ body.search .page-title:before {
   left: -25px;
 }
 
+body.monospace .hentry-day {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
 .entry-featured-image {
   display: block;
   padding: 10px 10px 9px;
@@ -1997,6 +2101,13 @@ body.search .page-title:before {
   color: #3B3B3B;
   padding-top: 2px;
   padding-bottom: 10px;
+}
+
+body.monospace .entry-title {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+body.monospace .entry-title .entry-subtitle {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
 .entry-meta {
@@ -2042,6 +2153,10 @@ a.more-link:hover {
 }
 a.more-link:active {
   background: black;
+}
+
+body.monospace a.more-link {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
 .page-content,
@@ -2108,6 +2223,10 @@ a.more-link:active {
   background: black;
 }
 
+body.monospace .entry-footer .post-edit-link {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
 .cat-links,
 .tags-links {
   display: block;
@@ -2146,6 +2265,11 @@ a.more-link:active {
 .cat-links a:active,
 .tags-links a:active {
   opacity: .8;
+}
+
+body.monospace .cat-links .label,
+body.monospace .tags-links .label {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
 .cat-links .label:before {
@@ -2299,6 +2423,10 @@ a.more-link:active {
   background: black;
 }
 
+body.monospace #cancel-comment-reply-link {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
 #comment {
   display: block;
   width: 100%;
@@ -2417,6 +2545,10 @@ a.comment-reply-link:hover {
 }
 a.comment-reply-link:active {
   background: black;
+}
+
+body.monospace a.comment-reply-link {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
 /**

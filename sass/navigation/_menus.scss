@@ -139,6 +139,14 @@
 	}
 }
 
+body.monospace{
+	.comment-navigation,
+	.posts-navigation,
+	.post-navigation {
+		font-family: $font__code;
+	}	
+}
+
 /**
 * Mobile adjustment
 */

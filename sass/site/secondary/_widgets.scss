@@ -117,6 +117,18 @@
 	}
 }
 
+body.monospace{
+	.drawer-content{
+		@include font-size( .875 );
+
+		.drawer-header{
+			.site-name{
+				font-family: $font__code;
+			}
+		}
+	}
+}
+
 .drawer-overlay{
 	content: '';
 	position: fixed;
@@ -158,6 +170,15 @@
 
 	select{
 		width: 100%;
+	}
+}
+
+body.monospace{
+	.widget{
+		.widgettitle,
+		.widget-title{
+			font-family: $font__code;
+		}
 	}
 }
 

@@ -103,6 +103,13 @@ body{
 	}
 }
 
+body.monospace{
+	.hentry-day{		
+		font-family: $font__code;
+		@include font-size( .75 );
+	}
+}
+
 .entry-featured-image{
 	display: block;
 	padding: 10px 10px 9px;
@@ -140,6 +147,16 @@ body{
 	}
 }
 
+body.monospace{
+	.entry-title{
+		font-family: $font__code;
+
+		.entry-subtitle{
+			font-family: $font__code;
+		}
+	}
+}
+
 .entry-meta{
 	color: lighten( $color__text-main, 30% );
 	font-style: italic;
@@ -161,6 +178,12 @@ body{
 
 a.more-link{
 	@include button-ghost;
+}
+
+body.monospace{
+	a.more-link{
+		font-family: $font__code;
+	}
 }
 
 .page-content,
@@ -216,6 +239,14 @@ a.more-link{
 	}
 }
 
+body.monospace{
+	.entry-footer{
+		.post-edit-link{
+			font-family: $font__code;
+		}
+	}
+}
+
 .cat-links,
 .tags-links{
 	display: block;
@@ -245,6 +276,15 @@ a.more-link{
 	a{
 		text-decoration: underline;
 		@include hover-ux;
+	}
+}
+
+body.monospace{
+	.cat-links,
+	.tags-links{
+		.label{
+			font-family: $font__code;			
+		}
 	}
 }
 

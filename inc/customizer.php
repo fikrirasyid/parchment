@@ -15,6 +15,26 @@ function manuscript_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport  = 'postMessage';
 
+	// Typography		
+	$wp_customize->add_section( 'typography', 
+		array(
+			'title' 	=> __( 'Typography', 'manuscript' ),
+			'priority' 	=> 40
+		) 
+	);
+
+	$wp_customize->add_setting( 'typography', array(
+		'default' => 'serif'
+	) );
+
+	$wp_customize->add_control( 'typography', array(
+		'label' 	=> __( 'Typography Preference', 'manuscript' ),
+		'section' 	=> 'typography',
+		'settings' 	=> 'typography',
+		'type'		=> 'select',
+		'choices' 	=> manuscript_typography_options()
+	) );
+
 	// Adding link color control
 	$wp_customize->add_setting( 'link_color', array(
 		'default'           => '#000000',

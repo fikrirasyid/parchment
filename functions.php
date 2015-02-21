@@ -103,10 +103,41 @@ function manuscript_widgets_init() {
 add_action( 'widgets_init', 'manuscript_widgets_init' );
 
 /**
+ * Get manuscript google fonts URL
+ * 
+ * @return mixed
+ */
+function manuscript_get_google_fonts_url(){
+// Determine typography preference
+	$typography = get_theme_mod( 'typography', 'serif' );
+
+	switch ( $typography ) {
+		case 'monospace':
+			$google_fonts_url = false;
+			break;
+
+		case 'sansserif':
+			$google_fonts_url = '//fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,700italic,400,700|Montserrat:400,700';
+			break;
+		
+		default:
+			$google_fonts_url = '//fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700|Montserrat:400,700';
+			break;
+	}
+
+	return apply_filters( 'manuscript_get_google_fonts_url', $google_fonts_url );	
+}
+
+/**
  * Enqueue scripts and styles.
  */
-function manuscript_scripts() {
-    wp_enqueue_style( 'manuscript-google-fonts', '//fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700|Montserrat:400,700' );
+function manuscript_scripts() {	
+	// Load google fonts, if necessary
+	$google_fonts_url = manuscript_get_google_fonts_url();
+
+	if( $google_fonts_url ){
+	    wp_enqueue_style( 'manuscript-google-fonts', $google_fonts_url );		
+	}
 
 	wp_enqueue_style( 'manuscript-style', get_stylesheet_uri(), array(), '20150221.1' );
 
@@ -121,6 +152,20 @@ function manuscript_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'manuscript_scripts' );
+
+/**
+ * Body class modifications
+ */
+function manuscript_body_class( $classes ){
+	$typography = get_theme_mod( 'typography', false );
+
+	if( $typography ){
+		$classes[] = sanitize_title( $typography );
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'manuscript_body_class' );
 
 /**
  * Display custom color scheme
@@ -162,6 +207,19 @@ function manuscript_excerpt_more(){
 	return " &hellip; </p><p><a href='{$more_url}' title='{$more_title}' class='more-link'>{$more_copy}</a>";
 }	
 add_filter( 'excerpt_more', 'manuscript_excerpt_more' );
+
+/**
+ * Manuscript typography options
+ */
+function manuscript_typography_options(){
+	$options = array(
+		'serif' 	=> __( 'Serif - Poetic', 'manuscript' ),
+		'sansserif' => __( 'Sans Serif - Clean', 'manuscript' ),
+		'monospace' => __( 'Monospace - Geeky', 'manuscript' ),
+	);
+
+	return apply_filters( 'manuscript_typography_options', $options );
+}
 
 /**
  * Implement the Custom Header feature.

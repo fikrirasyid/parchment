@@ -231,3 +231,61 @@
 		}
 	}		
 }
+
+body.monospace{
+	.comment-body,
+	.entry-content{
+		@include font-size( 1 );
+
+		h1{
+			font-style: normal;
+			position: relative;
+			font-family: $font__code;
+
+			&:before{
+				position: absolute;
+				top: 2px;
+				left: -30px;
+				content: '# ';
+			}
+		}
+
+		h2{
+			font-style: normal;
+			position: relative;
+
+			&:before{
+				position: absolute;
+				top: 2px;
+				left: -40px;
+				content: '##';
+			}
+		}
+
+		h3{
+			position: relative;
+			font-family: $font__code;
+
+			&:before{
+				position: absolute;
+				top: 2px;
+				left: -55px;
+				content: '###';
+			}
+
+		}
+
+		h4{
+			position: relative;
+			font-family: $font__code;
+
+			&:before{
+				position: absolute;
+				top: 2px;
+				left: -55px;
+				content: '####';
+			}
+
+		}
+	}	
+}
