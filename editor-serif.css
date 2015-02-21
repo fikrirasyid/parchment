@@ -1203,6 +1203,10 @@ body.monospace .entry-content h4:before {
   left: -55px;
   content: '####';
 }
+body.monospace .comment-body table thead td,
+body.monospace .entry-content table thead td {
+  font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
 
 body#tinymce {
   padding: 30px 30px 0 !important;

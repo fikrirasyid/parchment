@@ -1,0 +1,94 @@
+/*--------------------------------------------------------------
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+1.0 Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+body#tinymce{
+	padding: 60px 80px 30px !important;
+	max-width: 660px;
+	@include copy;
+	font-size: 18px;
+	font-family: $font__code;
+	color: $color__text-main;
+	background: white;
+	@include font-size( 1 );
+
+	h1{
+		font-style: normal;
+		position: relative;
+		font-family: $font__code;
+
+		&:before{
+			position: absolute;
+			top: 2px;
+			left: -30px;
+			content: '# ';
+		}
+	}
+
+	h2{
+		font-style: normal;
+		position: relative;
+
+		&:before{
+			position: absolute;
+			top: 2px;
+			left: -40px;
+			content: '##';
+		}
+	}
+
+	h3{
+		position: relative;
+		font-family: $font__code;
+
+		&:before{
+			position: absolute;
+			top: 2px;
+			left: -55px;
+			content: '###';
+		}
+
+	}
+
+	h4{
+		position: relative;
+		font-family: $font__code;
+
+		&:before{
+			position: absolute;
+			top: 2px;
+			left: -55px;
+			content: '####';
+		}
+
+	}	
+
+	blockquote{
+		p{		
+			@include font-size( 2.1 );
+		}
+	}
+
+	a{
+		color: $color__link;
+	}
+
+	table{
+		thead{
+			td{
+				font-family: $font__code;
+			}
+		}
+	}	
+}

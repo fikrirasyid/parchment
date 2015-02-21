@@ -75,10 +75,13 @@ function manuscript_setup() {
 		'default-image' => '',
 	) ) );
 
+	// Determine typography preference
+	$typography = get_theme_mod( 'typography', 'serif' );
+
 	// Adding editor style
 	add_editor_style( array(
-		'//fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700|Montserrat:400,700',
-		'editor.css'
+		manuscript_get_google_fonts_url(),
+		"editor-{$typography}.css"
 	) );
 }
 endif; // manuscript_setup

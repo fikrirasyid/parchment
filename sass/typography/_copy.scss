@@ -285,7 +285,14 @@ body.monospace{
 				left: -55px;
 				content: '####';
 			}
-
 		}
+
+		table{
+			thead{
+				td{
+					font-family: $font__code;
+				}
+			}
+		}		
 	}	
 }
