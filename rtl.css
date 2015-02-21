@@ -67,6 +67,7 @@
   padding-right: 50px;
   padding-left: 15px;
 }
+.rtl .drawer-content .drawer-navigation .sub-menu,
 .rtl .drawer-content .drawer-navigation .children {
   padding-left: 0;
   padding-right: 15px;
