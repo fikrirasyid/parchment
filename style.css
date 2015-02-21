@@ -1854,6 +1854,10 @@ body.admin-bar.scrolling .drawer-content {
   opacity: .8;
 }
 
+body.has-site-logo .site-title {
+  display: none;
+}
+
 .site-description {
   margin: 0;
   color: black;

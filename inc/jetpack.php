@@ -15,5 +15,12 @@ function manuscript_jetpack_setup() {
 		'container' => 'main',
 		'footer'    => 'page',
 	) );
+
+    add_theme_support( 'site-logo', array(
+        'header-text' => array(
+            'site-title'
+        ),
+        'size' => 'full',
+    )); 	
 }
 add_action( 'after_setup_theme', 'manuscript_jetpack_setup' );
