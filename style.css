@@ -2287,6 +2287,11 @@ body.monospace .tags-links .label {
   content: '\f302';
 }
 
+.search-no-results .search-field {
+  width: 60%;
+  margin: 0 1em 1em 0;
+}
+
 /**
 * Mobile adjustment
 */
