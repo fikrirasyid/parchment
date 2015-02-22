@@ -36,10 +36,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	10.1 Posts and pages
 	10.2 Asides
 	10.3 Comments
-11.0 Infinite scroll
-12.0 Media
+11.0 Media
 	12.1 Captions
 	12.2 Galleries
+12.0 Plugins
+	12.1 Civil Footnotes
+	12.2 Jetpack
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Normalize
@@ -2617,22 +2619,7 @@ body.monospace a.comment-reply-link {
 }
 
 /*--------------------------------------------------------------
-11.0 Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
-  display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-  display: block;
-}
-
-/*--------------------------------------------------------------
-12.0 Media
+11.0 Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
@@ -2726,7 +2713,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-13.0 Plugins
+12.0 Plugins
 --------------------------------------------------------------*/
 .entry-content hr.footnotes {
   display: none;
@@ -2766,6 +2753,18 @@ object {
 /**
 * Infinite Scroll
 */
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
 #infinite-footer {
   z-index: 20;
 }

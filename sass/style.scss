@@ -37,10 +37,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	10.1 Posts and pages
 	10.2 Asides
 	10.3 Comments
-11.0 Infinite scroll
-12.0 Media
+11.0 Media
 	12.1 Captions
 	12.2 Galleries
+12.0 Plugins
+	12.1 Civil Footnotes
+	12.2 Jetpack
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
@@ -96,18 +98,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "site/site";
 
 /*--------------------------------------------------------------
-11.0 Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-12.0 Media
+11.0 Media
 --------------------------------------------------------------*/
 @import "media/media";
 
 
 /*--------------------------------------------------------------
-13.0 Plugins
+12.0 Plugins
 --------------------------------------------------------------*/
 @import "plugins/plugin-civil-footnotes";
 @import "plugins/jetpack";
