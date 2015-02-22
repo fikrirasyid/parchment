@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package Manuscript
+ * @package Parchment
  */
 
 if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
@@ -15,7 +15,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	 * @param string $sep Optional separator.
 	 * @return string The filtered title.
 	 */
-	function manuscript_wp_title( $title, $sep ) {
+	function parchment_wp_title( $title, $sep ) {
 		if ( is_feed() ) {
 			return $title;
 		}
@@ -33,12 +33,12 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 
 		// Add a page number if necessary:
 		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', 'manuscript' ), max( $paged, $page ) );
+			$title .= " $sep " . sprintf( __( 'Page %s', 'parchment' ), max( $paged, $page ) );
 		}
 
 		return $title;
 	}
-	add_filter( 'wp_title', 'manuscript_wp_title', 10, 2 );
+	add_filter( 'wp_title', 'parchment_wp_title', 10, 2 );
 
 	/**
 	 * Title shim for sites older than WordPress 4.1.
@@ -46,10 +46,10 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	 * @link https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/
 	 * @todo Remove this function when WordPress 4.3 is released.
 	 */
-	function manuscript_render_title() {
+	function parchment_render_title() {
 		?>
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<?php
 	}
-	add_action( 'wp_head', 'manuscript_render_title' );
+	add_action( 'wp_head', 'parchment_render_title' );
 endif;

@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: manuscript\n"
+"Project-Id-Version: parchment\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-02-22 07:57+0700\n"
 "PO-Revision-Date: 2015-02-22 07:57+0700\n"
@@ -19,31 +19,31 @@ msgstr ""
 "_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;"
 "esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-Basepath: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/"
-"manuscript\n"
+"parchment\n"
 "X-Poedit-SearchPath-0: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/"
-"manuscript\n"
+"parchment\n"
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/404.php:15
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/404.php:15
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/404.php:19
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/404.php:19
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/404.php:27
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/404.php:27
 msgid "Most Used Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/404.php:44
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/404.php:44
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:28
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:28
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -51,297 +51,297 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:35
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:53
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:35
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:53
 msgid "Comment navigation"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:36
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:54
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:36
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:54
 msgid "Older Comments"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:37
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:55
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:37
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:55
 msgid "Newer Comments"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:65
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:65
 msgid "Comments are closed."
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:75
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:75
 msgid "Share Your Thought"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:78
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:78
 msgid "Type your comment"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:80
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:80
 msgid "Your Name"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:81
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:81
 msgid "Your Email"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:82
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/comments.php:82
 msgid "Your URL"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-hentry-separator.php:26
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-hentry-separator.php:28
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-hentry-separator.php:30
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content-hentry-separator.php:26
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content-hentry-separator.php:28
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content-hentry-separator.php:30
 msgid "l, j F Y"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-none.php:13
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content-none.php:13
 msgid "Nothing Found"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-none.php:19
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content-none.php:19
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-none.php:23
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content-none.php:23
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-none.php:28
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content-none.php:28
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-page.php:19
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-single.php:25
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content.php:17
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:209
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content-page.php:19
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content-single.php:25
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content.php:17
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/functions.php:209
 #, php-format
 msgid "Permanent link to %s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-page.php:29
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-single.php:35
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content.php:45
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content-page.php:29
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content-single.php:35
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content.php:45
 msgid "Pages:"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-page.php:36
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:117
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content-page.php:36
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:117
 msgid "Edit"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content.php:40
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:210
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/content.php:40
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/functions.php:210
 msgid "Continue Reading"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/footer.php:38
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/footer.php:38
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/footer.php:38
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/footer.php:38
 #, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/footer.php:40
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/footer.php:40
 #, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:53
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/functions.php:53
 msgid "Primary Menu"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:98
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/functions.php:98
 msgid "Sidebar"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:221
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/functions.php:221
 msgid "Serif - Poetic"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:222
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/functions.php:222
 msgid "Sans Serif - Clean"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:223
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/functions.php:223
 msgid "Monospace - Geeky"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/header.php:22
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/header.php:22
 msgid "Skip to content"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/header.php:24
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/header.php:24
 msgid "Menu"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:21
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/customizer.php:21
 msgid "Typography"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:31
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/customizer.php:31
 msgid "Typography Preference"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:46
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/customizer.php:46
 msgid "Link color"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:47
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/customizer.php:47
 msgid "Select color for your link"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:59
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/customizer.php:59
 msgid "Text color"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:60
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/customizer.php:60
 msgid "Select color for your text"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:75
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/customizer.php:75
 msgid "Error generating color scheme. Please try again."
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:82
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/customizer.php:82
 msgid ""
-"Color scheme cannot be generated. Please activate Manuscript theme first."
+"Color scheme cannot be generated. Please activate Parchment theme first."
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/extras.php:36
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/extras.php:36
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:23
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:23
 msgid "Posts navigation"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:27
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:27
 msgid "Older posts"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:31
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:31
 msgid "Newer posts"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:56
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:56
 msgid "Post navigation"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:78
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:78
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:86
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:86
 msgid "Add Your Comment"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:99
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:105
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:99
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:105
 msgid ", "
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:101
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:101
 #, php-format
 msgid "<span class=\"label\">Posted in</span> %1$s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:107
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:107
 #, php-format
 msgid "<span class=\"label\">Tagged</span> %1$s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:113
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:113
 msgid "Leave a comment"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:113
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:113
 msgid "1 Comment"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:113
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:113
 msgid "% Comments"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:134
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:134
 #, php-format
 msgid "Category: %s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:136
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:136
 #, php-format
 msgid "Tag: %s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:138
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:138
 #, php-format
 msgid "Author: %s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:140
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:140
 #, php-format
 msgid "Year: %s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:140
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:140
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:142
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:142
 #, php-format
 msgid "Month: %s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:142
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:142
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:144
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:144
 #, php-format
 msgid "Day: %s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:144
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:144
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:147
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:147
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:150
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:150
 #, php-format
 msgid "Archives: %s"
 msgstr ""
 
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:154
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:154
 #, php-format
 msgid "%1$s: %2$s"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:156
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/inc/template-tags.php:156
 msgid "Archives"
 msgstr ""
 
-#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/search.php:16
+#: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/parchment/search.php:16
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""

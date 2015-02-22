@@ -3,14 +3,14 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package Manuscript
+ * @package Parchment
  */
 
 /**
  * Add theme support for Infinite Scroll.
  * See: http://jetpack.me/support/infinite-scroll/
  */
-function manuscript_jetpack_setup() {
+function parchment_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'footer'    => 'page',
@@ -23,4 +23,4 @@ function manuscript_jetpack_setup() {
         'size' => 'full',
     )); 	
 }
-add_action( 'after_setup_theme', 'manuscript_jetpack_setup' );
+add_action( 'after_setup_theme', 'parchment_jetpack_setup' );

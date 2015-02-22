@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Manuscript
+ * @package Parchment
  */
 
 get_header(); ?>

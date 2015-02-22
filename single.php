@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Manuscript
+ * @package Parchment
  */
 
 get_header(); ?>

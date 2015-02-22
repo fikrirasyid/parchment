@@ -1,8 +1,8 @@
 <?php
 /**
- * Manuscript Theme Customizer
+ * Parchment Theme Customizer
  *
- * @package Manuscript
+ * @package Parchment
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function manuscript_customize_register( $wp_customize ) {
+function parchment_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->transport  = 'postMessage';
@@ -18,7 +18,7 @@ function manuscript_customize_register( $wp_customize ) {
 	// Typography		
 	$wp_customize->add_section( 'typography', 
 		array(
-			'title' 	=> __( 'Typography', 'manuscript' ),
+			'title' 	=> __( 'Typography', 'parchment' ),
 			'priority' 	=> 40
 		) 
 	);
@@ -29,11 +29,11 @@ function manuscript_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'typography', array(
-		'label' 	=> __( 'Typography Preference', 'manuscript' ),
+		'label' 	=> __( 'Typography Preference', 'parchment' ),
 		'section' 	=> 'typography',
 		'settings' 	=> 'typography',
 		'type'		=> 'select',
-		'choices' 	=> manuscript_typography_options()
+		'choices' 	=> parchment_typography_options()
 	) );
 
 	// Adding link color control
@@ -44,8 +44,8 @@ function manuscript_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
-		'label'       => esc_html__( 'Link color', 'manuscript' ),
-		'description' => esc_html__( 'Select color for your link', 'manuscript' ),
+		'label'       => esc_html__( 'Link color', 'parchment' ),
+		'description' => esc_html__( 'Select color for your link', 'parchment' ),
 		'section'     => 'colors',
 	) ) );	
 
@@ -57,56 +57,56 @@ function manuscript_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'text_color', array(
-		'label'       => esc_html__( 'Text color', 'manuscript' ),
-		'description' => esc_html__( 'Select color for your text', 'manuscript' ),
+		'label'       => esc_html__( 'Text color', 'parchment' ),
+		'description' => esc_html__( 'Select color for your text', 'parchment' ),
 		'section'     => 'colors',
 	) ) );	
 }
-add_action( 'customize_register', 'manuscript_customize_register' );
+add_action( 'customize_register', 'parchment_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function manuscript_customize_preview_js( $wp_customize ) {
-	wp_enqueue_script( 'manuscript_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20150220', true );
+function parchment_customize_preview_js( $wp_customize ) {
+	wp_enqueue_script( 'parchment_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20150220', true );
 
 	// Default params
-	$manuscript_customizer_params = array(
-		'generate_color_scheme_endpoint' 		=> esc_url( admin_url( 'admin-ajax.php?action=manuscript_generate_customizer_color_scheme' ) ),
-		'generate_color_scheme_error_message' 	=> __( 'Error generating color scheme. Please try again.', 'manuscript' ),
-		'clear_customizer_settings'				=> esc_url( admin_url( 'admin-ajax.php?action=manuscript_clear_customizer_settings' ) )		
+	$parchment_customizer_params = array(
+		'generate_color_scheme_endpoint' 		=> esc_url( admin_url( 'admin-ajax.php?action=parchment_generate_customizer_color_scheme' ) ),
+		'generate_color_scheme_error_message' 	=> __( 'Error generating color scheme. Please try again.', 'parchment' ),
+		'clear_customizer_settings'				=> esc_url( admin_url( 'admin-ajax.php?action=parchment_clear_customizer_settings' ) )		
 	);
 
 	// Adding proper error message when customizer fails to generate color scheme in live preview mode (theme hasn’t been activated). 
 	// The color scheme is generated using wp_ajax and wp_ajax cannot be registered if the theme hasn’t been activated.
 	if( ! $wp_customize->is_theme_active() ){
-		$manuscript_customizer_params['generate_color_scheme_error_message'] = __( 'Color scheme cannot be generated. Please activate Manuscript theme first.', 'manuscript' );
+		$parchment_customizer_params['generate_color_scheme_error_message'] = __( 'Color scheme cannot be generated. Please activate Parchment theme first.', 'parchment' );
 	}
 
 	// Attaching variables
-	wp_localize_script( 'manuscript_customizer', 'manuscript_customizer_params', apply_filters( 'manuscript_customizer_params', $manuscript_customizer_params ) );
+	wp_localize_script( 'parchment_customizer', 'parchment_customizer_params', apply_filters( 'parchment_customizer_params', $parchment_customizer_params ) );
 
 	// Display color scheme previewer
 	$color_scheme = get_theme_mod( 'background_color_scheme_customizer', false );
 
 	if( $color_scheme ){
-		remove_action( 'wp_enqueue_scripts', 'manuscript_color_scheme' );
+		remove_action( 'wp_enqueue_scripts', 'parchment_color_scheme' );
 
 		/**
 		 * Reload default style, wp_add_inline_style fail when the handle doesn't exist 
 		 */
-		wp_enqueue_style( 'manuscript-style', get_stylesheet_uri() );
-		$inline_style = wp_add_inline_style( 'manuscript-style', $color_scheme );
+		wp_enqueue_style( 'parchment-style', get_stylesheet_uri() );
+		$inline_style = wp_add_inline_style( 'parchment-style', $color_scheme );
 	}			
 }
-add_action( 'customize_preview_init', 'manuscript_customize_preview_js' );
+add_action( 'customize_preview_init', 'parchment_customize_preview_js' );
 
 /**
  * WordPress' native sanitize_hex_color seems to be hasn't been loaded
  * Provide theme's customizer with its own hex color sanitation
  */
-if( ! function_exists( 'manuscript_sanitize_hex_color' ) ) :
-function manuscript_sanitize_hex_color( $color ){
+if( ! function_exists( 'parchment_sanitize_hex_color' ) ) :
+function parchment_sanitize_hex_color( $color ){
 	if ( '' === $color ){
 		return '';	
 	}
@@ -124,24 +124,24 @@ function manuscript_sanitize_hex_color( $color ){
 }
 endif;
 
-if ( ! function_exists( 'manuscript_sanitize_hex_color_no_hash' ) ) :
-function manuscript_sanitize_hex_color_no_hash( $color ){
+if ( ! function_exists( 'parchment_sanitize_hex_color_no_hash' ) ) :
+function parchment_sanitize_hex_color_no_hash( $color ){
 	$color = ltrim( $color, '#' );
 
 	if ( '' === $color )
 		return '';
 
-	return manuscript_sanitize_hex_color( '#' . $color ) ? $color : null;	
+	return parchment_sanitize_hex_color( '#' . $color ) ? $color : null;	
 }
 endif;
 
 /**
  * Generate color scheme based on color given
  * 
- * @uses Manuscript_Simple_Color_Adjuster
+ * @uses Parchment_Simple_Color_Adjuster
  */
-if( ! function_exists( 'manuscript_generate_color_scheme_css' ) ) :
-function manuscript_generate_color_scheme_css( $color, $mode = false ){
+if( ! function_exists( 'parchment_generate_color_scheme_css' ) ) :
+function parchment_generate_color_scheme_css( $color, $mode = false ){
 	
 	// If given string has no hash, auto add hash
 	if( '#' != substr( $color, 0, 1 ) ){
@@ -149,11 +149,11 @@ function manuscript_generate_color_scheme_css( $color, $mode = false ){
 	}
 
 	// Verify color
-	if( ! manuscript_sanitize_hex_color( $color ) ){
+	if( ! parchment_sanitize_hex_color( $color ) ){
 		return false;
 	}
 
-	$simple_color_adjuster = new Manuscript_Simple_Color_Adjuster;
+	$simple_color_adjuster = new Parchment_Simple_Color_Adjuster;
 
 	switch ( $mode ) {
 		case 'background_color':
@@ -422,17 +422,17 @@ endif;
 /**
  * AJAX endpoint for generating color scheme in near real time for customizer
  */
-if( ! function_exists( 'manuscript_generate_customizer_color_scheme' ) ) :
-function manuscript_generate_customizer_color_scheme(){
+if( ! function_exists( 'parchment_generate_customizer_color_scheme' ) ) :
+function parchment_generate_customizer_color_scheme(){
 
 	if( current_user_can( 'customize' ) ){
 
 		// Determine color key
-		if( isset( $_GET['background_color'] ) && manuscript_sanitize_hex_color_no_hash( $_GET['background_color'] ) ){
+		if( isset( $_GET['background_color'] ) && parchment_sanitize_hex_color_no_hash( $_GET['background_color'] ) ){
 			$prefix = 'background';
-		} elseif( isset( $_GET['text_color'] ) && manuscript_sanitize_hex_color_no_hash( $_GET['text_color'] ) ){
+		} elseif( isset( $_GET['text_color'] ) && parchment_sanitize_hex_color_no_hash( $_GET['text_color'] ) ){
 			$prefix = 'text';
-		} elseif( isset( $_GET['link_color'] ) && manuscript_sanitize_hex_color_no_hash( $_GET['link_color'] ) ){
+		} elseif( isset( $_GET['link_color'] ) && parchment_sanitize_hex_color_no_hash( $_GET['link_color'] ) ){
 			$prefix = 'link';
 		} else {
 			$prefix = false;
@@ -444,14 +444,14 @@ function manuscript_generate_customizer_color_scheme(){
 			$key = $prefix . '_color';
 
 			// Get color
-			$color = manuscript_sanitize_hex_color_no_hash( $_GET[ $key ] );
+			$color = parchment_sanitize_hex_color_no_hash( $_GET[ $key ] );
 
 			if( $color ){
 
 				$color = '#' . $color;
 
 				// Generate color scheme css
-				$css = manuscript_generate_color_scheme_css( $color, $key );
+				$css = parchment_generate_color_scheme_css( $color, $key );
 
 				// Set Color Scheme
 				set_theme_mod( $key . '_scheme_customizer', $css );
@@ -482,13 +482,13 @@ function manuscript_generate_customizer_color_scheme(){
 	die();
 }
 endif;
-add_action( 'wp_ajax_manuscript_generate_customizer_color_scheme', 'manuscript_generate_customizer_color_scheme' );
+add_action( 'wp_ajax_parchment_generate_customizer_color_scheme', 'parchment_generate_customizer_color_scheme' );
 
 /**
  * Generate color scheme based on color choosen by user
  */
-if ( ! function_exists( 'manuscript_save_color_scheme' ) ) :
-function manuscript_save_color_scheme(){
+if ( ! function_exists( 'parchment_save_color_scheme' ) ) :
+function parchment_save_color_scheme(){
 
 	/**
 	 * Colors
@@ -506,7 +506,7 @@ function manuscript_save_color_scheme(){
 
 		if( $color ){
 
-			$css = manuscript_generate_color_scheme_css( $color, $key );
+			$css = parchment_generate_color_scheme_css( $color, $key );
 
 			if( $css ){
 
@@ -521,7 +521,7 @@ function manuscript_save_color_scheme(){
 	}
 }
 endif;
-add_action( 'customize_save_after', 'manuscript_save_color_scheme' );
+add_action( 'customize_save_after', 'parchment_save_color_scheme' );
 
 /**
  * Endpoint for clearing all customizer temporary settings
@@ -529,8 +529,8 @@ add_action( 'customize_save_after', 'manuscript_save_color_scheme' );
  * 
  * @return void
  */
-if( ! function_exists( 'manuscript_clear_customizer_settings' ) ) :
-function manuscript_clear_customizer_settings(){
+if( ! function_exists( 'parchment_clear_customizer_settings' ) ) :
+function parchment_clear_customizer_settings(){
 	if( current_user_can( 'customize' ) ){
 		remove_theme_mod( 'background_color_scheme_customizer' );		
 	}
@@ -538,4 +538,4 @@ function manuscript_clear_customizer_settings(){
 	die();
 }
 endif;
-add_action( 'wp_ajax_manuscript_clear_customizer_settings', 'manuscript_clear_customizer_settings' );
+add_action( 'wp_ajax_parchment_clear_customizer_settings', 'parchment_clear_customizer_settings' );

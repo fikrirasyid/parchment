@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package Manuscript
+ * @package Parchment
  */
 ?>
 
@@ -35,9 +35,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'manuscript' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'manuscript' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'parchment' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'parchment' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'manuscript' ), 'Manuscript', '<a href="http://fikrirasy.id" rel="designer">Fikri Rasyid</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'parchment' ), 'Parchment', '<a href="http://fikrirasy.id" rel="designer">Fikri Rasyid</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

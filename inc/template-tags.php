@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Manuscript
+ * @package Parchment
  */
 
 if ( ! function_exists( 'the_posts_navigation' ) ) :
@@ -20,15 +20,15 @@ function the_posts_navigation() {
 	}
 	?>
 	<nav class="navigation posts-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'manuscript' ); ?></h2>
+		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'parchment' ); ?></h2>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'manuscript' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'parchment' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'manuscript' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'parchment' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -53,7 +53,7 @@ function the_post_navigation() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'manuscript' ); ?></h2>
+		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'parchment' ); ?></h2>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
@@ -65,17 +65,17 @@ function the_post_navigation() {
 }
 endif;
 
-if ( ! function_exists( 'manuscript_posted_on' ) ) :
+if ( ! function_exists( 'parchment_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function manuscript_posted_on() {
+function parchment_posted_on() {
 	$author = get_the_author();
 
 	if( $author ) :
 
 		$byline = sprintf(
-			_x( 'by %s', 'post author', 'manuscript' ),
+			_x( 'by %s', 'post author', 'parchment' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( $author ) . '</a></span>'
 		);
 
@@ -83,38 +83,38 @@ function manuscript_posted_on() {
 
 	endif;
 
-	comments_popup_link( __( 'Add Your Comment', 'manuscript' ) );
+	comments_popup_link( __( 'Add Your Comment', 'parchment' ) );
 
 }
 endif;
 
-if ( ! function_exists( 'manuscript_entry_footer' ) ) :
+if ( ! function_exists( 'parchment_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function manuscript_entry_footer() {
+function parchment_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', 'manuscript' ) );
-		if ( $categories_list && manuscript_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( '<span class="label">Posted in</span> %1$s', 'manuscript' ) . '</span>', $categories_list );
+		$categories_list = get_the_category_list( __( ', ', 'parchment' ) );
+		if ( $categories_list && parchment_categorized_blog() ) {
+			printf( '<span class="cat-links">' . __( '<span class="label">Posted in</span> %1$s', 'parchment' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'manuscript' ) );
+		$tags_list = get_the_tag_list( '', __( ', ', 'parchment' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( '<span class="label">Tagged</span> %1$s', 'manuscript' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( '<span class="label">Tagged</span> %1$s', 'parchment' ) . '</span>', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'manuscript' ), __( '1 Comment', 'manuscript' ), __( '% Comments', 'manuscript' ) );
+		comments_popup_link( __( 'Leave a comment', 'parchment' ), __( '1 Comment', 'parchment' ), __( '% Comments', 'parchment' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'manuscript' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( __( 'Edit', 'parchment' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
@@ -131,29 +131,29 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( __( 'Category: %s', 'manuscript' ), single_cat_title( '', false ) );
+		$title = sprintf( __( 'Category: %s', 'parchment' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
-		$title = sprintf( __( 'Tag: %s', 'manuscript' ), single_tag_title( '', false ) );
+		$title = sprintf( __( 'Tag: %s', 'parchment' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
-		$title = sprintf( __( 'Author: %s', 'manuscript' ), '<span class="vcard">' . get_the_author() . '</span>' );
+		$title = sprintf( __( 'Author: %s', 'parchment' ), '<span class="vcard">' . get_the_author() . '</span>' );
 	} elseif ( is_year() ) {
-		$title = sprintf( __( 'Year: %s', 'manuscript' ), get_the_date( _x( 'Y', 'yearly archives date format', 'manuscript' ) ) );
+		$title = sprintf( __( 'Year: %s', 'parchment' ), get_the_date( _x( 'Y', 'yearly archives date format', 'parchment' ) ) );
 	} elseif ( is_month() ) {
-		$title = sprintf( __( 'Month: %s', 'manuscript' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'manuscript' ) ) );
+		$title = sprintf( __( 'Month: %s', 'parchment' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'parchment' ) ) );
 	} elseif ( is_day() ) {
-		$title = sprintf( __( 'Day: %s', 'manuscript' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'manuscript' ) ) );
+		$title = sprintf( __( 'Day: %s', 'parchment' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'parchment' ) ) );
 	} elseif ( is_tax( 'post_format' ) ) {
 		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-			$title = _x( 'Asides', 'post format archive title', 'manuscript' );
+			$title = _x( 'Asides', 'post format archive title', 'parchment' );
 		}
 	} elseif ( is_post_type_archive() ) {
-		$title = sprintf( __( 'Archives: %s', 'manuscript' ), post_type_archive_title( '', false ) );
+		$title = sprintf( __( 'Archives: %s', 'parchment' ), post_type_archive_title( '', false ) );
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-		$title = sprintf( __( '%1$s: %2$s', 'manuscript' ), $tax->labels->singular_name, single_term_title( '', false ) );
+		$title = sprintf( __( '%1$s: %2$s', 'parchment' ), $tax->labels->singular_name, single_term_title( '', false ) );
 	} else {
-		$title = __( 'Archives', 'manuscript' );
+		$title = __( 'Archives', 'parchment' );
 	}
 
 	/**
@@ -201,8 +201,8 @@ endif;
  *
  * @return bool
  */
-function manuscript_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'manuscript_categories' ) ) ) {
+function parchment_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'parchment_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -215,30 +215,30 @@ function manuscript_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'manuscript_categories', $all_the_cool_cats );
+		set_transient( 'parchment_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so manuscript_categorized_blog should return true.
+		// This blog has more than 1 category so parchment_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so manuscript_categorized_blog should return false.
+		// This blog has only 1 category so parchment_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in manuscript_categorized_blog.
+ * Flush out the transients used in parchment_categorized_blog.
  */
-function manuscript_category_transient_flusher() {
+function parchment_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'manuscript_categories' );
+	delete_transient( 'parchment_categories' );
 }
-add_action( 'edit_category', 'manuscript_category_transient_flusher' );
-add_action( 'save_post',     'manuscript_category_transient_flusher' );
+add_action( 'edit_category', 'parchment_category_transient_flusher' );
+add_action( 'save_post',     'parchment_category_transient_flusher' );
 
 /**
  * If the first 20 characters of title is equal to the first 20 characters of content, 
@@ -246,8 +246,8 @@ add_action( 'save_post',     'manuscript_category_transient_flusher' );
  * 
  * @return bool
  */
-if( ! function_exists( 'manuscript_is_auto_hide_title' ) ) :
-function manuscript_is_auto_hide_title(){
+if( ! function_exists( 'parchment_is_auto_hide_title' ) ) :
+function parchment_is_auto_hide_title(){
 	global $post;
 
 	if( substr( $post->post_title, 0, 20 ) == substr( strip_tags( $post->post_content ), 0, 20 ) ){
@@ -256,6 +256,6 @@ function manuscript_is_auto_hide_title(){
 		$do = false;
 	}
 
-	return apply_filters( 'manuscript_is_auto_hide_title', $do, $post );
+	return apply_filters( 'parchment_is_auto_hide_title', $do, $post );
 }
 endif;

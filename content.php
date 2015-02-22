@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Manuscript
+ * @package Parchment
  */
 
 // hentry separator
@@ -14,7 +14,7 @@ get_template_part( 'content', 'hentry-separator' );
 		// Use strip tags instead of esc_attr because some plugin such as https://wordpress.org/plugins/subtitles/ 
 		// filters get_the_title() output by adding HTML on it
 		if( has_post_thumbnail() ){
-			echo sprintf( '<a href="%s" class="entry-featured-image" title="%s">', get_permalink( get_the_ID() ), sprintf( __( 'Permanent link to %s', 'manuscript' ), strip_tags( get_the_title() ) ) ); 
+			echo sprintf( '<a href="%s" class="entry-featured-image" title="%s">', get_permalink( get_the_ID() ), sprintf( __( 'Permanent link to %s', 'parchment' ), strip_tags( get_the_title() ) ) ); 
 			the_post_thumbnail( 'large' );
 			echo '</a>';
 		}
@@ -22,14 +22,14 @@ get_template_part( 'content', 'hentry-separator' );
 
 	<header class="entry-header">
 		<?php 
-			if( ! manuscript_is_auto_hide_title() ) :
+			if( ! parchment_is_auto_hide_title() ) :
 				the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); 
 			endif;
 		?>
 
 		<?php if ( 'post' == get_post_type() && 'aside' != get_post_format() ) : ?>
 		<div class="entry-meta">
-			<?php manuscript_posted_on(); ?>
+			<?php parchment_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -37,12 +37,12 @@ get_template_part( 'content', 'hentry-separator' );
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
-				__( 'Continue Reading', 'manuscript' ),
+				__( 'Continue Reading', 'parchment' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'manuscript' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'parchment' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -50,7 +50,7 @@ get_template_part( 'content', 'hentry-separator' );
 
 	<?php if ( 'post' == get_post_type() && 'aside' == get_post_format() ) : ?>
 	<div class="entry-meta">
-		<?php manuscript_posted_on(); ?>
+		<?php parchment_posted_on(); ?>
 	</div><!-- .entry-meta -->
 	<?php endif; ?>	
 </article><!-- #post-## -->

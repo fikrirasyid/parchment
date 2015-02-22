@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Manuscript
+ * @package Parchment
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -19,9 +19,9 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'manuscript' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'parchment' ); ?></a>
 
-	<a href="#drawer" data-target-id="drawer" id="toggle-drawer" class="genericon genericon-menu toggle-button"><span class="label"><?php _e( 'Menu', 'manuscript' ); ?></span></a>
+	<a href="#drawer" data-target-id="drawer" id="toggle-drawer" class="genericon genericon-menu toggle-button"><span class="label"><?php _e( 'Menu', 'parchment' ); ?></span></a>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
