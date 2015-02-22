@@ -24,7 +24,8 @@ function manuscript_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting( 'typography', array(
-		'default' => 'serif'
+		'default' => 'serif',
+		'sanitize_callback' => 'sanitize_key'
 	) );
 
 	$wp_customize->add_control( 'typography', array(
