@@ -142,7 +142,7 @@ function manuscript_scripts() {
 	    wp_enqueue_style( 'manuscript-google-fonts', $google_fonts_url );		
 	}
 
-	wp_enqueue_style( 'manuscript-style', get_stylesheet_uri(), array(), '20150221.1' );
+	wp_enqueue_style( 'manuscript-style', get_stylesheet_uri(), array(), '20150222' );
 
 	wp_enqueue_script( 'manuscript-script', get_template_directory_uri() . '/js/manuscript.js', array( 'jquery' ), '20150215', true );
 
