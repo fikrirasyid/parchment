@@ -144,8 +144,6 @@ function manuscript_scripts() {
 
 	wp_enqueue_style( 'manuscript-style', get_stylesheet_uri(), array(), '20150221.1' );
 
-	wp_enqueue_script( 'manuscript-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
 	wp_enqueue_script( 'manuscript-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	wp_enqueue_script( 'manuscript-script', get_template_directory_uri() . '/js/manuscript.js', array( 'jquery' ), '20150215', true );
