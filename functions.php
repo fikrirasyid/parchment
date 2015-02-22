@@ -221,11 +221,6 @@ function manuscript_typography_options(){
 }
 
 /**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Load simple color adjuster library
  */
 if( ! class_exists( 'Manuscript_Simple_Color_Adjuster' ) ){
