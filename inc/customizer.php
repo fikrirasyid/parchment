@@ -79,7 +79,7 @@ function manuscript_customize_preview_js( $wp_customize ) {
 	// Adding proper error message when customizer fails to generate color scheme in live preview mode (theme hasn’t been activated). 
 	// The color scheme is generated using wp_ajax and wp_ajax cannot be registered if the theme hasn’t been activated.
 	if( ! $wp_customize->is_theme_active() ){
-		$manuscript_customizer_params['generate_color_scheme_error_message'] = __( 'Color scheme cannot be generated. Please activate Materialist theme first.', 'manuscript' );
+		$manuscript_customizer_params['generate_color_scheme_error_message'] = __( 'Color scheme cannot be generated. Please activate Manuscript theme first.', 'manuscript' );
 	}
 
 	// Attaching variables
