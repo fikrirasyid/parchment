@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: manuscript\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-02-22 07:57+0700\n"
-"PO-Revision-Date: 2015-02-22 07:57+0700\n"
+"PO-Revision-Date: 2015-02-22 08:02+0700\n"
 "Last-Translator: Fikri Rasyid <fikrirasyid@gmail.com>\n"
 "Language-Team: Fikri Rasyid <fikrirasyid@gmail.com>\n"
 "Language: en_EN\n"
@@ -25,98 +25,103 @@ msgstr ""
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/404.php:15
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Ups! halaman tersebut tidak dapat ditemukan."
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/404.php:19
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"Tidak ada yang ditemukan di lokasi ini. Coba gunakan tautan dibawah atau "
+"lakukan pencarian?"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/404.php:27
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Kategori Populer"
 
 #. translators: %1$s: smiley
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/404.php:44
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "Coba cari di arsip bulanan. %1$s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:28
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1$s komentar untuk &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s komentar untuk &ldquo;%2$s&rdquo;"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:35
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:53
 msgid "Comment navigation"
-msgstr ""
+msgstr "Navigasi Komentar"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:36
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:54
 msgid "Older Comments"
-msgstr ""
+msgstr "Komentar Sebelumnya"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:37
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:55
 msgid "Newer Comments"
-msgstr ""
+msgstr "Komentar Terbaru"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:65
 msgid "Comments are closed."
-msgstr ""
+msgstr "Komentar ditutup."
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:75
 msgid "Share Your Thought"
-msgstr ""
+msgstr "Bagikan Komentarmu"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:78
 msgid "Type your comment"
-msgstr ""
+msgstr "Tulis komentarmu"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:80
 msgid "Your Name"
-msgstr ""
+msgstr "Namamu"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:81
 msgid "Your Email"
-msgstr ""
+msgstr "Surelmu"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/comments.php:82
 msgid "Your URL"
-msgstr ""
+msgstr "URL-mu"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-hentry-separator.php:26
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-hentry-separator.php:28
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-hentry-separator.php:30
 msgid "l, j F Y"
-msgstr ""
+msgstr "l, j F Y"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-none.php:13
 msgid "Nothing Found"
-msgstr ""
+msgstr "Tidak ditemukan"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-none.php:19
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"Siap mempublikasikan pos pertamamu? <a href=\"%1$s\">Mulai di sini</a>."
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-none.php:23
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Maaf, tidak ada hasil yang sesuai dengan pencarian anda. Silahkan gunakan "
+"kata kunci berbeda."
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-none.php:28
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
+msgstr "Hal yang kamu coba akses tidak ditemukan. Coba lakukan pencarian "
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-page.php:19
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-single.php:25
@@ -124,41 +129,41 @@ msgstr ""
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:209
 #, php-format
 msgid "Permanent link to %s"
-msgstr ""
+msgstr "Tautan untuk %s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-page.php:29
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-single.php:35
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content.php:45
 msgid "Pages:"
-msgstr ""
+msgstr "Halaman:"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content-page.php:36
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:117
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/content.php:40
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:210
 msgid "Continue Reading"
-msgstr ""
+msgstr "Lanjutkan Membaca"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/footer.php:38
 msgid "http://wordpress.org/"
-msgstr ""
+msgstr "http://wordpress.org/"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/footer.php:38
 #, php-format
 msgid "Proudly powered by %s"
-msgstr ""
+msgstr "Ditenagai oleh %s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/footer.php:40
 #, php-format
 msgid "Theme: %1$s by %2$s."
-msgstr ""
+msgstr "Tema: %1$s oleh %2$s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:53
 msgid "Primary Menu"
-msgstr ""
+msgstr "Menu Utama"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:98
 msgid "Sidebar"
@@ -166,182 +171,182 @@ msgstr ""
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:221
 msgid "Serif - Poetic"
-msgstr ""
+msgstr "Serif - Artistik"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:222
 msgid "Sans Serif - Clean"
-msgstr ""
+msgstr "Sans Serif - Bersih"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/functions.php:223
 msgid "Monospace - Geeky"
-msgstr ""
+msgstr "Monospace - Geek"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/header.php:22
 msgid "Skip to content"
-msgstr ""
+msgstr "Lewat langsung ke konten"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/header.php:24
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:21
 msgid "Typography"
-msgstr ""
+msgstr "Tipografi"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:31
 msgid "Typography Preference"
-msgstr ""
+msgstr "Tipografi Pilihan"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:46
 msgid "Link color"
-msgstr ""
+msgstr "Warna tautan"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:47
 msgid "Select color for your link"
-msgstr ""
+msgstr "Pilih warna untuk tautan"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:59
 msgid "Text color"
-msgstr ""
+msgstr "Warna Teks"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:60
 msgid "Select color for your text"
-msgstr ""
+msgstr "Pilih warna untuk teks"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:75
 msgid "Error generating color scheme. Please try again."
-msgstr ""
+msgstr "Terjadi galat dalam pembuatan skema warna. Silahkan mencoba lagi."
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/customizer.php:82
 msgid ""
 "Color scheme cannot be generated. Please activate Manuscript theme first."
-msgstr ""
+msgstr "Tidak bisa membuat skema warna. Tolong aktifkan tema Manuscript dulu."
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/extras.php:36
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "Halaman %s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:23
 msgid "Posts navigation"
-msgstr ""
+msgstr "Navigasi pos"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:27
 msgid "Older posts"
-msgstr ""
+msgstr "Pos terdahulu"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:31
 msgid "Newer posts"
-msgstr ""
+msgstr "Pos terbaru"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:56
 msgid "Post navigation"
-msgstr ""
+msgstr "Navigasi pos"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:78
 #, php-format
 msgctxt "post author"
 msgid "by %s"
-msgstr ""
+msgstr "oleh %s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:86
 msgid "Add Your Comment"
-msgstr ""
+msgstr "Tambahkan Komentarmu"
 
 #. translators: used between list items, there is a space after the comma
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:99
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:105
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:101
 #, php-format
 msgid "<span class=\"label\">Posted in</span> %1$s"
-msgstr ""
+msgstr "<span class=\"label\">Kategori</span> %1$s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:107
 #, php-format
 msgid "<span class=\"label\">Tagged</span> %1$s"
-msgstr ""
+msgstr "<span class=\"label\">Tag</span> %1$s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:113
 msgid "Leave a comment"
-msgstr ""
+msgstr "Tinggalkan komentar"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:113
 msgid "1 Comment"
-msgstr ""
+msgstr "1 Komentar"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:113
 msgid "% Comments"
-msgstr ""
+msgstr "% Komentar"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:134
 #, php-format
 msgid "Category: %s"
-msgstr ""
+msgstr "Kategori: %s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:136
 #, php-format
 msgid "Tag: %s"
-msgstr ""
+msgstr "Tag: %s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:138
 #, php-format
 msgid "Author: %s"
-msgstr ""
+msgstr "Penulis: %s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:140
 #, php-format
 msgid "Year: %s"
-msgstr ""
+msgstr "Tahun: %s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:140
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:142
 #, php-format
 msgid "Month: %s"
-msgstr ""
+msgstr "Bulan: %s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:142
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr ""
+msgstr "F Y"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:144
 #, php-format
 msgid "Day: %s"
-msgstr ""
+msgstr "Hari: %s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:144
 msgctxt "daily archives date format"
 msgid "F j, Y"
-msgstr ""
+msgstr "F j, Y"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:147
 msgctxt "post format archive title"
 msgid "Asides"
-msgstr ""
+msgstr "Catatan Pendek"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:150
 #, php-format
 msgid "Archives: %s"
-msgstr ""
+msgstr "Arsip: %s"
 
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:154
 #, php-format
 msgid "%1$s: %2$s"
-msgstr ""
+msgstr "%1$s: %2$s"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/inc/template-tags.php:156
 msgid "Archives"
-msgstr ""
+msgstr "Arsip"
 
 #: /Users/fmba/htdocs/fikrirasyid/wp-content/themes/manuscript/search.php:16
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Hasil Pencarian untuk: %s"
