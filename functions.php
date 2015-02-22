@@ -92,6 +92,7 @@ add_action( 'after_setup_theme', 'manuscript_setup' );
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
+if( ! function_exists( 'manuscript_widgets_init' ) ) :
 function manuscript_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'manuscript' ),
@@ -103,6 +104,7 @@ function manuscript_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
+endif; // manuscript_widgets_init
 add_action( 'widgets_init', 'manuscript_widgets_init' );
 
 /**
@@ -111,7 +113,7 @@ add_action( 'widgets_init', 'manuscript_widgets_init' );
  * @return mixed
  */
 function manuscript_get_google_fonts_url(){
-// Determine typography preference
+	// Determine typography preference
 	$typography = get_theme_mod( 'typography', 'serif' );
 
 	switch ( $typography ) {
@@ -134,6 +136,7 @@ function manuscript_get_google_fonts_url(){
 /**
  * Enqueue scripts and styles.
  */
+if( ! function_exists( 'manuscript_scripts' ) ) :
 function manuscript_scripts() {	
 	// Load google fonts, if necessary
 	$google_fonts_url = manuscript_get_google_fonts_url();
@@ -150,11 +153,13 @@ function manuscript_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+endif; // manuscript_scripts
 add_action( 'wp_enqueue_scripts', 'manuscript_scripts' );
 
 /**
  * Body class modifications
  */
+if( ! function_exists( 'manuscript_body_class' ) ) :
 function manuscript_body_class( $classes ){
 	$typography = get_theme_mod( 'typography', false );
 
@@ -164,6 +169,7 @@ function manuscript_body_class( $classes ){
 
 	return $classes;
 }
+endif; // manuscript_body_class
 add_filter( 'body_class', 'manuscript_body_class' );
 
 /**
@@ -190,7 +196,7 @@ function manuscript_color_scheme(){
 		}
 	}
 }
-endif;
+endif; // manuscript_color_scheme
 add_action( 'wp_enqueue_scripts', 'manuscript_color_scheme', 20 );
 
 /**
