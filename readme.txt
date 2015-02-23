@@ -41,7 +41,7 @@ Parchment focuses in content. Everything else is placed in drawer
 
 Customize Parchment’s text, link, and background color
 
-![If you know some good pattern image, you can use it on Parchment as well](http://fikrirasy.id/wp-content/uploads/2015/02/05-parchment-you-can-use-image-as-background-as-well1-1024x680.jpg)
+![If you know some good pattern image, you can use it on Parchment as well](http://fikrirasy.id/wp-content/uploads/2015/02/05-parchment-you-can-use-image-as-background-as-well-1024x680.jpg)
 
 If you know some good pattern image, you can use it on Parchment as well
 
