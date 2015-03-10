@@ -53,7 +53,7 @@
 }
 .rtl #toggle-drawer {
   left: auto;
-  right: 15px;
+  right: 10px;
 }
 .rtl .drawer-content .drawer-header {
   padding-right: 54px;
@@ -88,6 +88,9 @@
   .rtl.category .page-title, .rtl.tag .page-title, .rtl.date .page-title, .rtl.search .page-title {
     margin-left: 0;
     margin-right: 35px;
+  }
+  .rtl #toggle-drawer {
+    right: 9px;
   }
   .rtl .hentry-day {
     margin-left: 0;

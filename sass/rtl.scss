@@ -80,7 +80,7 @@
 
 	#toggle-drawer{	
 		left: auto;
-		right: 15px;
+		right: 10px;
 	}
 
 	.drawer-content{
@@ -118,7 +118,6 @@
 * Mobile adjustment
 */
 @media screen and ( max-width: $size__breakpoint-mobile ){
-
 	.rtl{
 		.sticky{
 			.entry-title{
@@ -135,6 +134,10 @@
 				margin-left: 0;
 				margin-right: 35px;
 			}
+		}
+
+		#toggle-drawer{
+			right: 9px;
 		}
 
 		.hentry-day{

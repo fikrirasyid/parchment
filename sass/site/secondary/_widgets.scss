@@ -3,10 +3,10 @@
 */
 #toggle-drawer{
 	font-size: 16px;
-	padding: 10px 20px;
+	padding: 10px 10px;
 	position: fixed;
-	top: 15px;
-	left: 15px;
+	top: 10px;
+	left: 10px;
 	color: $color__text-main;
 	@include hover-ux();
 
@@ -17,7 +17,7 @@
 
 .admin-bar{
 	#toggle-drawer{
-		top: 47px;
+		top: 42px;
 	}
 }
 
@@ -288,12 +288,28 @@ body{
 	body{
 		&.admin-bar{
 			#toggle-drawer{
-				top: 15px;
+				top: 10px;
 			}
 
 			.drawer-content{
 				top: 0;
 			}
+		}
+	}
+}
+
+/**
+* Mobile adjustment
+*/
+@media screen and ( max-width: $size__breakpoint-mobile ){
+	#toggle-drawer{
+		padding: 10px 20px;
+		left: 9px;
+	}
+
+	.admin-bar{
+		#toggle-drawer{
+			top: 47px;
 		}
 	}
 }
