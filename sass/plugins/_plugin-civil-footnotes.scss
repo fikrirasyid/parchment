@@ -39,3 +39,12 @@
 		}
 	}
 }
+
+@media screen and ( max-width: $size__breakpoint-mobile ){
+	.entry-content{
+		ol.footnotes{
+			@include font-size( .85 );
+			line-height: 1.6;
+		}
+	}
+}

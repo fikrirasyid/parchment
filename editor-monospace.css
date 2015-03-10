@@ -903,6 +903,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1rem;
   line-height: 1.8;
 }
+@media screen and (max-width: 640px) {
+  .comment-body,
+  .entry-content {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
 .comment-body h1,
 .entry-content h1 {
   line-height: 1.2;
@@ -1220,6 +1227,12 @@ body#tinymce {
   background: white;
   font-size: 16px;
   font-size: 1rem;
+}
+@media screen and (max-width: 640px) {
+  body#tinymce {
+    font-size: 16px;
+    font-size: 1rem;
+  }
 }
 body#tinymce h1 {
   line-height: 1.2;

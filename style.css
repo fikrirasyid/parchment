@@ -965,6 +965,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1rem;
   line-height: 1.8;
 }
+@media screen and (max-width: 640px) {
+  .comment-body,
+  .entry-content {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
 .comment-body h1,
 .entry-content h1 {
   line-height: 1.2;
@@ -2779,6 +2786,13 @@ object {
   text-decoration: none;
 }
 
+@media screen and (max-width: 640px) {
+  .entry-content ol.footnotes {
+    font-size: 13.6px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
 /**
 * Infinite Scroll
 */
