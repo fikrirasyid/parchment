@@ -2654,6 +2654,12 @@ body.monospace a.comment-reply-link {
   opacity: .8;
 }
 
+@media screen and (max-width: 640px) {
+  #colophon {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
 /*--------------------------------------------------------------
 11.0 Media
 --------------------------------------------------------------*/

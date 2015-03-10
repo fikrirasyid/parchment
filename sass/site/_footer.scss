@@ -9,3 +9,10 @@
 		@include hover-ux();
 	}
 }
+
+@media screen and ( max-width: $size__breakpoint-mobile ){
+	#colophon{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
