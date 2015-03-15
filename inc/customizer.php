@@ -155,6 +155,12 @@ function parchment_generate_color_scheme_css( $color, $mode = false ){
 
 	$simple_color_adjuster = new Parchment_Simple_Color_Adjuster;
 
+	// Flat color falls for gradient effect on body
+	// Use rgba instead
+	$body_shadow_rgba = $simple_color_adjuster->hex_to_rgb( $color );
+	$body_shadow_rgba[] = 0;
+	$body_shadow_color = implode(',', $body_shadow_rgba);
+
 	switch ( $mode ) {
 		case 'background_color':
 
@@ -170,13 +176,13 @@ function parchment_generate_color_scheme_css( $color, $mode = false ){
 				}
 
 				body.not-touch-device:after{
-					background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, {$color} 100%); /* FF3.6+ */
-					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,{$color})); /* Chrome,Safari4+ */
-					background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,{$color} 100%); /* Chrome10+,Safari5.1+ */
-					background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,{$color} 100%); /* Opera 11.10+ */
-					background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,{$color} 100%); /* IE10+ */
-					background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,{$color} 100%); /* W3C */
-					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */		
+					background: -moz-linear-gradient(top, rgba({$body_shadow_color}) 0%, {$color} 100%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,{$color}), color-stop(100%,{$color})); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(top, rgba({$body_shadow_color}) 0%,{$color} 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(top, rgba({$body_shadow_color}) 0%,{$color} 100%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(top, rgba({$body_shadow_color}) 0%,{$color} 100%); /* IE10+ */
+					background: linear-gradient(to bottom, rgba({$body_shadow_color}) 0%,{$color} 100%); /* W3C */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{$color}', endColorstr='{$color}',GradientType=0 ); /* IE6-9 */		
 				}
 
 				input[type='text'],
