@@ -181,7 +181,7 @@
 		margin: 2em 0;
 
 		thead{
-			td{
+			th,td{
 				font-family: $font__heading;
 				text-transform: uppercase;
 				background: lighten( $color__background-body, 5% );			

@@ -1109,7 +1109,8 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid #888888;
   margin: 2em 0;
 }
-.comment-body table thead td,
+.comment-body table thead th, .comment-body table thead td,
+.entry-content table thead th,
 .entry-content table thead td {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -1387,7 +1388,7 @@ body#tinymce table {
   border-top: 1px solid #888888;
   margin: 2em 0;
 }
-body#tinymce table thead td {
+body#tinymce table thead th, body#tinymce table thead td {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   background: white;

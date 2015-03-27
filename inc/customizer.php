@@ -242,7 +242,9 @@ function parchment_generate_color_scheme_css( $color, $mode = false ){
 				}
 
 				.entry-content table thead td,
-				.comment-body table thead td{
+				.comment-body table thead td,
+				.entry-content table thead th,
+				.comment-body table thead th{
 					background: " . $simple_color_adjuster->lighten( $color, 5 ) . ";			
 				}
 
