@@ -30,4 +30,12 @@ body#tinymce{
 	a{
 		color: $color__link;
 	}
+
+	.alignleft {
+		margin-right: 1.5em;
+	}
+
+	.alignright {
+		margin-left: 1.5em;
+	}	
 }

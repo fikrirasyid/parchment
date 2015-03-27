@@ -1463,3 +1463,9 @@ body#tinymce a {
 body#tinymce table thead td {
   font-family: "Menlo", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
+body#tinymce .alignleft {
+  margin-right: 1.5em;
+}
+body#tinymce .alignright {
+  margin-left: 1.5em;
+}

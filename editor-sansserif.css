@@ -1417,3 +1417,9 @@ body#tinymce blockquote p {
 body#tinymce a {
   color: black;
 }
+body#tinymce .alignleft {
+  margin-right: 1.5em;
+}
+body#tinymce .alignright {
+  margin-left: 1.5em;
+}
