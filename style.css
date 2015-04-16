@@ -1205,10 +1205,22 @@ h1, h2, h3, h4, h5, h6 {
 .comment-body img,
 .entry-content img {
   padding: 5px 5px 4px;
-  margin: -5px -5px -4px;
+  margin: 0 -5px 0;
   background: white;
   line-height: .9;
   box-shadow: 0 2px 2px #c2c2c2;
+}
+.comment-body img.alignleft,
+.entry-content img.alignleft {
+  margin-right: 15px;
+}
+.comment-body img.alignright,
+.entry-content img.alignright {
+  margin-left: 15px;
+}
+.comment-body img.aligncenter,
+.entry-content img.aligncenter {
+  margin: 0 auto;
 }
 .comment-body img.wp-smiley,
 .entry-content img.wp-smiley {
@@ -1649,13 +1661,13 @@ body.monospace .post-navigation {
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 1.5em;
+  margin-right: 1em;
 }
 
 .alignright {
   display: inline;
   float: right;
-  margin-left: 1.5em;
+  margin-left: 1em;
 }
 
 .aligncenter {

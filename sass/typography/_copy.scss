@@ -221,11 +221,23 @@
 
 	img{
 		padding: 5px 5px 4px;
-		margin: -5px -5px -4px;
+		margin: 0 -5px 0;
 		background: white;
 		line-height: .9;
 		box-shadow: 0 2px 2px darken( $color__background-body, 20% );
 		
+		&.alignleft{
+			margin-right: 15px;
+		}
+
+		&.alignright{
+			margin-left: 15px;
+		}
+
+		&.aligncenter{
+			margin: 0 auto;
+		}
+
 		&.wp-smiley{
 			background: none;
 			padding: 0;
