@@ -1916,6 +1916,11 @@ body.monospace .widget .widget-title {
   color: #999;
 }
 
+/* Calendar Widget */
+.widget_calendar caption {
+  margin: 5px 0 20px;
+}
+
 body.admin-bar .drawer-content {
   top: 32px;
 }
