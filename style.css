@@ -2394,6 +2394,12 @@ body.monospace .tags-links .label {
   margin-top: 5em;
   margin-bottom: 5em;
 }
+#comments .no-comments {
+  text-align: center;
+  padding: 8px 8px 7px;
+  border: 1px dotted rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
+}
 
 .comments-title {
   font-size: 20.8px;
