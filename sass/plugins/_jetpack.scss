@@ -1,10 +1,42 @@
 /**
 * Infinite Scroll
 */
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+
+/* Infinite handle styling */
+#infinite-handle{
+	text-align: center;
 	display: none;
+
+	span{
+		background: transparent;
+	}
+
+	button{
+		@include button-ghost;
+		padding: .7em 2em;		
+
+		&:hover,
+		&:active{
+			padding: .7em 2em;
+		}
+	}
+}	
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll{
+	.posts-navigation{ /* Older / Newer Posts Navigation (always hidden) */
+		display: none; 
+	}
+
+	&.neverending{
+		.site-footer{ /* Theme Footer (when set to scrolling) */
+			display: none; 
+		}
+	}
+
+	#infinite-handle{
+		display: block;
+	}
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */

@@ -2827,11 +2827,53 @@ object {
 /**
 * Infinite Scroll
 */
+/* Infinite handle styling */
+#infinite-handle {
+  text-align: center;
+  display: none;
+}
+#infinite-handle span {
+  background: transparent;
+}
+#infinite-handle button {
+  border: 1px solid #3B3B3B;
+  color: #3B3B3B;
+  font-family: "Montserrat", sans-serif;
+  padding: .9em 2em;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
+  font-size: 12.4px;
+  font-size: 0.775rem;
+  text-decoration: none;
+  margin-top: 1em;
+  display: inline-block;
+  line-height: 1;
+  padding: .7em 2em;
+}
+#infinite-handle button:hover {
+  background: #3B3B3B;
+  color: #F5F5F5;
+}
+#infinite-handle button:active {
+  background: black;
+}
+#infinite-handle button:hover, #infinite-handle button:active {
+  padding: .7em 2em;
+}
+
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation,
+.infinite-scroll .posts-navigation {
+  /* Older / Newer Posts Navigation (always hidden) */
+  display: none;
+}
 .infinite-scroll.neverending .site-footer {
   /* Theme Footer (when set to scrolling) */
   display: none;
+}
+.infinite-scroll #infinite-handle {
+  display: block;
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
