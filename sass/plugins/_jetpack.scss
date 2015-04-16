@@ -48,3 +48,32 @@
 		padding-top: 40px;
 	}
 }
+
+/**
+* Custom Widgets
+*/
+.widget-grofile{
+	p{
+		line-height: 1.4;
+	}
+}
+
+.widget_contact_info{
+	line-height: 1.4;
+
+	.contact-map{
+		margin-bottom: 10px;
+	}
+}
+
+.widget_jetpack_display_posts_widget{
+	.jetpack-display-remote-posts{
+		padding-top: .3em;
+
+		h4{
+			font-weight: normal;
+			@include font-size( 1 );
+			margin-bottom: 1em;
+		}
+	}
+}

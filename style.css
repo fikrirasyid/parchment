@@ -2853,3 +2853,26 @@ object {
     padding-top: 40px;
   }
 }
+/**
+* Custom Widgets
+*/
+.widget-grofile p {
+  line-height: 1.4;
+}
+
+.widget_contact_info {
+  line-height: 1.4;
+}
+.widget_contact_info .contact-map {
+  margin-bottom: 10px;
+}
+
+.widget_jetpack_display_posts_widget .jetpack-display-remote-posts {
+  padding-top: .3em;
+}
+.widget_jetpack_display_posts_widget .jetpack-display-remote-posts h4 {
+  font-weight: normal;
+  font-size: 16px;
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
